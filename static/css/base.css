@@ -3,11 +3,12 @@ html {
 }
 
 body {
-    background: url('/media/background.jpg') no-repeat center center fixed;
+    background-image: url('/media/camera-bg.jpg');
     background-size: cover;
+    background-position: center;
     height: calc(100vh - 164px);
     color: #000;
-    font-family: '', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 /* from Bulma */
