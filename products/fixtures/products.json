@@ -1,0 +1,239 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001340155",
+        "name": "CF Card",
+        "description": "New standard for compact storageCFexpress Type A cards are a new standard for compact, high-performance storage. Despite being smaller than a conventional SD card, their PCIe Gen3 interface offers ultra-fast data transfer.",
+        "price": 141.10,
+        "category": 1,
+        "rating": 4.6,
+        "image_url": "media/accessory-images/cf-card.jpg",
+        "image": "cf-card.jpg"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001600425",
+        "name": "DJI Focus Pro Creator Combo",
+        "description": "The latest LiDAR technology has significantly improved the focusing capabilities for human subjects, with a focus distance approximately three times that of the previous generation. This is made possible by the impressive 76,800 ranging points that the upgraded LiDAR boasts.",
+        "price": 657.50,
+        "category": 1,
+        "rating": 4.9,
+        "image_url": "media/accessory-images/dji-creator-bundle.jpg",
+        "image": "dji-creator-bundle.jpg"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001730010",
+        "name": "Easyrig Minimax",
+        "description": "The ergonomically designed Easyrig Minimax is the comfortable way to support your camera and eliminates the fatigue associated with long periods of hand held operation, it is the perfect partner for compact video cameras, video DSLRs and lightweight film cameras.",
+        "price": 816.27,
+        "category": 1,
+        "rating": 4.2,
+        "image_url": "media/accessory-images/easirig-minimax.jpg",
+        "image": "easirig-minimax.jpg"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5001890157",
+        "name": "Manfrotto Monopod",
+        "description": "The XPRO Monopod Aluminium 4-section with Fluid Video Head is a professional full fluid video monopod designed for videographers who need to shoot from above crowds or at different angles.",
+        "price": 182.50,
+        "category": 1,
+        "rating": 3,
+        "image_url": "media/accessory-images/manfrotto-monopod.jpg",
+        "image": "manfrotto-monopod.jpg"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5002111605",
+        "name": "Peli Air Case 1637",
+        "description": "The Peli Air range of cases is known for its lightweight design and superior durability. This is made possible thanks to the use of the super-light proprietary HPX² Polymer, which is also used in the 1637 case.",
+        "price": 232.99,
+        "category": 1,
+        "rating": 5,
+        "image_url": "media/accessory-images/peli-aircase.jpg",
+        "image": "peli-aircase.jpg"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5002260206",
+        "name": "Smallrig Heavy Duty Tripod",
+        "description": "Get a better basic tee in a size that truly fits with this pocket t-shirt from The Foundry Supply Co.  short-sleeve, crew-neck tee left chest pocket 100% cotton washable imported",
+        "price": 100.00,
+        "category": 1,
+        "rating": 4.4,
+        "image_url": "media/accessory-images/smallrig-hd-tripod.jpg",
+        "image": "smallrig-hd-tripod.jpg"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5002440521",
+        "name": "Sony Alpha",
+        "description": "The Alpha 7 IV is a revolutionary full-frame camera that sets a new standard for image quality, video recording, autofocus, and handling. With a powerful 33MP sensor and Bionz XR processing, it delivers breathtaking professional image quality, even in low light. The Real-time Tracking and Eye AF technology make it easy to capture fast-moving subjects, while the vari-angle touch screen and In-Body Image Stabilisation provide a comfortable and stable shooting experience.",
+        "price": 1790.83,
+        "category": 4,
+        "rating": 4.4,
+        "image_url": "media/camera-images/alpha.jpg",
+        "image": "alpha.jpg"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5002601115",
+        "name": "Sony Cyber-Shot",
+        "description": "The Cyber-shot RX100 VII is a high-performance compact camera that offers a powerful 1.0-type stacked CMOS sensor and ZEISS Vario-Sonnar T* 24-200mm F2.8-4.5 lens. The camera is capable of shooting 20fps with AF/AE tracking and Real-time Eye AF for both humans and animals. The RX100 VII also features 4K HDR (HLG) video recording, a 180-degree flip screen, and a microphone jack for professional audio recording.",
+        "price": 1259.16,
+        "category": 4,
+        "rating": 4.9,
+        "image_url": "media/camera-images/cyber.jpg",
+        "image": "cyber.jpg"
+      }
+    },
+    {
+      "pk": 9,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5002690715",
+        "name": "Canon EOS",
+        "description": "The EOS R5 is a full-frame mirrorless camera that offers a 45MP sensor, 8K video recording, and 20fps continuous shooting. The camera features Dual Pixel CMOS AF II with 1,053 AF points, 5-axis In-Body Image Stabilisation, and a 3.2-inch vari-angle touch screen. The EOS R5 also offers built-in Wi-Fi and Bluetooth, and is compatible with the RF lens range.",
+        "category": 2,
+        "rating": 4.1,
+        "image_url": "media/camera-images/eos.jpg",
+        "image": "eos.jpg"
+      }
+    },
+    {
+      "pk": 10,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5002701115",
+        "name": "Panasonic Lumix",
+        "description": "The camera also offers revolutionary video performance, being the first LUMIX camera to achieve 8K video, as well as supporting internal recording of 5.8K Apple ProRes RAW HQ / ProRes RAW.",
+        "price": 2499.17,
+        "category": 4,
+        "rating": 4.4,
+        "image_url": "media/camera-images/lumix.jpg",
+        "image": "lumix.jpg"
+      }
+    },
+    {
+      "pk": 11,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5002761055",
+        "name": "Fujifilm X-T4",
+        "description": "The X-T4 is a high-performance mirrorless camera that offers a 26.1MP sensor, 5-axis In-Body Image Stabilisation, and 15fps continuous shooting. The camera features a 3-inch vari-angle touch screen, a 3.69m-dot OLED electronic viewfinder, and a 425-point hybrid AF system. The X-T4 also offers 4K video recording, built-in Wi-Fi and Bluetooth, and is compatible with the XF lens range.",
+        "price": 749.17,
+        "category": 4,
+        "rating": 3,
+        "image_url": "media/camera-images/xt30.jpg",
+        "image": "xt30.jpg"
+      }
+    },
+    {
+      "pk": 12,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5002820069",
+        "name": "Nikon Z9",
+        "description": "Nikons Z 9 flagship mirrorless camera is constantly improving with firmware updates, making it perfect for any type of photography or videography. With its advanced technology and high-quality features, this camera can take you to places you never thought possible.",
+        "price": 3624.17,
+        "category": 4,
+        "rating": 3.6,
+        "image_url": "media/camera-images/z9.jpg",
+        "image": "z9.jpg"
+      }
+    },
+    {
+      "pk": 13,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5002820147",
+        "name": "Canon Telephoto Extender",
+        "description": "The Extender EF 2x III is a powerful tool for photographers, extending the focal length of Canon L-series telephoto or telephoto zoom lenses by a factor of 2x. This results in outstanding image quality and higher AF accuracy, making it ideal for press, sports, and nature photography. Additionally, the extender is highly resistant to dust and water, ensuring its durability in various shooting conditions.",
+        "price": 185.36,
+        "category": 9,
+        "rating": 5,
+        "image_url": "media/lens-images/telephoto/canon-telephoto-extender.jpg",
+        "image": "canon-telephoto-extender.jpg"
+      }
+    },
+    {
+      "pk": 14,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5002910572",
+        "name": "Canon 70-300mm Lens",
+        "description": "The Canon EF 70-300mm f/4-5.6 IS II USM is a versatile telephoto lens that offers a 70-300mm focal range, making it ideal for a variety of subjects. The lens features Nano USM technology for fast and quiet focusing, as well as a 4-stop Image Stabiliser to reduce camera shake.",
+        "price": 532.50,
+        "category": 9,
+        "rating": 4.7,
+        "image_url": "media/lens-images/telephoto/canon-70-300.jpg",
+        "image": "canon-70-300.jpg"
+      }
+    },
+    {
+      "pk": 15,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5002990740",
+        "name": "Panasonic 70-200mm Lens",
+        "description": "The Panasonic Lumix S PRO 70-200mm f/2.8 O.I.S. is a professional telephoto zoom lens that offers a 70-200mm focal range and a fast f/2.8 aperture. The lens features a 5-axis Dual I.S. 2 system for up to 7 stops of stabilisation, as well as a focus clutch mechanism for quick switching between auto and manual focus.",
+        "price": 621.99,
+        "category": 9,
+        "rating": 4.8,
+        "image_url": "media/lens-images/telephoto/panasonic-70-200.jpg",
+        "image": "panasonic-70-200.jpg"
+      }
+    },
+    {
+      "pk": 16,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5003050248",
+        "name": "Proteus Lens Set",
+        "description": "The Proteus Lens Set is a versatile set of lenses that offers a wide range of focal lengths, making it ideal for a variety of subjects. The set includes a 24mm, 35mm, and 50mm lens, each with a fast f/1.4 aperture for excellent low-light performance. The lenses are compatible with a range of camera mounts, including Canon EF, Nikon F, and Sony E.",
+        "price": 20557.50,
+        "category": 9,
+        "rating": 4.4,
+        "image_url": "media/lens-images/telephoto/proteus-zoom-set.jpg",
+        "image": "proteus-zoom-set.jpg"
+      }
+    },
+    {
+      "pk": 17,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp5003070787",
+        "name": "Nikkon Z 70-200mm Lens",
+        "description": "The Nikkor Z 70-200mm f/2.8 VR S is a professional telephoto zoom lens that offers a 70-200mm focal range and a fast f/2.8 aperture. The lens features a 5-axis Dual I.S. 2 system for up to 7 stops of stabilisation, as well as a focus clutch mechanism for quick switching between auto and manual focus.",
+        "price": 1665.83,
+        "category": 9,
+        "rating": 4.4,
+        "image_url": "media/lens-images/telephoto/z70-70-200mm.jpg",
+        "image": "z70-70-200mm.jpg"
+      }
+    }
+  ]
