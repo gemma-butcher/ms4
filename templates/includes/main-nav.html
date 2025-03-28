@@ -17,10 +17,10 @@
                 Cameras
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="camera-link">
-                <a href="" class="dropdown-item">Professional</a>
-                <a href="" class="dropdown-item">Instant</a>
-                <a href="" class="dropdown-item">DSLR</a>
-                <a href="" class="dropdown-item">All Cameras</a>
+                <a href="{% url 'products' %}?category=professional" class="dropdown-item">Professional</a>
+                <a href="{% url 'products' %}?category=instant" class="dropdown-item">Instant</a>
+                <a href="{% url 'products' %}?category=dslr" class="dropdown-item">DSLR</a>
+                <a href="{% url 'products' %}?category=professional,instant,dslr" class="dropdown-item">All Cameras</a>
             </div>
         </li>
 
@@ -29,9 +29,9 @@
                 Lenses
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="lenses-link">
-                <a href="" class="dropdown-item">Sport</a>
-                <a href="" class="dropdown-item">Telephoto</a>
-                <a href="" class="dropdown-item">All Lenses</a>
+                <a href="{% url 'products' %}?category=sport" class="dropdown-item">Sport</a>
+                <a href="{% url 'products' %}?category=telephoto" class="dropdown-item">Telephoto</a>
+                <a href="{% url 'products' %}?category=sport,telephoto" class="dropdown-item">All Lenses</a>
             </div>
         </li>
 
@@ -40,10 +40,10 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>
