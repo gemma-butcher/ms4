@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Product, Category
 # Create your views here.
 
@@ -13,7 +14,15 @@ def all_products(request):
     sort = None 
     direction = None
 
-    
+    # Category filtering
+    selected_categories = request.GET.getlist('category')
+    if selected_categories:
+        products = products.filter(category__name__in=selected_categories)
+        categories = Category.objects.filter(name__in=selected_categories)
+    else:
+        categories = Category.objects.all()
+
+    # Sorting logic
     if 'sort' in request.GET:
         sortkey = request.GET['sort']
         sort = sortkey 
@@ -24,18 +33,13 @@ def all_products(request):
         if 'direction' in request.GET:
             direction = request.GET['direction']
             if direction == 'desc':
-                sortkey = f'-(sortkey)'
+                sortkey = f'-{sortkey}'
         products = products.order_by(sortkey)
 
-    if 'category' in request.GET:
-        categories = request.GET['category'].split(',')
-        products = products.filter(category__name__in=categories)
-        categories = Category.objects.filter(name__in=categories)
-    else:
-        categories = Category.objects.all()
 
+    # Search filtering
     if 'q' in request.GET:
-        query = request.GET.get('q').strip
+        query = request.GET.get('q', '').strip()
 
         if not query:
             messages.error(request, "You didn't enter any search criteria!")
@@ -43,6 +47,10 @@ def all_products(request):
         
         queries = Q(name__icontains=query) | Q(description__icontains=query)
         products = products.filter(queries)
+
+     # Debugging Output
+    print("Products count:", products.count())
+    print("Categories:", categories)
     
     current_sorting = f'{sort}_{direction}'
 

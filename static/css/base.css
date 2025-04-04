@@ -72,6 +72,19 @@ body {
     background-color: white;
 }
 
+a.category-badge > span.badge:hover {
+    background: #000 !important;
+    color: white !important;
+}
+
+/* Products */
+.main-product-row {
+    margin-top: 200px !important;
+}
+
+.individual-product-row {
+    margin-top: 200px !important;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
