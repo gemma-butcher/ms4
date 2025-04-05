@@ -72,6 +72,10 @@ body {
     background-color: white;
 }
 
+.h2-div {
+    margin-top: 200px;
+}
+
 a.category-badge > span.badge:hover {
     background: #000 !important;
     color: white !important;
