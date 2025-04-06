@@ -107,6 +107,11 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+/* Shopping cart */
+.basket-table {
+    margin-top: 75px !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
