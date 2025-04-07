@@ -81,6 +81,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'milestone4.wsgi.application'
 
+# Messages
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
