@@ -25,7 +25,7 @@
         </div>
         <div class="row main-product-row">
             <div class="product-container col-10 offset-1">
-                <div class="row mt-1 mb-2">
+                <div class="row mt-1 mb-3">
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
                             <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
@@ -44,7 +44,7 @@
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+                                <span class="small"><a class="active-link" href="{% url 'products' %}">Products Home</a> | </span>
                             {% endif %}
                             {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>
@@ -53,7 +53,7 @@
                 <div class="row">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
+                            <div class="card h-100 p-3 border-0 product-card-custom">
                                 {% if product.image %}
                                 <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -72,7 +72,7 @@
                                             <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                                             {% if product.category %}
                                             <p class="small mt-1 mb-6">
-                                                <a class="text-muted" href="{% url 'products' %}?category={{ product.category }}">{{ product.category }}>
+                                                <a class="active-link" href="{% url 'products' %}?category={{ product.category }}">{{ product.category }}>
                                                     <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                                                 </a>
                                             </p>
@@ -89,22 +89,22 @@
                         </div>
                         {% if forloop.counter|divisibleby:1 %}
                             <div class="col-12 d-sm-none mb-5">
-                                <hr>
+                                <!-- <hr> -->
                             </div>
                         {% endif %}                        
                         {% if forloop.counter|divisibleby:2 %}
                             <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                <hr>
+                                <!-- <hr> -->
                             </div>
                         {% endif %}
                         {% if forloop.counter|divisibleby:3 %}
                             <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                                <hr>
+                                <!-- <hr> -->
                             </div>
                         {% endif %}
                         {% if forloop.counter|divisibleby:4 %}
                             <div class="col-12 d-none d-xl-block mb-5">
-                                <hr>
+                                <!-- <hr> -->
                             </div>
                         {% endif %}
                     {% endfor %}
