@@ -238,6 +238,33 @@ a.category-badge > span.badge:hover {
     overflow-y: auto;
 }
 
+
+/* ----- Footer ------ */
+
+/* ------ FAQ's ------ */
+body.faq-page {
+    background-image: none; /* Remove the background image */
+    background-color: #f0f0f0; /* Or set a different color for the FAQ page */
+}
+
+.faq-accordion-container {
+    margin-top: 200px !important;
+}
+
+a[data-toggle="collapse"] {
+    font-weight: bold;
+    color: #007bff;
+}
+
+a[data-toggle="collapse"]:hover {
+    text-decoration: none;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+}
+
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
