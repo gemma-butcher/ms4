@@ -131,17 +131,17 @@ a.category-badge > span.badge:hover {
 
 /* Product Card */
 .product-card-custom {
-    border: 1px solid #e0e0e0; /* soft light border */
-    border-radius: 12px; /* rounded corners */
-    box-shadow: 0 2px 8px rgba(54, 155, 149, 0.30); /* light shadow */
-    transition: all 0.3s ease; /* smooth animation */
-    overflow: hidden; /* keeps rounded corners clean */
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(54, 155, 149, 0.30);
+    transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 /* On hover */
 .product-card-custom:hover {
-    box-shadow: 0 4px 16px rgba(129, 33, 178, 0.30); /* stronger shadow on hover */
-    transform: translateY(-5px); /* lift card slightly */
+    box-shadow: 0 4px 16px rgba(129, 33, 178, 0.30);
+    transform: translateY(-5px);
     border-color: #b3ece9;
 }
 
@@ -165,12 +165,12 @@ a.category-badge > span.badge:hover {
 }
 
 
-/* Shopping cart */
+/* ------ Shopping cart ------ */
 .basket-table {
     margin-top: 75px !important;
 }
 
-/* Messages */
+/* ------ Messages ------ */
 .message-container {
     position: fixed;
     top: 72px;
@@ -243,26 +243,28 @@ a.category-badge > span.badge:hover {
 
 /* ------ FAQ's ------ */
 body.faq-page {
-    background-image: none; /* Remove the background image */
-    background-color: #f0f0f0; /* Or set a different color for the FAQ page */
+    background-image: none;
+    background-color: #fff;
 }
 
 .faq-accordion-container {
     margin-top: 200px !important;
 }
 
-a[data-toggle="collapse"] {
-    font-weight: bold;
-    color: #007bff;
+/* FAQ Accordion */
+.faq-accordion-container .card {
+    border: 1px solid #e0e0e0; /* soft light border */
+    border-radius: 12px; /* rounded corners */
+    box-shadow: 0 2px 8px rgba(54, 155, 149, 0.30); /* light shadow */
+    transition: all 0.3s ease; /* smooth animation */
+    overflow: hidden; /* keeps rounded corners clean */
+}
+.faq-accordion-container .card-header {
+    background: #f8f9fa; /* light background for header */
+    border-bottom: 1px solid #e0e0e0; /* soft light border */
 }
 
-a[data-toggle="collapse"]:hover {
-    text-decoration: none;
-}
-
-.card-header {
-    background-color: #f8f9fa;
-}
+.faq-accordion {}
 
 
 /* -------------------------------- Media Queries */
