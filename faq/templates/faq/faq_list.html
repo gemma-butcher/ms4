@@ -1,55 +1,48 @@
 {% extends "base.html" %}
+{% block title %}FAQ Page{% endblock %}
+
 {% block body_class %}faq-page{% endblock %}
+{% block extra_title %} - FAQ{% endblock %}
 {% load static %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
 {% block content %}
-<div class="faq-accordion-container">
+    <div class="container py-5 faq-accordion-container">
     <h1 class="text-center mb-4">Frequently Asked Questions</h1>
 
-        <div id="faqAccordion" class="accordion">
-            <!-- FAQ Item 1 -->
+    {% for category in faq_data %}
+        <div class="accordion mb-4" id="accordion-{{ forloop.counter }}">
             <div class="card">
-                <div class="card-header" id="headingOne">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            What is the return policy?
-                        </button>
-                    </h2>
+                <div class="card-header" id="heading-{{ forloop.counter }}">
+                <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse-{{ forloop.counter }}">
+                    <strong>{{ category.category }}</strong>
+                    </button>
+                </h2>
                 </div>
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                <div id="collapse-{{ forloop.counter }}" class="collapse" aria-labelledby="heading-{{ forloop.counter }}" data-parent="#accordion-{{ forloop.counter }}">
                     <div class="card-body">
-                        Our return policy allows you to return any unused item within 30 days of purchase for a full refund. Please make sure the item is in its original packaging.
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ Item 2 -->
-            <div class="card">
-                <div class="card-header" id="headingTwo">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            How can I track my order?
-                        </button>
-                    </h2>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
-                    <div class="card-body">
-                        Once your order has been shipped, you will receive an email with a tracking number and link to the shipping carrier’s website.
+                        <div id="accordion-{{ forloop.counter }}-inner">
+                        {% for item in category.questions %}
+                            <div class="card">
+                                <div class="card-header" id="heading-{{ forloop.parentloop.counter }}-{{ forloop.counter }}">
+                                    <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-{{ forloop.parentloop.counter }}-{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse-{{ forloop.parentloop.counter }}-{{ forloop.counter }}">
+                                        {{ item.question }}
+                                    </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse-{{ forloop.parentloop.counter }}-{{ forloop.counter }}" class="collapse" aria-labelledby="heading-{{ forloop.parentloop.counter }}-{{ forloop.counter }}" data-parent="#accordion-{{ forloop.parentloop.counter }}-inner">
+                                    <div class="card-body">
+                                    {{ item.answer }}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-</div>
-
-{% endblock %}
-
-{% block extra_title %} - Home
+    {% endfor %}
+    </div>
 {% endblock %}

@@ -2,9 +2,17 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import FAQ
 from .forms import FAQForm
 
+import json
+import os
+from django.conf import settings
+
 def faq_list(request):
-    faqs = FAQ.objects.all()
-    return render(request, 'faq/faq_list.html', {'faqs': faqs})
+    file_path = os.path.join(settings.BASE_DIR, 'faq', 'static', 'faq', 'faqs.json')
+    with open(file_path, 'r', encoding='utf-8') as f:
+        faq_data = json.load(f)
+
+    return render(request, 'faq/faq_list.html', {'faq_data': faq_data})
+
 
 def faq_create(request):
     if request.method == 'POST':
@@ -16,6 +24,7 @@ def faq_create(request):
         form = FAQForm()
     return render(request, 'faq/faq_form.html', {'form': form})
 
+
 def faq_update(request, pk):
     faq = get_object_or_404(FAQ, pk=pk)
     if request.method == 'POST':
@@ -26,6 +35,7 @@ def faq_update(request, pk):
     else:
         form = FAQForm(instance=faq)
     return render(request, 'faq/faq_form.html', {'form': form})
+
 
 def faq_delete(request, pk):
     faq = get_object_or_404(FAQ, pk=pk)
