@@ -4,6 +4,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    path('faq/', views.faq_list, name='faq'),
     path('', views.faq_list, name='faq_list'),
     path('add/', views.faq_create, name='faq_create'),
     path('<int:pk>/edit/', views.faq_update, name='faq_update'),
