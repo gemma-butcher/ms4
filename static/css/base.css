@@ -328,6 +328,45 @@ body.contact-page {
     border-color: #b3ece9;
 }
 
+/* ------ Contact Page ------*/
+.contact-container {
+    margin-top: 200px !important;
+}
+
+.contact-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(54, 155, 149, 0.30);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+.contact-card:hover {
+    box-shadow: 0 4px 16px rgba(129, 33, 178, 0.30);
+    border-color: #b3ece9;
+}
+
+.contact-card-header {
+    background-color: rgba(54, 155, 149, 0.8) !important;
+}
+
+.contact-form-label {
+    margin-left: 10px;
+}
+
+.contact-input {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(54, 155, 149, 0.30);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.contact-submit-btn {
+    background-color: rgba(129, 33, 178, 0.30) !important;
+    color: #000 !important;
+    font-weight: bold;
+    border-radius: 12px;
+}
 
 /* ---------------- Media Queries ------------ */
 

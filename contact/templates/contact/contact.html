@@ -1,18 +1,56 @@
 {% extends "base.html" %}
-{% block title %}FAQ Page{% endblock %}
-
 {% block body_class %}contact-page{% endblock %}
 {% block extra_title %}Contact I-Snap{% endblock %}
 {% load static %}
-<h1>Contact Us</h1>
-<form method="post">
-    {% csrf_token %}
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required><br>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br>
-    <button type="submit">Submit</button>
-</form>
-{% block content %}
 
+{% block content %}
+<div class="container py-5 contact-container">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card contact-card shadow-sm hover-effect-card">
+                    <div class="card-header contact-card-header text-white">
+                        <h4 class="mb-0">Contact Us</h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="name" class="form-label contact-form-label uk-text-bold">Name</label>
+                                <input type="text" class="form-control contact-input" id="name" name="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label contact-form-label">Email</label>
+                                <input type="email" class="form-control contact-input uk-text-bold" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                            <button type="submit" class="btn contact-submit-btn w-100">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Success Modal -->
+{% if success %}
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel">Success</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Your message has been successfully submitted. Thank you for contacting us!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
 {% endblock %}

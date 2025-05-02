@@ -8,5 +8,5 @@ def contact(request):
         email = request.POST.get('email')
         # Save to database
         Contact.objects.create(name=name, email=email)
-        return HttpResponse("Thank you for contacting us!")
+        return render(request, 'contact/contact.html', {'success': True})
     return render(request, 'contact/contact.html')
