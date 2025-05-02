@@ -85,11 +85,12 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', #required by allauth
+                'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
-                'bag.contexts.bag_contents',  # custom context processor for bag contents
+                'bag.contexts.bag_contents',
+                'milestone4.context_processors.free_shipping_threshold',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
