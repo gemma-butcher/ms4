@@ -1,3 +1,4 @@
+
 """
 Django settings for milestone4 project.
 
@@ -52,7 +53,6 @@ INSTALLED_APPS = [
     'checkout',
     'faq',
     'contact',
-    'profiles',
     
 
     # Other
