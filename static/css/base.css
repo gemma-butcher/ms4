@@ -305,7 +305,8 @@ footer {
 /* ------ FAQ's ------ */
 body.faq-page,
 body.contact-page,
-body.profiles-page {
+body.profiles-page,
+body.allauth-pages {
     background-image: none;
     background-color: #fff;
 }
@@ -367,6 +368,11 @@ body.profiles-page {
     color: #000 !important;
     font-weight: bold;
     border-radius: 12px;
+}
+
+/* Allauth pages */
+.allauth-pages {
+    margin-top: 200px !important;
 }
 
 /* ---------------- Media Queries ------------ */

@@ -1,17 +1,12 @@
+{% extends "base.html" %}
 {% load i18n %}
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>
             {% block head_title %}
             {% endblock head_title %}
-        </title>
         {% block extra_head %}
         {% endblock extra_head %}
     </head>
     <body>
+        {% block body_class %}allauth-pages{% endblock %}
         {% block body %}
             {% if messages %}
                 <div>
@@ -80,7 +75,11 @@
             {% block content %}
             {% endblock content %}
         {% endblock body %}
-        {% block extra_body %}
-        {% endblock extra_body %}
+        {% block extra_css %}
+        {% endblock extra_css %}
+        {% block extra_js %}
+        {% endblock extra_js %}
     </body>
 </html>
+
+<!-- Debug: This is allauth/layouts/base.html -->
