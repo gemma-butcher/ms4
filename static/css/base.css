@@ -304,7 +304,8 @@ footer {
 
 /* ------ FAQ's ------ */
 body.faq-page,
-body.contact-page {
+body.contact-page,
+body.profiles-page {
     background-image: none;
     background-color: #fff;
 }
