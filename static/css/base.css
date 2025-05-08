@@ -129,6 +129,7 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+
 /* Product Card */
 .product-card-custom {
     border: 1px solid #e0e0e0;
@@ -164,6 +165,10 @@ a.category-badge > span.badge:hover {
     font-weight: bold;
 }
 
+/* --- Add Products --- */
+.add-product-container {
+    margin-top: 200px !important;
+}
 
 /* ------ Shopping cart ------ */
 .basket-table {
