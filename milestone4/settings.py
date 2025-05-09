@@ -15,7 +15,6 @@ import dj_database_url
 if os.path.exists("env.py"):
     import env
 from pathlib import Path
-from decouple import config, Csv
 import dj_database_url
 
 
