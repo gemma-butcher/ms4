@@ -166,7 +166,8 @@ a.category-badge > span.badge:hover {
 }
 
 /* --- Add Products --- */
-.add-product-container {
+.add-product-container,
+.edit-page-container {
     margin-top: 200px !important;
 }
 
