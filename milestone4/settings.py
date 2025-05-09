@@ -13,10 +13,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 import os
 from django.conf import settings
 import dj_database_url
-if os.path.exists("env.py"):
-    import env
 from pathlib import Path
 import dj_database_url
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -190,8 +189,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-if 'USE_AWS' in os.environ:
-    # Bucket Config
+if os.path.exists("env.py"):
+    import env
+
+if 'USE_AWS' in os.environ and os.environ['USE_AWS'] == 'True':
     AWS_STORAGE_BUCKET_NAME = 'i-snap-bucket'
     AWS_S3_REGION_NAME = 'eu-north-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
@@ -207,6 +208,7 @@ if 'USE_AWS' in os.environ:
     # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
 
 
 # Default primary key field type
