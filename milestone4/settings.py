@@ -15,6 +15,8 @@ from django.conf import settings
 import dj_database_url
 from pathlib import Path
 import dj_database_url
+from dotenv import load_dotenv
+load_dotenv()
 
 
 
