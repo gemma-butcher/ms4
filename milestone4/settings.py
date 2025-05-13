@@ -249,3 +249,4 @@ CSRF_FAILURE_VIEW = 'django.views.csrf.csrf_failure'
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 SECURE_SSL_REDIRECT = True
+CSRF_TRUSTED_ORIGINS = ['https://i-snap-110e214ae896.herokuapp.com']
