@@ -18,6 +18,9 @@ import dj_database_url
 from dotenv import load_dotenv
 load_dotenv()
 
+if os.path.isfile('env.py'):
+    import env
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -183,18 +186,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static'),
-# ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-if os.path.exists("env.py"):
-    import env
 
-if 'USE_AWS' in os.environ and os.environ['USE_AWS'] == 'True':
+if 'USE_AWS' in os.environ:
+    #cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
     
     AWS_STORAGE_BUCKET_NAME = 'i-snap-bucket'
     AWS_S3_REGION_NAME = 'eu-north-1'
