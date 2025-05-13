@@ -31,11 +31,9 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     Create or update the user profile
     """
     if created:
+        # Create a new UserProfile when a User is created
         UserProfile.objects.create(user=instance)
     else:
-        # Ensure the UserProfile exists before saving
-        if not hasattr(instance, 'userprofile'):
-            UserProfile.objects.create(user=instance)
-        else:
-            instance.userprofile.save()
+        # Save the existing UserProfile
+        instance.userprofile.save()
     
