@@ -17,6 +17,9 @@ import dj_database_url
 from dotenv import load_dotenv
 load_dotenv()
 
+if os.path.exists("env.py"):
+    import env
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -192,8 +195,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-if os.path.exists("env.py"):
-    import env
 
 if 'USE_AWS' in os.environ and os.environ['USE_AWS'] == 'True':
     # Cache Control for AWS S3
