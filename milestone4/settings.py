@@ -64,7 +64,9 @@ INSTALLED_APPS = [
     'storages',
 ]
 
-# INSTALLED_APPS += ['sslserver']
+# Add sslserver only in development
+if 'DEVELOPMENT' in os.environ:
+    INSTALLED_APPS += ['sslserver']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
