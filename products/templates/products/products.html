@@ -68,7 +68,7 @@
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
-                                        <div class="col">
+                                        <div class="col-12">
                                             <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                                             {% if product.category %}
                                             <p class="small mt-1 mb-6">
@@ -77,22 +77,37 @@
                                                 </a>
                                             </p>
                                             {% endif %}
-                                            {% if product.rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                            {% else %}
-                                                <small class="text-muted">No Rating</small>
-                                            {% endif %}
-                                            {% if request.user.is_superuser %}
-                                            <small class="ml-3">
-                                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                            </small>
-                                            {% endif %}
+                                        <div class="row align-items-center">
+                                            <div class="col-6 rating">
+                                                    {% if product.rating %}
+                                                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                                    {% else %}
+                                                        <small class="text-muted">No Rating</small>
+                                                    {% endif %}
+                                            </div>
+                                            <div class="col-6 text-right add-to-basket-btn-wrapper">
+                                                <form method="POST" action="{% url 'add_to_bag' product.id %}">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" name="quantity" value="1">
+                                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                                    <button type="submit" class="add-to-basket-btn">
+                                                        <i class="fas fa-shopping-bag"></i>
+                                                        <span>Add to Basket</span>
+                                                    </button>
+                                                </form>
+                                            </div>
                                         </div>
+                                        {% if request.user.is_superuser %}
+                                        <small class="ml-3">
+                                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                        </small>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
                         {% if forloop.counter|divisibleby:1 %}
                             <div class="col-12 d-sm-none mb-5">
                                 <!-- <hr> -->
