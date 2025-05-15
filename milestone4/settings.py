@@ -64,7 +64,7 @@ INSTALLED_APPS = [
     'storages',
 ]
 
-INSTALLED_APPS += ['sslserver']
+# INSTALLED_APPS += ['sslserver']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
