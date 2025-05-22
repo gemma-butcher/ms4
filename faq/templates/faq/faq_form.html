@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
-{% load forms %}
+{% load widget_tweaks %}
+
 {% load static %}
 
 {% block body_class %}faq-form{% endblock %}
@@ -15,7 +16,7 @@
 {% block title %}Add/Edit FAQ{% endblock %}
 
 {% block content %}
-<div class="container my-5">
+<div class="container faq-form-container">
     <h1 class="mb-4">{% if faq %}Edit FAQ{% else %}Add FAQ{% endif %}</h1>
     <form method="post">
         {% csrf_token %}

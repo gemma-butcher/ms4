@@ -28,6 +28,9 @@
                                     <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-{{ forloop.parentloop.counter }}-{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse-{{ forloop.parentloop.counter }}-{{ forloop.counter }}">
                                         {{ item.question }}
+                                        {% if user.is_superuser %}
+                                            <a href="{% url 'faq_update' item.id %}" class="btn btn-sm btn-warning ml-2">Edit</a>
+                                        {% endif %}
                                     </button>
                                     </h5>
                                 </div>
@@ -39,6 +42,7 @@
                             </div>
                         {% endfor %}
                         </div>
+
                     </div>
                 </div>
             </div>

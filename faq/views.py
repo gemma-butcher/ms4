@@ -1,16 +1,19 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import FAQ
 from .forms import FAQForm
-
+from django.contrib.auth.decorators import user_passes_test
+from django.conf import settings
 import json
 import os
-from django.conf import settings
+
 
 def faq_list(request):
-    file_path = os.path.join(settings.BASE_DIR, 'faq', 'static', 'faq', 'faqs.json')
-    with open(file_path, 'r', encoding='utf-8') as f:
-        faq_data = json.load(f)
-
+    faqs = FAQ.objects.all().order_by('category')
+    # Group by category if needed
+    categories = {}
+    for faq in faqs:
+        categories.setdefault(faq.category, []).append(faq)
+    faq_data = [{'category': cat, 'questions': qs} for cat, qs in categories.items()]
     return render(request, 'faq/faq_list.html', {'faq_data': faq_data})
 
 
@@ -24,7 +27,7 @@ def faq_create(request):
         form = FAQForm()
     return render(request, 'faq/faq_form.html', {'form': form})
 
-
+@user_passes_test(lambda u: u.is_superuser)
 def faq_update(request, pk):
     faq = get_object_or_404(FAQ, pk=pk)
     if request.method == 'POST':
@@ -34,7 +37,7 @@ def faq_update(request, pk):
             return redirect('faq_list')
     else:
         form = FAQForm(instance=faq)
-    return render(request, 'faq/faq_form.html', {'form': form})
+    return render(request, 'faq/faq_form.html', {'form': form, 'faq': faq})
 
 
 def faq_delete(request, pk):

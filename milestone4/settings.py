@@ -65,6 +65,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap4',
     'bootstrap4',
     'storages',
+    'widget_tweaks',
 ]
 
 # Add sslserver only in development

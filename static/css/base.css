@@ -372,14 +372,16 @@ footer {
 
 /* ------ FAQ's ------ */
 body.faq-page,
+html body.faq-form,
 body.contact-page,
 body.profiles-page,
 body.allauth-pages {
-    background-image: none;
-    background-color: #fff;
+    background-image: none !important;
+    background-color: #fff !important;
 }
 
-.faq-accordion-container {
+.faq-accordion-container,
+.faq-form-container {
     margin-top: 200px !important;
 }
 
