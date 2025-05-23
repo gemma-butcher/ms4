@@ -1,20 +1,7 @@
 {% extends 'base.html' %}
 {% block body_class %}faq-form-page{% endblock %}
+{% block extra_title %} - Add FAQ{% endblock %}
 {% load widget_tweaks %}
-
-{% load static %}
-
-{% block body_class %}faq-form{% endblock %}
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-{% block extra_title %} - FAQ Form{% endblock %}
-
-{% block title %}Add/Edit FAQ{% endblock %}
 
 {% block content %}
 <div class="container faq-form-container">
@@ -36,6 +23,7 @@
         <button type="submit" class="btn btn-primary">
             {% if faq %}Update FAQ{% else %}Create FAQ{% endif %}
         </button>
+        <a href="{% url 'faq_list' %}" class="btn btn-secondary">Cancel</a>
     </form>
 </div>
 {% endblock %}

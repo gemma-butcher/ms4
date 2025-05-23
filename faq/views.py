@@ -17,7 +17,7 @@ def faq_list(request):
     return render(request, 'faq/faq_list.html', {'faq_data': faq_data})
 
 
-def faq_create(request):
+def faq_add(request):
     if request.method == 'POST':
         form = FAQForm(request.POST)
         if form.is_valid():
@@ -25,7 +25,7 @@ def faq_create(request):
             return redirect('faq_list')
     else:
         form = FAQForm()
-    return render(request, 'faq/faq_form.html', {'form': form})
+    return render(request, 'faq/faq_add.html', {'form': form})
 
 @user_passes_test(lambda u: u.is_superuser)
 def faq_update(request, pk):

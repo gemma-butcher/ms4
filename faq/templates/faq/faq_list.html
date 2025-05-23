@@ -7,46 +7,77 @@
 
 {% block content %}
     <div class="container py-5 faq-accordion-container">
-    <h1 class="text-center mb-4">Frequently Asked Questions</h1>
-
-    {% for category in faq_data %}
-        <div class="accordion mb-4" id="accordion-{{ forloop.counter }}">
-            <div class="card accordion-card">
-                <div class="card-header" id="heading-{{ forloop.counter }}">
-                <h2 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse-{{ forloop.counter }}">
-                    <strong>{{ category.category }}</strong>
-                    </button>
-                </h2>
-                </div>
-                <div id="collapse-{{ forloop.counter }}" class="collapse" aria-labelledby="heading-{{ forloop.counter }}" data-parent="#accordion-{{ forloop.counter }}">
-                    <div class="card-body">
-                        <div id="accordion-{{ forloop.counter }}-inner">
-                        {% for item in category.questions %}
-                            <div class="card">
-                                <div class="card-header" id="heading-{{ forloop.parentloop.counter }}-{{ forloop.counter }}">
-                                    <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-{{ forloop.parentloop.counter }}-{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse-{{ forloop.parentloop.counter }}-{{ forloop.counter }}">
-                                        {{ item.question }}
-                                        {% if user.is_superuser %}
-                                            <a href="{% url 'faq_update' item.id %}" class="btn btn-sm btn-warning ml-2">Edit</a>
-                                        {% endif %}
-                                    </button>
-                                    </h5>
-                                </div>
-                                <div id="collapse-{{ forloop.parentloop.counter }}-{{ forloop.counter }}" class="collapse" aria-labelledby="heading-{{ forloop.parentloop.counter }}-{{ forloop.counter }}" data-parent="#accordion-{{ forloop.parentloop.counter }}-inner">
-                                    <div class="card-body">
-                                    {{ item.answer }}
+        <h1 class="text-center mb-4">Frequently Asked Questions</h1>
+        {% for category in faq_data %}
+            <div class="accordion mb-4" id="accordion-{{ forloop.counter }}">
+                <div class="card accordion-card">
+                    <div class="card-header" id="heading-{{ forloop.counter }}">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse-{{ forloop.counter }}">
+                                <strong>{{ category.category }}</strong>
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapse-{{ forloop.counter }}" class="collapse" aria-labelledby="heading-{{ forloop.counter }}" data-parent="#accordion-{{ forloop.counter }}">
+                        <div class="card-body">
+                            <div id="accordion-{{ forloop.counter }}-inner">
+                                {% for item in category.questions %}
+                                    <div class="card">
+                                        <div class="card-header" id="heading-{{ forloop.parentloop.counter }}-{{ forloop.counter }}">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse-{{ forloop.parentloop.counter }}-{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse-{{ forloop.parentloop.counter }}-{{ forloop.counter }}">
+                                                    {{ item.question }}
+                                                </button>
+                                                {% if user.is_superuser %}
+                                                    <a href="{% url 'faq_update' item.id %}" class="btn btn-sm btn-warning ml-2">Edit</a>
+                                                    <!-- Delete button (triggers modal) -->
+                                                    <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteModal{{ item.id }}">Delete</button>
+                                                {% endif %}
+                                            </h5>
+                                        </div>
+                                        <div id="collapse-{{ forloop.parentloop.counter }}-{{ forloop.counter }}" class="collapse" aria-labelledby="heading-{{ forloop.parentloop.counter }}-{{ forloop.counter }}" data-parent="#accordion-{{ forloop.parentloop.counter }}-inner">
+                                            <div class="card-body">
+                                                {{ item.answer }}
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                    {% if user.is_superuser %}
+                                    <!-- Delete Modal -->
+                                    <div class="modal fade" id="deleteModal{{ item.id }}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel{{ item.id }}" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="deleteModalLabel{{ item.id }}">Confirm Delete</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Are you sure you want to delete this FAQ?<br>
+                                                    <strong>{{ item.question }}</strong>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                    <form method="post" action="{% url 'faq_delete' item.id %}">
+                                                        {% csrf_token %}
+                                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                {% endfor %}
                             </div>
-                        {% endfor %}
                         </div>
-
                     </div>
                 </div>
             </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+        {% if user.is_superuser %}
+            <div class="mb-3 text-right">
+                <a href="{% url 'faq_add' %}" class="btn btn-success">Add FAQ</a>
+            </div>
+        {% endif %}
     </div>
 {% endblock %}
