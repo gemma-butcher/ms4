@@ -118,6 +118,10 @@ body.home-page {
 }
 
 /* ----- Products ------ */
+.product-container {
+    margin-bottom: 50px !important;
+}
+
 .main-product-row {
     margin-top: 50px !important;
 }
