@@ -192,9 +192,9 @@ The Business Goals of I-Snap are:
 - Have customers feel they are purchasing through a trustworthy source.
 
 ### Business Plan
-# 📷 PixelProGear – E-commerce Camera & Accessory Store
+# 📷 I-Snap – E-commerce Camera & Accessory Store
 
-**PixelProGear** is a Django-powered e-commerce platform for selling high-quality cameras, lenses, and accessories. Our goal is to provide enthusiasts and professionals with expert-vetted gear and a seamless shopping experience.
+**I-Snap** is a Django-powered e-commerce platform for selling high-quality cameras, lenses, and accessories. Our goal is to provide enthusiasts and professionals with expert-vetted gear and a seamless shopping experience.
 
 ---
 
@@ -210,14 +210,14 @@ The Business Goals of I-Snap are:
 ## 🎯 Objectives
 
 ### Short-term (0–1 year)
-- Launch MVP and acquire first 1,000 users
-- Reach $10,000/month revenue
+- Launch MVP and acquire first 1,000 sales
+- Reach £10,000/month revenue
 - Build product review system and compatibility checker
 
 ### Long-term (2–5 years)
-- Offer gear rentals and used equipment
+- Offer professional video equipment rentals and used equipment sales
 - Add AI-powered product suggestions
-- Become a top-3 niche gear store online
+- Become a top-3 niche tech-gear store online
 
 ---
 
@@ -226,8 +226,10 @@ The Business Goals of I-Snap are:
 📄 Frequently Asked Questions (FAQ) section for customer self-help
 📬 Contact form with message storage in the database (for support & inquiries)
 💳 Secure checkout with Stripe/PayPal
-🛠️ Admin panel for inventory management
+🛠️ Admin panel for inventory management, FAQ management and updates
 📦 Order tracking & fulfillment integration
+User profile page including current and previous orders
+
 
 ---
 
@@ -239,10 +241,10 @@ The Business Goals of I-Snap are:
 | Frontend     | Django templates / React (optional) |
 | Database     | PostgreSQL                    |
 | Payments     | Stripe, PayPal                |
-| Hosting      | AWS / Heroku / Railway        |
+| Hosting      | AWS / Heroku        |
 | Dev Tools    | Docker, GitHub Actions        |
 | Auth         | Django Allauth / Custom       |
-| SEO & Analytics | Open Graph, Google Analytics |
+| SEO & Analytics | Brightedge, Google Analytics |
 
 ---
 
@@ -268,11 +270,11 @@ The Business Goals of I-Snap are:
 
 | Item              | Cost Estimate |
 |-------------------|---------------|
-| MVP Development   | $5,000–10,000 |
-| Initial Inventory | $20,000+      |
-| Marketing Launch  | $3,000        |
+| MVP Development   | £5,000- £7,000 |
+| Initial Inventory | £100,000+      |
+| Marketing Launch  | £10,000        |
 
-**Projected Year 1 Revenue:** $100,000  
+**Projected Year 1 Revenue:** £300,000  
 **Target Profit Margin:** ~25%  
 **Break-even Goal:** Within 12 months
 
@@ -285,6 +287,7 @@ The Business Goals of I-Snap are:
 - **Designer:** UI/UX & branding
 - **Marketing Lead:** SEO, campaigns, social
 - **Support Rep:** Customer inquiries & returns
+- **Business Manager:** B2B connections and sales
 
 ---
 
@@ -301,9 +304,9 @@ The Business Goals of I-Snap are:
 ## 📌 Roadmap
 
 - [x] Django project setup
-- [ ] Add product catalog with images & categories
-- [ ] Stripe/PayPal integration
-- [ ] Launch MVP
+- [x] Add product catalog with images & categories
+- [x] Stripe/PayPal integration
+- [x] Launch MVP
 - [ ] Build rental & used gear modules (v2)
 
 ---
@@ -326,8 +329,8 @@ MIT License
 ## 📬 Contact
 
 Reach out for collaboration or investment opportunities:  
-**Email:** contact@pixelprogear.com  
-**Instagram:** [@pixelprogear](https://instagram.com/pixelprogear)  
+**Email:** contact@i-snap.com  
+**Instagram:** [@i-snap](https://instagram.com/i-snap)  
 
 
 ### User Stories
@@ -357,13 +360,10 @@ Reach out for collaboration or investment opportunities:
 - The secondary font, [Lexand Deca](https://fonts.google.com/specimen/Lexend+Deca) was chosen because it is Monospace, is a very clean font, which looks great bold and in uppercase. The spacing equal spacing allowed for easy use in based on character length. It was perfect for a strong brand logo as well as use for headings.
 
 ### Icons
-
-
 - Icons are taken from the new Bootstrap Icon library and so are SVG files,
 - Icons are utilised in the navbar for Account and Cart for consistency with other sites, a search icon is used on smaller screens.
 
 ### Colors
-
 - I wanted the site to look clean, professional and smart.
 - Using bright and visually appealing colours on the homepage relect aspects of desireable qualities in photography and videography and is reflected in the hero image.
 - The colors chosen are both bold and subtle for uses such as hover or active.
@@ -401,7 +401,7 @@ Reach out for collaboration or investment opportunities:
 
 ### Toasts
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/92019714-59a2ca80-ed57-11ea-8bfc-9c09f6115c12.png" alt="Toasts">
+  <img src=" alt="Toasts">
 </div>
 
 - Bootstrap Toasts are used to notify users of their actions on the page.
@@ -424,8 +424,8 @@ Reach out for collaboration or investment opportunities:
 ### All Pages
 #### Navbar
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/90983901-e4264580-e571-11ea-969a-2691fab45c57.png" alt="Medium Header"><br>
-  <img src="https://user-images.githubusercontent.com/44118951/90983900-e1c3eb80-e571-11ea-9b2e-63367348af77.png" alt="Small Header">
+  <img src="" alt="Medium Header"><br>
+  <img src="" alt="Small Header">
 </div>
 
 - The Navbar is the single persistent item across the site, as a footer has been foregone in favour of the infinite scroll.
@@ -444,7 +444,7 @@ Reach out for collaboration or investment opportunities:
 ### Product List Page
 #### StockDrop Carousel
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/90984657-a677eb80-e576-11ea-9cde-db27388571c1.png" alt="Stockdrop Carousel"><br>
+  <img src="" alt="Stockdrop Carousel"><br>
 </div>
 
 - Used as a splash image that highlights the most recent collections.
@@ -456,7 +456,7 @@ Reach out for collaboration or investment opportunities:
 
 #### Product Box
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/91299975-c855b600-e7a2-11ea-933b-faf304c4f86b.png" alt="Product Box"><br>
+  <img src="" alt="Product Box"><br>
 </div>
 
 - Used as the main item in the feed, as a 3x3 grid on larger screens, singly on smaller screens.
@@ -482,7 +482,7 @@ Reach out for collaboration or investment opportunities:
 ### Product Detail Page
 #### Product Detail Box
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/91301917-f4266b00-e7a5-11ea-8374-4f804d0b7b5c.png" alt="Product Detail"><br>
+  <img src="" alt="Product Detail"><br>
 </div>
 
 - Displays information similar to the product box but adds a description section, with larger text and buttons.
@@ -491,7 +491,7 @@ Reach out for collaboration or investment opportunities:
 
 #### Related Items Bar
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/91303564-80d22880-e7a8-11ea-8474-187ab22f5ac4.png" alt="Product Detail"><br>
+  <img src="" alt="Product Detail"><br>
 </div>
 
 - Highlights up to nine other popular products in the same category as the chosen product.
@@ -502,7 +502,7 @@ Reach out for collaboration or investment opportunities:
 ### Account Pages
 #### Singup and Login
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/91305151-e58e8280-e7aa-11ea-8455-214e0b86b602.png" alt="Product Box"><br>
+  <img src="" alt="Product Box"><br>
 </div>
 
 - [django-allauth](https://github.com/pennersr/django-allauth) is used for account verification functions.
@@ -516,42 +516,23 @@ Reach out for collaboration or investment opportunities:
 - Trying to access another user's page will result in your own page being displayed as the view checks for the current logged in user and utilises that for the page context.
 - Able to save Shipping and Billing details separately, so when making an order the fields will automatically be filled in.
 
-### Likes Pages
-#### Likes
-- A list in reverse chronological order of all liked items.
-- Page follows the same layout as other product feed pages.
-- Can be used without logging in and the items will be saved to the session storage.
-- If logged in, the items will be saved directly to the user account. 
-- Any items that are stored in the session will be transferred to the user account upon login or account creation.
-- if the user gets to the page without liked items it gives an option to head back to the main page. 
 
-#### Likes Popover Notification
-<div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/92010500-29a0fa80-ed4a-11ea-8efb-f5ad77b86328.png" alt="Like Popover"><br>
-</div>
-
-- The popover in the navbar will update when a product is liked.
-- displays only the recent likes so it doesn't become a long list. 
-- is persistent on all pages. 
-- Icon pulses as confirmation rather than opening to remain unobtrusive. 
-
-### Cart Pages
-#### Cart 
-- Shows a list of items that have been added to the cart. 
+### Basket Page 
+#### Basket 
+- Shows a list of items that have been added to the basket. 
 - Information varies depending on product characteristics like quantity or size.
-- Quantity can be altered, but cannot be increased above max stock. 
+- Quantity can be updated, but cannot be increased above max stock. 
 - Items can be removed without page reloading, they will fade out and a notification will fire.
 - The total will also refresh when quantity is updated or an item is removed.
 - If the page is empty, a button leading to the home page is shown.
 
-#### Cart Popover
+#### Add to Basket Shortcut
+- There is a button on the products page located at the bottom right of the product card.
+- The button allows the user to add the item directly to their basket for quick and easy shopping more popular on lower ticket items.
+- A quantity of one item per click of button will be added to the basket at a time. 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/92010878-9c11da80-ed4a-11ea-800d-867e624e7190.png" alt="Cart Popover"><br>
-</div>
+  <img src="documentation/readme_images/add_to_basket_shortcut.png" alt="Basket Shortcut"><br>
 
-- Similar to the like popover but will update when a product is added.
-- Icon pulses and has a badge showing the number of items in the cart.
-- Can go straight to the checkout.
 
 ### Checkout Pages
 #### Payment Page
@@ -605,7 +586,7 @@ Reach out for collaboration or investment opportunities:
     - The items saved by users will be saved in reverse chronological order by utilising a "through" model table on the ManytoMany field.
     - Products have a "popularity" field that updates on likes, and stock changes.
     - Products are sorted by both popularity and stock quantity.
-    - Delivery is €9 and is free above €60.
+    - Delivery is free above £50. Postage costs vary per products and per quantity and delivery destination.
 
 ### Users
 - Anonymous Users
