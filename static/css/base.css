@@ -1,6 +1,13 @@
-html {
+html, body {
     height: 100%;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 body, .default-background {
     background-color: #fff;
 }
@@ -112,7 +119,7 @@ body.home-page {
 
 /* ----- Products ------ */
 .main-product-row {
-    margin-top: 200px !important;
+    margin-top: 50px !important;
 }
 
 .individual-product-row {
@@ -310,10 +317,8 @@ body.home-page {
 
 /* ----- Footer ------ */
 footer {
-    position: fixed;
-    bottom: 0;
     left: 0;
-    width: 100%;
+    margin-top: auto;
     background: #fff; /* or any background you want */
     z-index: 1000;
     padding: 20px 0 10px;
@@ -380,6 +385,7 @@ body.faq-form-page {
 .faq-accordion-container,
 .faq-form-container {
     margin-top: 200px !important;
+    padding-bottom: 250px !important;
 }
 
 /* FAQ Accordion */

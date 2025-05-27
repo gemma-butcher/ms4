@@ -114,6 +114,9 @@
         </div>
     </header>
 
+    {% block content %}
+    {% endblock %}
+
     <footer class="mt-auto bg-light text-center py-3 border-top">
         <div class="footer-container">
             <div class="footer-section">
@@ -161,8 +164,6 @@
     </div>
     {% endif %}
 
-    {% block content %}
-    {% endblock %}
 
     {% block postloadjs %}
     <script type="text/javascript">
