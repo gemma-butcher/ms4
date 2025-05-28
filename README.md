@@ -78,7 +78,7 @@
     <summary><a href="#database-structure">Database Structure</a></summary>
 
     - [Details](#details)
-    - [Diagram](#diagram)
+    - [Entity Relationship Diagram](#diagram)
     </details></li>    
 
     <li><details>
@@ -532,6 +532,7 @@ Reach out for collaboration or investment opportunities:
 - A quantity of one item per click of button will be added to the basket at a time. 
 <div align="center">
   <img src="documentation/readme_images/add_to_basket_shortcut.png" alt="Basket Shortcut"><br>
+</div>
 
 
 ### Checkout Pages
@@ -646,11 +647,11 @@ Reach out for collaboration or investment opportunities:
 - I chose this instead of the standard **sqlite3** database given with a Django installation to utilise more advanced Database features available within Django. In particular, weighted text search, and array fields in the DB.
 - The project is directly connected to the deployed database on Heroku during development as this was necessary to utilise a Postgres database on Gitpod while using the Code Institute Dockerfile.
 
-### Diagram
+### Entity Relationship Diagram
 - The diagram shows a layout of the tables created by my models in the database.
 - The diagram below omits the tables created by default, except the user table, as well as the tables created by [django-allauth](https://django-allauth.readthedocs.io/en/latest/index.html).
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/44118951/91736967-c3cc3b80-ebae-11ea-8905-661c3a1e9f8c.png" alt="Database Diagram"><br>
+  <img src="documentation/readme_images/erd.png" alt="Database Entity Relationship Diagram"><br>
 </div>
 
 
@@ -667,16 +668,17 @@ Reach out for collaboration or investment opportunities:
 
 | Column Name | Validation | Field Type |
  --- | --- | ---
+id | pk, null=False | bigint
 order_number | max_length=32, null=False, editable=False | CharField
 email | max_length=254, null=False, blank=False | CharField
-billing_full_name | max_length=50, null=False, blank=False | CharField
-billing_phone_number | null=False, blank=False | CustomPhoneNumberField
-billing_postcode | max_length=20, default='', blank=True | CharField
-billing_town_or_city | max_length=40, null=False, blank=False | CharField
-billing_street_address_1 | max_length=80, null=False, blank=False | CharField
-billing_street_address_2 | max_length=80, null=False, blank=False | CharField
-billing_county | max_length=80, default='', blank=True | CharField
-billing_country | blank_label='Country *', null=False, blank=False | CountryField
+full_name | max_length=50, null=False, blank=False | CharField
+phone_number | null=False, blank=False | CustomPhoneNumberField
+country | blank_label='Country *', null=False, blank=False | CountryField
+postcode | max_length=20, default='', blank=True | CharField
+town_or_city | max_length=40, null=False, blank=False | CharField
+street_address_1 | max_length=80, null=False, blank=False | CharField
+street_address_2 | max_length=80, null=False, blank=False | CharField
+county | max_length=80, default='', blank=True | CharField
 shipping_full_name | max_length=50, null=False, blank=False | CharField
 shipping_phone_number | null=False, blank=False | CustomPhoneNumberField
 shipping_postcode | max_length=20, default='', blank=True | CharField
@@ -690,15 +692,18 @@ delivery_cost | max_digits=6, decimal_places=2, null=False, default=0 | DecimalF
 order_total | max_digits=10, decimal_places=2, null=False, default=0 | DecimalField
 grand_total | max_digits=10, decimal_places=2, null=False, default=0 | DecimalField
 user_profile_id | on_delete=models.SET_NULL, null=True, blank=True, related_name='orders' | ForeignKey to UserProfile
-original_cart | null=False, blank=False | TextField
+original_bag | null=False, blank=False | TextField
 stripe_pid | max_length=254, null=False, blank=False | CharField
+user_profile_id |  | bigint
 
-#### OrderLineItem Model
+#### checkout orderlineitem Model
 **Notes:**
 - Is created after an Order is created as it relies on the Order to work.
 
 | Column Name | Validation | Field Type |
  --- | --- | ---
+id | pk, null=False | bigint
+product_size |  | CharField
 quantity | null=False, blank=False, default=0 | IntegerField
 lineitem_total | max_digits=6, decimal_places=2, editable=False, null=False, blank=False | DecimalField
 order_id | on_delete=models.CASCADE, null=False, blank=False, related_name='lineitems' | ForeignKey to Order
@@ -708,6 +713,7 @@ product_id | on_delete=models.CASCADE, null=False, blank=False | ForeignKey to P
 #### Email Model
 | Column Name | Validation | Field Type |
  --- | --- | ---
+id | pk, null=False | bigint
 email | blank=False, null=False | EmailField
 name | max_length=60, blank=False, null=False | CharField
 subject | max_length=254, blank=False, null=False | CharField
@@ -718,25 +724,22 @@ date | default=timezone.now | DateTimeField
 #### Category Model
 | Column Name | Validation | Field Type |
  --- | --- | ---
+id | pk, null=False | bigint
 name | max_length=254 | CharField
 friendly_name | max_length=254, default='' | CharField
 
 #### Product Model
 | Column Name | Validation | Field Type |
  --- | --- | ---
-name | max_length=254, default='' | 
-description |  | TextField
-price | max_digits=6, decimal_places=2 | DecimalField
+id | pk, null=False | bigint
+sku | null=False | CharField
+name | null=False | TextField
+description | null=False | TextField
+price | max_digits=7, decimal_places=2 null=False | DecimalField
+rating | max_digits=6, decimal_places=2 | TextField
 image | default='default.png', upload_to='product_images' | ImageField
-date_added | default=timezone.now | DateTimeField
-admin_tags | max_length=40), size=8 | ArrayField
-is_unique | default=True, blank=False, null=False | BooleanField
-stock | default=1, blank=False, null=False | SmallIntegerField
-size | max_length=2, default='', blank=True | CharField
-popularity | default=0, blank=False, null=False, editable=False | IntegerField
-times_purchased | default=0, blank=False, null=False, editable=False | IntegerField
+image_url |  | Charfield
 category_id | 'Category', null=True, blank=True, related_name='products' on_delete=models.SET_NULL, | ForeignKey to Category
-stock_drop_id | 'StockDrop', null=True, blank=True, on_delete=models.SET_NULL, related_name='products' | ForeignKey to Stockdrop
 
 #### Stockdrop Model
 | Column Name | Validation | Field Type |
@@ -751,31 +754,32 @@ display | default=True | BooleanField
 #### Userprofile Model
 | Column Name | Validation | Field Type |
  --- | --- | ---
-billing_full_name | max_length=50, default='', blank=True | CharField
-billing_phone_number | default='', blank=True | CustomPhoneNumberField
-billing_postcode | max_length=20, default='', blank=True | CharField
-billing_town_or_city | max_length=40, default='', blank=True | CharField
-billing_street_address_1 | max_length=80, default='', blank=True | CharField
-billing_street_address_2 | max_length=80, default='', blank=True | CharField
-billing_county | max_length=80, default='', blank=True | CharField
-billing_country | blank_label='Country', default='', blank=True | CountryField
-shipping_full_name | max_length=50, default='', blank=True | CharField
-shipping_phone_number | default='', blank=True | CustomPhoneNumberField
-shipping_postcode | max_length=20, default='', blank=True | CharField
-shipping_street_address_1 | max_length=80, default='', blank=True | CharField
-shipping_street_address_2 | max_length=80, default='', blank=True | CharField
-shipping_town_or_city | max_length=40, default='', blank=True | CharField
-shipping_county | max_length=80, default='', blank=True | CharField
-shipping_country | blank_label='Country', default='', blank=True | CountryField
-user | on_delete=models.CASCADE | ForeignKey to User
-liked_products | blank=True, related_name='users', through='Liked' | ManyToManyField to Product
+id | pk, null=False | bigint
+user_id | null=False, Unique | Charfield
+default_phone_number | default='', blank=True | CustomPhoneNumberField
+default_postcode | max_length=20, default='', blank=True | CharField
+default_town_or_city | max_length=40, default='', blank=True | CharField
+default_street_address_1 | max_length=80, default='', blank=True | CharField
+default_street_address_2 | max_length=80, default='', blank=True | CharField
+default_county | max_length=80, default='', blank=True | CharField
+default_country | blank_label='Country', default='', blank=True | CountryField
 
-#### Liked Model
+### FAQ App
+#### Categories Model
 | Column Name | Validation | Field Type |
  --- | --- | ---
-product_id | on_delete=models.CASCADE | ForeignKey to Product
-userprofile_id | on_delete=models.CASCADE | ForeignKey to Userprofile
-datetime_added | auto_now_add=True | DateTimeField
+id | pk, null=False | pk, null=False | bigint
+name | Null=False | CharField
+
+#### FAQ Model
+| Column Name | Validation | Field Type |
+ --- | --- | ---
+id | pk, null=False | bigint
+question | null=False | CharField
+answer | null=False | CharField
+created_on | null=False | timestamp
+updated_on | null=False | timestamp
+category_id | null=False | bigint
 
 ----
 
