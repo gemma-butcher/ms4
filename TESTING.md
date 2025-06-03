@@ -55,6 +55,8 @@ For testing compatibility, I created a testing matrix to test across multiple de
 
 ## Code Validation
 
+### Html Validation
+
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project. The results and screenshots are in the table below.
 
 | Page                 | Screenshot Link                                                                   | Notes  |
@@ -68,6 +70,17 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 |delete_slang.html     |[view here](documentation/testing_images/html_validation/)    | Passed |
 |404.html              |[view here](documentation/testing_images/html_validation/)             | Passed |
 |CSS                   |[view here](documentation/testing_images/html_validation/)   | Passed. Warnings due to root variables not able to be tested|
+
+### CSS Validation
+
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project. The results and screenshots are in the table below.
+
+| Page                 | Screenshot Link                                               | Notes  |
+|----------------------|---------------------------------------------------------------|--------|
+|base.css       |[view here](documentation/testing_images/css_validation/base_css.png) | Passed | 
+|profiles.css   |[view here](documentation/testing_images/html_validation/profile_css.png) | Passed |
+|checkout.css   |[view here](documentation/testing_images/html_validation/checkout_css.png) | Passed |
+
 
 ##### back to [top](#table-of-contents)
 

@@ -2,7 +2,6 @@
 {% block title %}Page Not Found{% endblock %}
 {% block body_class %}default-background{% endblock %}
 {% load static %}
-
 {% block content %}
 <div class="container py-5">
     <div class="row justify-content-center">
@@ -16,11 +15,11 @@
                         Sorry, the page you are looking for does not exist.<br>
                         It might have been moved or deleted.
                     </p>
-                    <a href="{% url 'products' %}" class="btn btn-primary btn-lg mr-2">
-                        Back to Products
+                    <a href="{% url 'home' %}" class="btn btn-primary btn-lg">
+                        Back to Home
                     </a>
-                    <a href="{% url 'index' %}" class="btn btn-secondary btn-lg">
-                        Home Page
+                    <a href="{% url 'products' %}" class="btn btn-secondary btn-lg ml-2">
+                        Browse Products
                     </a>
                 </div>
             </div>
