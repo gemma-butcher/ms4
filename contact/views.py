@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Contact
 
+
 def contact(request):
     if request.method == 'POST':
         name = request.POST.get('name')

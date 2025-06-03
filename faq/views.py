@@ -13,7 +13,10 @@ def faq_list(request):
     categories = {}
     for faq in faqs:
         categories.setdefault(faq.category, []).append(faq)
-    faq_data = [{'category': cat, 'questions': qs} for cat, qs in categories.items()]
+    faq_data = [
+        {'category': cat, 'questions': qs}
+        for cat, qs in categories.items()
+    ]
     return render(request, 'faq/faq_list.html', {'faq_data': faq_data})
 
 
@@ -26,6 +29,7 @@ def faq_add(request):
     else:
         form = FAQForm()
     return render(request, 'faq/faq_add.html', {'form': form})
+
 
 @user_passes_test(lambda u: u.is_superuser)
 def faq_update(request, pk):

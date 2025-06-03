@@ -1,6 +1,7 @@
 from django import forms
 from .models import FAQ
 
+
 class FAQForm(forms.ModelForm):
     class Meta:
         model = FAQ
@@ -8,4 +9,6 @@ class FAQForm(forms.ModelForm):
 
         def __init__(self, *args, **kwargs):
             super().__init__(*args, **kwargs)
-            self.fields['category'].empty_label = "Please select a category from the dropdown list"
+            self.fields['category'].empty_label = (
+                "Please select a category from the dropdown list"
+            )
