@@ -61,7 +61,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 | Page                 | Screenshot Link                                                                   | Notes  |
 |----------------------|-----------------------------------------------------------------------------------|--------|
-|index.html            |[view here](documentation/testing_images/html_validation/)           | Passed | 
+|index.html            |[view here](documentation/testing_images/html_validation/index_html_w3c.png)  | Passed | 
 |login.html            |[view here](documentation/testing_images/html_validation/)           | Passed |
 |signup.html           |[view here](documentation/testing_images/html_validation/)          | Passed |
 |dashboard.html        |[view here](documentation/testing_images/html_validation/)       | Passed | 
