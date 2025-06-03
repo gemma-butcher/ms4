@@ -59,18 +59,18 @@ For testing compatibility, I created a testing matrix to test across multiple de
 
 The W3C Markup Validator was used to validate every html page of the project to ensure there were no syntax errors in the project. The results and screenshots are in the table below.
 
-| Page                  | Screenshot Link                                                                   | Notes  |
-|-----------------------|-----------------------------------------------------------------------------------|--------|
-|base.html              |[view here](documentation/testing_images/html_validation/base_html_w3c.png)        | Passed |
-|index.html             |[view here](documentation/testing_images/html_validation/index_html_w3c.png)       | Passed |
-|main-nav.html          |[view here](documentation/testing_images/html_validation/products_html_w3c.png)    | Passed |
-|mobile-top-header.html |[view here](documentation/testing_images/html_validation/products_html_w3c.png)    | Passed |
-|products.html          |[view here](documentation/testing_images/html_validation/products_html_w3c.png)    | Passed |
-|product-detail.html    |[view here](documentation/testing_images/html_validation/)                         | Passed |
-|edit-product.html      |[view here](documentation/testing_images/html_validation/)                         | Passed | 
-|add-product.html       |[view here](documentation/testing_images/html_validation/)                         | Passed |
-|profile.html           |[view here](documentation/testing_images/html_validation/)                         | Passed | 
-|bag.html               |[view here](documentation/testing_images/html_validation/)                         | Passed |
+| Page                  | Screenshot Link                                                                       | Notes  |
+|-----------------------|---------------------------------------------------------------------------------------|--------|
+|base.html              |[view here](documentation/testing_images/html_validation/base_html_w3c.png)            | Passed |
+|index.html             |[view here](documentation/testing_images/html_validation/index_html_w3c.png)           | Passed |
+|main-nav.html          |[view here](documentation/testing_images/html_validation/products_html_w3c.png)        | Passed |
+|mobile-top-header.html |[view here](documentation/testing_images/html_validation/products_html_w3c.png)        | Passed |
+|products.html          |[view here](documentation/testing_images/html_validation/products_html_w3c.png)        | Passed |
+|product-detail.html    |[view here](documentation/testing_images/html_validation/product_details_html_w3c.png) | Passed |
+|edit-product.html      |[view here](documentation/testing_images/html_validation/)                             | Passed | 
+|add-product.html       |[view here](documentation/testing_images/html_validation/)                             | Passed |
+|profile.html           |[view here](documentation/testing_images/html_validation/)                             | Passed | 
+|bag.html               |[view here](documentation/testing_images/html_validation/)                             | Passed |
 |checkout.html          |[view here](documentation/testing_images/html_validation/)         | Passed |
 |checkout-success.html  |[view here](documentation/testing_images/html_validation/)         | Passed |
 |contact.html           |[view here](documentation/testing_images/html_validation/)         | Passed |
