@@ -648,8 +648,7 @@ Reach out for collaboration or investment opportunities:
 - The project is directly connected to the deployed database on Heroku during development as this was necessary to utilise a Postgres database on Gitpod while using the Code Institute Dockerfile.
 
 ### Entity Relationship Diagram
-- The diagram shows a layout of the tables created by my models in the database.
-- The diagram below omits the tables created by default, except the user table, as well as the tables created by [django-allauth](https://django-allauth.readthedocs.io/en/latest/index.html).
+- The diagram shows a layout of the tables created by my models in the database..
 <div align="center">
   <img src="documentation/readme_images/erd.png" alt="Database Entity Relationship Diagram"><br>
 </div>
@@ -740,15 +739,6 @@ rating | max_digits=6, decimal_places=2 | TextField
 image | default='default.png', upload_to='product_images' | ImageField
 image_url |  | Charfield
 category_id | 'Category', null=True, blank=True, related_name='products' on_delete=models.SET_NULL, | ForeignKey to Category
-
-#### Stockdrop Model
-| Column Name | Validation | Field Type |
- --- | --- | ---
-name | max_length=30, null=False | CharField
-description | max_length=200, null=False | CharField
-image | upload_to='stock_drop' | ImageField
-date_added | default=timezone.now | DateTimeField
-display | default=True | BooleanField
 
 ### Users App
 #### Userprofile Model
