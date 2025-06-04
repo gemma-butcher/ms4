@@ -40,9 +40,7 @@ def adjust_bag(request, item_id):
     """
     Adjust the quantity of the specified product to the specified amount
     """
-
     product = get_object_or_404(Product, pk=item_id)
-
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url', 'view_bag')
     size = None
@@ -53,7 +51,7 @@ def adjust_bag(request, item_id):
     if size:
         if item_id in list(bag.keys()):
             if size in bag[item_id]['items_by_size'].keys():
-                bag[item_id]['items_by_size'][size] += quantity
+                bag[item_id]['items_by_size'][size] = quantity  # <-- set, don't add
                 messages.success(
                     request,
                     (
@@ -75,7 +73,7 @@ def adjust_bag(request, item_id):
             )
     else:
         if item_id in list(bag.keys()):
-            bag[item_id] += quantity
+            bag[item_id] = quantity  # <-- set, don't add
             messages.success(
                 request,
                 f'Updated {product.name} quantity to {bag[item_id]}'

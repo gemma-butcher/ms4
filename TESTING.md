@@ -180,26 +180,26 @@ The project user stories have been met with the following features;
 
        The accordion can be seen below.
 
-![screenshot](documents/readme/accordion.png)
+![screenshot]()
 
 
 ✅  click on slang terms to view their definitions and sample usage, so I can understand the meaning and context.
 
    ItScool provides:<br>
-      * a bootstrap accordion which when clicked, reveals slang words listed with their corresponding definitions. Viewable [here](documents/readme/accordion.png).<br>
+      * a bootstrap accordion which when clicked, reveals slang words listed with their corresponding definitions. Viewable [here]().<br>
 
 
 ✅  search for slang terms by typing keywords or phrases, so I can quickly find the slang term I'm interested in.
 
    ItScool provides:<br>
-    * A search bar enabling the user to search for slang terms, that are relevance from partial matching using fuzzywuzzy. This displays partial match results due to the nature of slang spellings. This can be seen [here](documents/readme/search_function.png).<br>
-    * A search result area displaying the results of the search. Viewable [here](documents/readme/search_results.png).
+    * A search bar enabling the user to search for slang terms, that are relevance from partial matching using fuzzywuzzy. This displays partial match results due to the nature of slang spellings. This can be seen [here]().<br>
+    * A search result area displaying the results of the search. Viewable [here]().
 
 
 ✅  browse slang terms by selecting a letter from A-Z, so I can easily find terms that start with a specific letter.
 
    ItScool provides:<br>
-     * a bootstrap accordion of all slangs listed alphabetically on all devices. The accordion can be seen [here](documents/readme/accordion.png).
+     * a bootstrap accordion of all slangs listed alphabetically on all devices. The accordion can be seen [here]().
 
 ✅  as a new user, create an account by providing a username and password, so I can log in and use additional features.
 
@@ -492,24 +492,145 @@ It is particuarly useful as it can encompass a wide range of input from stakehol
 
 ### Automated Testing
 
-Test Driven Development (TDD) is where developers test first and use these results to guide theor development. The process begins when tests are written in order to fail but only so much so that the tests dont break the programme. TDD is thought of as more developer-centric, and is revolves around code correctness.
-
-A popular technique in TDD is Red-Green-Refactor. TDD is a manageable way of testing code breaking it down into manageable chunks. This is explained below;
-Red - Write a failing test. Script a test that will fail around a specific function of the programme.
-Green - Make the test pass, enough needs to be done to get it to pass and work
-Refactor - Clean up the code. Refining the code is done making it efficient and reliable. 
-
-An example of automated testing for this project would be;
-
--Red - A test is written for Background image does not change on start game button being clicked.
-
--Green - Add background image function with event listeners to the start game button so background changes on click. 
-
--Refactor - Tidy code up and minimise where possible. Check reliability. Revisit when more functions or event listeners are added, or the original function is extended. Monitor.
-
 Various language specific frameworks are available to run automated testing. One of the most popular is Jest for testing JavaScript. 
 
 It is best to combine manual and automated testing. Automated tests will not test user experience and tests will only ever be as good as the questions we ask it to perform.
+
+#### Bag App Test (BagViewTest)
+The BagViewTests class is designed to comprehensively test the main features and user interactions of the bag (shopping cart) functionality in the application. It uses Django’s built-in test client to simulate user actions and verify that the bag behaves as expected.
+
+Test Coverage
+The tests cover the following core features:
+
+Viewing the Bag
+Adding Items to the Bag
+Adjusting Item Quantities
+Removing Items from the Bag
+1. Viewing the Bag
+Test: test_view_bag_get
+Purpose: Ensures that the bag page is accessible and renders correctly.
+How:
+The test sends a GET request to the bag page using the URL pattern 'view_bag'.
+It asserts that the response status code is 200 (OK) and that the correct template is used.
+Why:
+This confirms that users can always access their bag and that the view and template are set up correctly.
+2. Adding Items to the Bag
+Test: test_add_to_bag
+Purpose: Verifies that a user can add a product to their bag.
+How:
+The test simulates a POST request to the add_to_bag view, sending the product ID, quantity, and a redirect URL.
+It checks that the response redirects to the correct page and that the session data contains the correct product and quantity.
+Why:
+This ensures that the add-to-bag functionality works, the session is updated, and the user receives appropriate feedback.
+3. Adjusting Item Quantities
+Test: test_adjust_bag
+Purpose: Ensures that users can change the quantity of an item already in their bag.
+How:
+The test first adds a product to the bag, then simulates a POST request to the adjust_bag view with a new quantity.
+It asserts that the session data reflects the updated quantity (not the sum of old and new, but the new value).
+Why:
+This test checks that the adjust functionality sets the quantity as expected, matching user intent and preventing accidental over-adding.
+4. Removing Items from the Bag
+Test: test_remove_from_bag
+Purpose: Verifies that users can remove items from their bag.
+How:
+The test adds a product to the bag, then simulates a POST request to the remove_from_bag view.
+It checks that the product is no longer present in the session bag data.
+Why:
+This ensures that the remove functionality works and that users can manage their bag contents as expected.
+Why These Tests Matter
+Reliability: They ensure the bag’s core features work as intended after every code change.
+User Experience: They help guarantee that users can add, adjust, and remove products without unexpected behavior.
+Regression Prevention: They catch bugs early, especially after refactoring or adding new features.
+
+On the first test the app failed. The image of the terminal can be seen below.
+
+![screenshot](documentation/testing_images/automated_testing/bag_auto_test_fail.png)
+
+
+What Was Wrong
+Previously, the adjust_bag view was adding the new quantity to the existing quantity in the bag.
+For example, if the bag already had 2 of an item in the bag and you tried to "adjust" it to 5, the code would add 5 to 2, resulting in 7.
+This is not the expected behavior for an "adjust" action—users expect the quantity to be set to the new value, not increased by it.
+
+What the Fix Does:
+The fix changes the logic so that when you adjust the quantity of an item in the bag, it sets the quantity to the new value provided by the user, rather than adding to the existing quantity.
+
+Key Line Changed:
+Before (incorrect): bag[item_id] += quantity
+
+![screenshot](documentation/testing_images/automated_testing/bag_fail_code_snippet.png)
+
+After (correct): bag[item_id] = quantity
+
+![screenshot](documentation/testing_images/automated_testing/bag_fixed_snippet.png)
+ 
+How the Fixed Code Works
+Retrieve the Bag:
+The bag is fetched from the session. If it doesn’t exist, an empty dictionary is used.
+
+Check for Product Size:
+If the product has sizes (like S, M, L), the code adjusts the quantity for the specific size.
+
+Adjust Quantity (No Size):
+
+If the item is already in the bag, its quantity is set to the new value (bag[item_id] = quantity).
+If the item is not in the bag, it is added with the specified quantity.
+Save the Bag:
+The updated bag is saved back to the session.
+
+Redirect:
+The user is redirected to the appropriate page.
+
+Why This Fix Is Important
+Correct User Experience:
+When users adjust the quantity of an item in their bag, they expect the number to be exactly what they set, not the sum of the old and new values.
+
+Test Consistency:
+The automated tests expect the quantity to be set, not added. This fix ensures your tests pass and your app behaves as users expect.
+
+Prevents Over-Adding:
+Without this fix, users could accidentally end up with more items in their bag than intended.
+
+In summary:
+The fix ensures that "adjusting" a bag item sets its quantity to the user’s chosen value, matching both user expectations and your test logic.
+The test pass returning a print to the terminal of 'ok' can be seen below
+
+![screenshot](documentation/testing_images/automated_testing/auto_test_bag_pass.png)
+
+#### Contact App Test (ContactViewTest)
+Contact App Automated Test Summary
+The automated tests for the contact app ensure both the accessibility and functionality of the contact form:
+Below is an image of the test file followed by the summary.<br>
+![screenshot](documentation/testing_images/automated_testing/contact_app_auto_test_file.png)<br>
+
+1. GET Request Test
+Purpose:
+Verifies that the contact page loads successfully when accessed by a user.
+How it works:
+The test sends a GET request to the contact page URL and checks that the server responds with a status code 200 (OK).
+It also confirms that the correct template (contact/contact.html) is used to render the page.
+Why it matters:
+This ensures that users can reach the contact form without errors and that the page is set up correctly in the Django project.
+
+2. POST Request Test
+Purpose:
+Simulates a user submitting the contact form and verifies that the form data is processed correctly.
+How it works:
+The test sends a POST request with sample form data (name and email) to the contact page.
+It then checks that:
+The response status is 200, indicating the page reloads successfully.
+The submitted data is saved in the database (i.e., a new Contact object is created).
+The response contains a success indicator, confirming that the user receives feedback after submitting the form.
+Why it matters:
+This test ensures that the contact form works end-to-end: users can submit their information, the backend processes and stores the data, and users receive confirmation that their message was sent.
+In summary:
+These tests provide confidence that the contact page is always accessible and that the contact form reliably accepts and stores user submissions, helping to catch issues early in development or after changes.
+The confirmation that the test passed with aan output of 'ok' is shown below in the terminal.
+<br>
+
+
+![screenshot](documentation/testing_images/automated_testing/contact_app_auto_test_terminal.png)<br>
 
 ## Further Testing
 
