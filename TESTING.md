@@ -431,20 +431,21 @@ It is particuarly useful as it can encompass a wide range of input from stakehol
 
 | **Feature**          | **Test Details**           | **Expected results**                      | **Pass/Fail** |                                             
 | :-- | :-- | :-- | :-- |
-| ItScool Nav Link | Click to redirect to index page | Links to start page, except when modal displayed | Pass |
-| Signup Nav Link | Click to direct to signup page | Links to signup page, except when modal displayed or logged in| Pass |
-| Login Nav Link | Click to direct to Login page | Links to login page, except when modal displayed and currently logged in | Pass |
-| Logout Nav Link | Click to logout | Logs out unless already logged out. redirects to login page | Pass |
-| User Dashboard nav link | Click to direct to user dashboard | Links to user dashboard, visible when logged in as user | Pass |
-| Add Slang Nav Link | Click to direct to add slang page| Links to add slang, visible when logged in as user | Pass |
+| I-Snap Nav Logo Link | Click to redirect to index page | Links to start page | Pass |
+| Signup Nav Link | Click to direct to signup page | Links to signup page , unless already logged in then redirect to user profile page | Pass |
+| Login Nav Link | Click to direct to Login page | Links to login page, unless already logged in then redirect to user profile page | Pass |
+| Logout Nav Link | Click to logout | Logs user out unless already logged out. redirects to login page. Toast Message successfully logged out shows | Pass |
+| My Account menu (logged out) | Click My Account and select register or login. | Login link takes user to login page. Register link takes user to sign up page | Pass |
+| My Account menu (logged in admin) | Click My Account and select Product management, register or login. | Product management takes admin user to product management page, Login link takes user to login page. Register link takes user to sign up page | Pass |
+| Shopping bag link | Click shopping bag icon | takes user to their shopping bag | Pass |
 | Remove Slang Nav Link | Click to direct to remove slang page| Links to remove slang, visible when logged in as user | Pass |
 | Admin Dashboard Nav Link | Click to direct to admin dashboard | Links to admin dashboard, visible when logged in as admin | Pass |
 | Sign Up & Login Link | Click links to direct to relevant page | Links to relevant page | Pass |
 | Sign Up | create user name and password, attempt login | Creates username and password. Logs in | Pass |
 | Auto date change in footer | Check year is present and correct on loading | Shows current year in span in footer | Pass |
 | 404 Page | Type unknown url extention in browser | Page loads when a page cannot be found or error occurs | Pass |
-| 404 take me home button | Click take me home button | Redirects to index and links to index.html page on click | Pass |
-| 404 redirect | Check redirect after 10 seconds of inactivity | Redirects to index after 10 seconds | Pass |
+| 404 back to home button | Click take me home button | Redirects to index and links to index.html page on click | Pass |
+| 404 Browse Products Button | Click Browse products button on the 404 page | Redirects user to products page | Pass |
 
 - Below is a table of the manual user testing carried for products.
 
@@ -472,19 +473,23 @@ It is particuarly useful as it can encompass a wide range of input from stakehol
 | Logout | Click link in admin and user navbar | Logs user out and redirects to login page | Pass |
 
 - Below is a table of the manual user testing carried for contact.
+
 | **Feature**          | **Test Details**           | **Expected results**                      | **Pass/Fail** |                                             
 | :-- | :-- | :-- | :-- |
 
 - Below is a table of the manual user testing carried for FAQ's.
+
 | **Feature**          | **Test Details**           | **Expected results**                      | **Pass/Fail** |                                             
 | :-- | :-- | :-- | :-- |
-| Admin Delete Slang | Input slang to delete, select from results and use confirmation modal to confirm. Re-search for deleted slang | Returns close matches, modal shows when delete button is clicked and removes from app, verified on re search | Pass |
-| Admin Pending Slangs | Add slang as user, log in as admin to check updated list | Request is shown in the pending slangs list and updates | Pass |
-| Admin Action Button (Approve) | Click approval button, check success by searching for approved slang. | Flash message appears with success. Slang is added to database | Pass |
-| Admin Action Button (Delete) | Click delete button, confirm in modal. | Confirming deletion removes slang from pending list and database | Pass |
-| Admin Action Button (Edit) | Click edit button |  Edit modal triggered and shows | Pass |
-| Admin Edit Modal | Enter input to edit pending slang, confirm or cancel | Pending slang is updated with edits upon saving changes, modal shuts upon clicking close button | Pass |
-| Add Slang Admin | Enter input to add slang | Search for new slang added using search bar | Pass |
+| FAQ Page | Click FAQ Link in footer quick links. Ensure FAQ page loads as expected | FAQ page loads as expected | Pass |
+| FAQ styling effects | Hover over accordion section and ensure hover effects work | Hover effects work as expected | Pass |
+| FAQ accordion category section expansion | Click FAQ category sections and ensure they expand with FAQ's as expected | Expand and reveal FAQ questions as expected | Pass |
+| FAQ accordion category section contraction | Click faq category sections when open and ensure they contract to hide FAQ's as expected | Contracts and hides FAQ questions as expected | Pass |
+| FAQ Questions expands to reveal answer | Click FAQ questions in a category and ensure answer is revealed | FAQ answer is revealed as expected. | Pass |
+| FAQ Questions contracts to hide answer | Click FAQ questions in a category and ensure answer is hidden | FAQ answer is hidden as expected. | Pass |
+| Admin Action Button (Add) | Ensure logged in as a superuser (@admin required), Click add FAQ button | Directed to Add FAQ page | Pass |
+| Admin Add FAQ Page | Enter a question, answer and select category from relevant fields. Click Create FAQ button, navigate to faq page to check questions and answer is added in selected category | Question and answer has been added to selected category| Pass |
+| Admin Action Button (Cancel) | Navigate to the Add FAQ page. Click the grey cancel button next to the create FAQ button. | Admin user is redirected back to the FAQ page | Pass |
 
 ##### back to [top](#table-of-contents)
 
@@ -497,6 +502,7 @@ Various language specific frameworks are available to run automated testing. One
 It is best to combine manual and automated testing. Automated tests will not test user experience and tests will only ever be as good as the questions we ask it to perform.
 
 #### Bag App Test (BagViewTest)
+
 The BagViewTests class is designed to comprehensively test the main features and user interactions of the bag (shopping cart) functionality in the application. It uses Django’s built-in test client to simulate user actions and verify that the bag behaves as expected.
 
 Test Coverage
@@ -599,7 +605,9 @@ The test pass returning a print to the terminal of 'ok' can be seen below
 ![screenshot](documentation/testing_images/automated_testing/auto_test_bag_pass.png)
 
 #### Contact App Test (ContactViewTest)
-Contact App Automated Test Summary
+
+##### Contact App Automated Test Summary
+
 The automated tests for the contact app ensure both the accessibility and functionality of the contact form:
 Below is an image of the test file followed by the summary.<br>
 ![screenshot](documentation/testing_images/automated_testing/contact_app_auto_test_file.png)<br>
