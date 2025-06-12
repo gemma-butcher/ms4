@@ -447,8 +447,8 @@ body.faq-form-page {
     border-radius: 12px;
 }
 
-/* 404 Page */
-.not-found-container {
+/* ------ 404 Page ------ */
+.container.not-found-container {
     margin-top: 200px !important;
     text-align: center;
 }
