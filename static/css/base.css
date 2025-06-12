@@ -245,7 +245,11 @@ body.home-page {
     border-radius: 0;
 }
 
-/* ------ Shopping cart ------ */
+/* ------ Shopping Bag ------ */
+.container.bag-container {
+    margin-top: 200px !important;
+}
+
 .basket-table {
     margin-top: 75px !important;
 }
