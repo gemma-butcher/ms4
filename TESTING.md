@@ -438,11 +438,17 @@ It is particuarly useful as it can encompass a wide range of input from stakehol
 | My Account menu (logged out) | Click My Account and select register or login. | Login link takes user to login page. Register link takes user to sign up page | Pass |
 | My Account menu (logged in admin) | Click My Account and select Product management, register or login. | Product management takes admin user to product management page, Login link takes user to login page. Register link takes user to sign up page | Pass |
 | Shopping bag link | Click shopping bag icon | takes user to their shopping bag | Pass |
-| Remove Slang Nav Link | Click to direct to remove slang page| Links to remove slang, visible when logged in as user | Pass |
-| Admin Dashboard Nav Link | Click to direct to admin dashboard | Links to admin dashboard, visible when logged in as admin | Pass |
-| Sign Up & Login Link | Click links to direct to relevant page | Links to relevant page | Pass |
-| Sign Up | create user name and password, attempt login | Creates username and password. Logs in | Pass |
+| Shop Now link | Click shop now link | Links and directs user to products page | Pass |
+| Login | Attempt login with registered username and password | logs user in and shows toast message to verify | Pass |
+| Sign Up | Create user name and password, attempt login | Creates username and password. Logs in | Pass |
 | Auto date change in footer | Check year is present and correct on loading | Shows current year in span in footer | Pass |
+| Footer Home Link | Click Home Link in footer | Relaoads index.html home page | Pass |
+| Footer Products Link | Click Products Link in footer | Directs user to the products page | Pass |
+| Footer FAQ Link | Click FAQ Link in footer | Directs user to the FAQ's page | Pass |
+| Footer Contact Link | Click Contact Link in footer | Directs user to the Contact page | Pass |
+| Footer Instagram Link | Click Instagram Link in footer | Directs user to the instgram website in new tab | Pass |
+| Footer Twitter Link | Click Twitter Link in footer| Directs user to the twitter website in new tab | Pass |
+| Footer Facebook Link | Click Facebook Link in footer | Directs user to the Facebook website in new tab | Pass |
 | 404 Page | Type unknown url extention in browser | Page loads when a page cannot be found or error occurs | Pass |
 | 404 back to home button | Click take me home button | Redirects to index and links to index.html page on click | Pass |
 | 404 Browse Products Button | Click Browse products button on the 404 page | Redirects user to products page | Pass |
