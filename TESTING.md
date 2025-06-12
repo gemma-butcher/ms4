@@ -441,6 +441,11 @@ It is particuarly useful as it can encompass a wide range of input from stakehol
 | Shop Now link | Click shop now link | Links and directs user to products page | Pass |
 | Login | Attempt login with registered username and password | logs user in and shows toast message to verify | Pass |
 | Sign Up | Create user name and password, attempt login | Creates username and password. Logs in | Pass |
+| Website search bar | Click the input box, enter search term, Click search icon | Presents likley results | Pass | 
+| All products drop down links | Click all products in the nav bar | Drop down all products menu options show : price, rating, category, all products | Pass |
+| Cameras drop down links | Click Cameras link in the nav bar | Drop down cameras menu options show : professional, instant, DSLR, all cameras | Pass |
+| Lenses products drop down links | Click lenses link in the nav bar | Drop down lenses menu options show : sport, telephoto, all lenses | Pass |
+| Special Offers drop down links | Click special offers link in the nav bar | Drop down all products menu options show : new arrivals, deals, clearance, all specials | Pass |
 | Auto date change in footer | Check year is present and correct on loading | Shows current year in span in footer | Pass |
 | Footer Home Link | Click Home Link in footer | Relaoads index.html home page | Pass |
 | Footer Products Link | Click Products Link in footer | Directs user to the products page | Pass |
@@ -453,10 +458,43 @@ It is particuarly useful as it can encompass a wide range of input from stakehol
 | 404 back to home button | Click take me home button | Redirects to index and links to index.html page on click | Pass |
 | 404 Browse Products Button | Click Browse products button on the 404 page | Redirects user to products page | Pass |
 
+
 - Below is a table of the manual user testing carried for products.
 
 | **Feature**          | **Test Details**           | **Expected results**                      | **Pass/Fail** |                                             
 | :-- | :-- | :-- | :-- |
+| Website search bar | Click the input box, enter search term, Click search icon | Presents likley results | Pass |
+| All products by price | Click the by price option in all products dropdown | Renders all products by price | Pass |
+| All products by rating | Click the by rating option in all products dropdown | Renders all products by rating | Pass |
+| All products by category | Click the by pcategory option in all products dropdown | Renders all products by category default category group a-z | Pass |
+| All products  | Click the All Products option in all products dropdown | Renders all products by price | Pass |
+| Professional cameras  | Click the professional option in cameras dropdown | Renders cameras categorised as professional | Pass |
+| Instant cameras  | Click the instant option in cameras dropdown | Renders cameras categorised as instant | Pass |
+| DSLR cameras  | Click the DSLR option in cameras dropdown | Renders cameras categorised as DSLR | Pass |
+| All Cameras  | Click the All cameras option in Cameras dropdown | Renders all cameras | Pass |
+| Sport Lenses  | Click the sport option in lenses dropdown | Renders lenses categorised as sport | Pass |
+| Telephoto Lenses  | Click the telephoto option in lenses dropdown | Renders lenses categorised as telephoto | Pass |
+| All Lenses  | Click the all lenses option in lenses dropdown | Renders all lenses | Pass |
+| New Arrivals  | Click the new arrivals option in special offers dropdown | Renders products categorised as a new arrival | Pass |
+| Deals  | Click the deals option in special offers dropdown | Renders products categorised as a deal | Pass |
+| Clearance  | Click the clearance option in special offers dropdown | Renders products categorised as a clearance | Pass |
+| All Specials  | Click the all specials option in special offers dropdown | Renders products categorised as a special | Pass |
+| Product sort dropdown | Click the sort dropdown bar | Dropdown shows various sorting categories to display products by | Pass |
+| Product sort Price (low to high) | Click the sort dropdown bar, click Price (low to high) | Products are shown in order of price ascending | Pass |
+| Product sort Price (high to low) | Click the sort dropdown bar, click Price (High to low) | Products are shown in order of price descending | Pass |
+| Product sort Rating (high to low) | Click the sort dropdown bar, click rating (low to high) | Products are shown in order of rating ascending | Pass |
+| Product sort Rating (low to high) | Click the sort dropdown bar, click rating (high to low) | Products are shown in order of rating descending | Pass |
+| Product Name (a-z) | Click the sort dropdown bar, click name (a-z) | Products are shown in order of name in alphabetical order a-z | Pass |
+| Product Name (z-a) | Click the sort dropdown bar, click name (z-a) | Products are shown in order of name in reverse alphabetical order z-a | Pass |
+| Category (a-z) | Click the sort dropdown bar, click category (a-z) | Products are shown in order of category in alphabetical order a-z | Pass |
+| Category (z-a) | Click the sort dropdown bar, click category (z-a) | Products are shown in order of category in reverse alphabetical order z-a | Pass |
+| Hover effects | Hover over product card | Purple hover effect and translate shows movement | Pass |
+| Product card Category Link / Filter | Click category links on product card | Product page displays selected category from product card | Pass |
+| Add to basket button - Product Card | Click add to basket button on a product card | PRoduct is added to bag confirmed by toast success message | Pass |
+| Products Home Link | Click Products home text link in top left of product screen | Displays all products and resets filters to default (none) | Pass |
+| Product total display | Select category, verfiy amount of displayed products matches total product display | Pass |
+
+
 
 - Below is a table of the manual user testing carried for bag.
 
