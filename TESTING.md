@@ -490,7 +490,7 @@ It is particuarly useful as it can encompass a wide range of input from stakehol
 | Category (z-a) | Click the sort dropdown bar, click category (z-a) | Products are shown in order of category in reverse alphabetical order z-a | Pass |
 | Hover effects | Hover over product card | Purple hover effect and translate shows movement | Pass |
 | Product card Category Link / Filter | Click category links on product card | Product page displays selected category from product card | Pass |
-| Add to basket button - Product Card | Click add to basket button on a product card | PRoduct is added to bag confirmed by toast success message | Pass |
+| Add to basket button - Product Card | Click add to basket button on a product card | Product is added to bag confirmed by toast success message and bag icon total updates | Pass |
 | Products Home Link | Click Products home text link in top left of product screen | Displays all products and resets filters to default (none) | Pass |
 | Product total display | Select category, verfiy amount of displayed products matches total product display | Pass |
 
@@ -500,6 +500,14 @@ It is particuarly useful as it can encompass a wide range of input from stakehol
 
 | **Feature**          | **Test Details**           | **Expected results**                      | **Pass/Fail** |                                             
 | :-- | :-- | :-- | :-- |
+| Shopping bag link | Click shopping bag icon | takes user to their shopping bag | Pass |
+| Empty Bag Message | Click shopping bag icon from products pag when bag is empty | 'Your shopping bag is empty' message displayed | Pass |
+| Continue Shopping Link | Click continue shopping text link in bag page | Redirects user to all products page | Pass |
+| Product in bag | Check product has correct info, image, price , quantity and subtotal | Pass | 
+| Product quantity update and total | Add or subtract product quantity using plus and minus buttons, click update | Updates product quantity as expected and total updates in correlation to this | Pass |
+
+
+
 
 - Below is a table of the manual user testing carried for checkout.
 
