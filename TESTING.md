@@ -501,10 +501,12 @@ It is particuarly useful as it can encompass a wide range of input from stakehol
 | **Feature**          | **Test Details**           | **Expected results**                      | **Pass/Fail** |                                             
 | :-- | :-- | :-- | :-- |
 | Shopping bag link | Click shopping bag icon | takes user to their shopping bag | Pass |
+| Go to checkout button - Bag modal | Click the go to checkout button in bag modal | Direct user to shopping bag | Pass | 
 | Empty Bag Message | Click shopping bag icon from products pag when bag is empty | 'Your shopping bag is empty' message displayed | Pass |
 | Continue Shopping Link | Click continue shopping text link in bag page | Redirects user to all products page | Pass |
 | Product in bag | Check product has correct info, image, price , quantity and subtotal | Pass | 
 | Product quantity update and total | Add or subtract product quantity using plus and minus buttons, click update | Updates product quantity as expected and total updates in correlation to this | Pass |
+| Remove product function | Click remove when an item is present in the bag | Removes quantity of selected item from the bag, toast message to confirm shows | Pass |
 
 
 
@@ -513,12 +515,29 @@ It is particuarly useful as it can encompass a wide range of input from stakehol
 
 | **Feature**          | **Test Details**           | **Expected results**                      | **Pass/Fail** |                                             
 | :-- | :-- | :-- | :-- |
+| Secure checkout button - Bag page | Click the go to checkout button in bag page | Direct user to checkout page | Pass |
+| Name Field - Required | Try to submit form without name field completed | Warning message asking to complete the field shows, does not process form | Pass |
+| Email Field - Required | Try to submit form without email field completed, and with no @ in email address | Warning message asking to complete the field shows, does not process form | Pass |
+| Phone Number Field - Required | Try to submit form without phone number field completed | Warning message asking to complete the field shows, does not process form | Pass |
+| Country Field - Required | Try to submit form without a selected country | Warning message asking to complete the field shows, does not process form | Pass |
+| Country Field | Click field and ensure all countries are selectable by selecting each one | All countries are selectable | Pass |
+| Town/City Field - Required | Try to submit form without town/city field completed | Warning message asking to complete the field shows, does not process form | Pass |
+| Street Address 1 Field - Required | Try to submit form without street address 1 field completed | Warning message asking to complete the field shows, does not process form | Pass |
+| Card Number | Enter stripe test card number (VALID) | Only takes a valid card number, notifies if incomplete | Pass |
+| Card expiry date | Enter valid expiry date | Only takes a valid expiry date, notifies if incomplete | Pass |
+| Card security number | Enter 3 digit code | Only takes a 3 digit code, notifies if incomplete | Pass |
+| Card Registered Zip Code | Enter valid zip code | Only takes a valid zip code in relation to selected country, notifies if incomplete | Pass |
+| Complete order button | Click button once checkout form is complete | Only processes payment and order when the form is complete, directs user to the order confirmation page | Pass |
+| Adjust Bag Link | Click the adjust bag link | Directs user back to the shopping bag | Pass |
+
+
+
 
 - Below is a table of the manual user testing carried for profiles.
 
 | **Feature**          | **Test Details**           | **Expected results**                      | **Pass/Fail** |                                             
 | :-- | :-- | :-- | :-- |
-| Admin Dashboard | Navigate to admin dashboard, check for flash message | Flash message appears in dashboard when navigated to | Pass |
+| My Account | Whilst logged out click on my account in the nav bar | Register and Login links appear on a drop down | Pass |
 | User Dashboard Profile | Login as user and navigate to userdashboard | User dashboard displays username in the profile card | Pass |
 | Sign Up | Create user name and password, attempt login | Creates username and password. Logs in | Pass |
 | Log In | Attempt login with username and password used for signup | Logs in with registered credentials | Pass |
