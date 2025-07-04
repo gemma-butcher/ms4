@@ -10,7 +10,7 @@
 {% endblock %}
 {% block body_class %}home-page{% endblock %}
 {% block content %}
-    <div class="container h-100">
+    <!-- <div class="container h-100">
         <div class="row h-100">
             <div class="col-7 col-md-6 my-auto">
                 <h1 class="display-4 logo-font text-black">
@@ -26,7 +26,119 @@
 
             </div>
         </div>
+    </div> -->
+
+<!-- Hero section with background image -->
+<section id="hero" class="hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8 my-auto">
+                <div class="hero-overlay p-4 rounded">
+                    <h1 class="display-4 logo-font text-white">Welcome to I-Snap</h1>
+                    <h2 class="text-white">Snap Into Professional Excellence</h2>
+                    <h4>
+                        <a href="{% url 'products' %}" class="btn-isnap btn rounded-0 text-uppercase py-3">Shop Now</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
+    
+   <!-- Content section with white background -->
+<div class="content-section">
+    <div class="container my-5">
+        <!-- Value proposition section -->
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="mb-4">Professional Photography Equipment for Every Need</h2>
+                <p class="lead">From DSLR cameras to action cams, I-Snap provides premium photography gear for professionals and enthusiasts alike.</p>
+            </div>
+        </div>
+        
+        <!-- Features with icons -->
+        <div class="row mb-5">
+            <div class="col-md-4 mb-4">
+                <div class="text-center">
+                    <i class="fas fa-camera fa-3x mb-3" style="color: #369b95;"></i>
+                    <h3>Premium Cameras</h3>
+                    <p>Explore our wide selection of professional-grade cameras from top brands.</p>
+                    <a href="{% url 'products' %}?category=cameras" class="btn-isnap">View Cameras</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="text-center">
+                    <i class="fas fa-camera-retro fa-3x mb-3" style="color: #7719a1;"></i>
+                    <h3>Essential Accessories</h3>
+                    <p>Find tripods, lenses, and lighting equipment to perfect your photography setup.</p>
+                    <a href="{% url 'products' %}?category=accessories" class="btn-isnap">Shop Accessories</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="text-center">
+                    <i class="fas fa-cogs fa-3x mb-3" style="color: #369b95;"></i>
+                    <h3>Expert Services</h3>
+                    <p>Get professional advice, repairs, and customization for your equipment.</p>
+                    <a href="{% url 'products' %}?category=services" class="btn-isnap">Learn More</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Featured product or promotion -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="product-card-custom p-4">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="{% static 'img/cyber.jpg' %}" alt="Featured Camera" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-8 d-flex flex-column justify-content-center">
+                            <h3>Featured: Sony Cyber-Shot DSLR Camera</h3>
+                            <p class="my-3">Our most popular professional camera with 4K HDR (HLG) video recording, 180-degree flip screen and premium build quality.</p>
+                            <p><strong>$1,239.16</strong> <span class="text-danger">Save $300</span></p>
+                            <div>
+                                <a href="{% url 'product_detail' 8 %}" class="btn-isnap">View Details</a>
+                                <a href="{% url 'add_to_bag' 1 %}" class="btn-purple-float ml-3">Add to Basket</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Testimonial section -->
+        <div class="row mb-5">
+            <div class="col-12 text-center mb-4">
+                <h2>What Our Customers Say</h2>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 product-card-custom">
+                    <div class="card-body">
+                        <p class="card-text">"I've been buying my photography equipment from I-Snap for years. Their selection and customer service are unmatched!"</p>
+                        <p class="card-text"><small class="text-muted">— Sarah T., Professional Photographer</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 product-card-custom">
+                    <div class="card-body">
+                        <p class="card-text">"The team at I-Snap helped me select the perfect camera for my wildlife photography needs. Couldn't be happier!"</p>
+                        <p class="card-text"><small class="text-muted">— Michael R., Nature Photographer</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Final CTA section -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 class="mb-4">Ready to elevate your photography?</h3>
+                <a href="{% url 'products' %}" class="btn-isnap btn-lg">Browse All Products</a>
+                <a href="{% url 'contact' %}" class="btn-purple-float btn-lg ml-3">Contact Our Experts</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block extra_title %} - Home
