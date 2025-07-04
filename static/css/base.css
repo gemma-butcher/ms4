@@ -1,3 +1,4 @@
+/*---Base CSS for the I-Snap eCommerce site ---*/
 html, body {
     height: 100%;
 }
@@ -28,6 +29,61 @@ a.active-link {
 /* On hover, even active links */
 a:hover {
     color: #165665;
+}
+
+/* I-Snap Branded Button */
+.btn-isnap {
+    border: none;
+    border-radius: 8px !important;
+    background: linear-gradient(135deg, #369b95, #7719a1); /* Gradient from teal to purple */
+    padding: 10px 18px;
+    margin-top: 10px;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-isnap:hover {
+    box-shadow: 0 4px 16px rgba(129, 33, 178, 0.40);
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #3aafa8, #8121b2); /* Slightly brighter gradient */
+}
+
+/* Teal-Purple Button with Card-like Hover Effect */
+.btn-teal-lift {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: white;
+    padding: 8px 16px;
+    color: #369b95; /* Your teal color */
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(54, 155, 149, 0.15);
+}
+
+.btn-teal-lift:hover {
+    box-shadow: 0 4px 16px rgba(129, 33, 178, 0.30);
+    transform: translateY(-3px);
+    border-color: #b3ece9;
+    color: #7719a1;
+}
+
+/* Purple Brand Button */
+.btn-purple-float {
+    border: 1px solid #7719a1;
+    border-radius: 8px;
+    background-color: #7719a1;
+    padding: 8px 16px;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(129, 33, 178, 0.2);
+}
+
+.btn-purple-float:hover {
+    box-shadow: 0 4px 16px rgba(54, 155, 149, 0.40);
+    background-color: #8121b2;
 }
 
 /* from Bulma */
@@ -111,10 +167,32 @@ a.category-badge > span.badge:hover {
 }
 /* Home Page */
 
-body.home-page {
-    background-image: url('/media/camera-bg.jpg');
-    background-size: cover;
-    background-position: center;
+/* Hero section - with ID for extra specificity */
+#hero.hero-section,
+body .hero-section {
+    background-image: url('/static/img/camera-bg.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 500px !important;
+    min-height: 400px !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    margin-bottom: 30px !important;
+    margin-top: 160px !important;
+    z-index: 1 !important;
+}
+
+/* Content section */
+.content-section {
+    background: #fff;
+    padding-top: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-overlay {
+    background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%) !important;
 }
 
 /* ----- Products ------ */
@@ -381,6 +459,10 @@ footer {
     margin-top: 0;
     font-size: 12px;
     color: #777;
+}
+
+.social-icons {
+    margin-top: 10px !important;
 }
 
 
