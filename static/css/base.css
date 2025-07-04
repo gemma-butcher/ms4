@@ -1,6 +1,7 @@
 /*---Base CSS for the I-Snap eCommerce site ---*/
 html, body {
     height: 100%;
+    overflow-x: hidden !important;
 }
 
 body {
@@ -94,6 +95,119 @@ a:hover {
     height: 1.5rem;
     width: 1.5rem;
 }
+/* Navbar */
+/* Modern Navigation Styling */
+.bg-black {
+    background-color: #000;
+}
+
+.delivery-banner-bg {
+    background: linear-gradient(to right, #1a1a1a, #000, #1a1a1a);
+}
+
+.custom-nav-link {
+    transition: all 0.3s ease;
+}
+
+.custom-nav-link:hover {
+    color: #4ECDC4 !important;
+    transform: translateY(-2px);
+}
+
+.btn-accent {
+    background-color: #4ECDC4;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+    background-color: #FF6B6B;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.search-button {
+    background-color: #4ECDC4;
+    border: none;
+    transition: all 0.3s;
+}
+
+.search-button:hover {
+    background-color: #7719a1;
+}
+
+.form-control {
+    border: 1px solid #333;
+}
+
+.form-control:focus {
+    border-color: #4ECDC4;
+    box-shadow: 0 0 0 0.2rem rgba(78, 205, 196, 0.25);
+}
+
+/* Style dropdown menus */
+.dropdown-menu.bg-dark {
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    overflow: hidden;
+    padding: 0.5rem 0;
+}
+
+.dropdown-item {
+    transition: all 0.2s;
+    padding: 0.5rem 1.5rem;
+}
+
+.dropdown-item:hover {
+    background-color: #4ECDC4;
+    color: white !important;
+}
+
+/* Update the main navigation items */
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,0.8);
+    font-weight: 500;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #4ECDC4;
+}
+
+.navbar-dark .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #4ECDC4;
+    transition: all 0.3s;
+    transform: translateX(-50%);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::after {
+    width: 70%;
+}
+
+.input-group .form-control {
+    margin-right: 10px;
+    border-top-right-radius: 50rem !important;
+    border-bottom-right-radius: 50rem !important;
+}
+
+.input-group-append {
+    margin-left: 0 !important;
+}
+
+
+.search-button {
+    border-top-left-radius: 50rem !important;
+    border-bottom-left-radius: 50rem !important;
+}
 
 /* Logo */
 .logo-font {
@@ -102,12 +216,6 @@ a:hover {
 
 .main-logo-link {
     width: fit-content;
-}
-
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
 }
 
 .btn-black {
@@ -165,7 +273,6 @@ a.category-badge > span.badge:hover {
     background: #000 !important;
     color: white !important;
 }
-/* Home Page */
 
 
 /* ----- Products ------ */
@@ -376,12 +483,14 @@ a.category-badge > span.badge:hover {
 
 /* ----- Footer ------ */
 footer {
-    left: 0;
-    margin-top: auto;
-    background: #fff; /* or any background you want */
-    z-index: 1000;
-    padding: 20px 0 10px;
-    font-size: 14px;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
 }
 
 .footer-container {
@@ -436,6 +545,54 @@ footer {
 
 .social-icons {
     margin-top: 10px !important;
+}
+
+footer .container,
+footer .container-fluid {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+body > footer {
+    clear: both !important;
+    position: relative !important;
+    width: 100vw !important;
+    margin: 0 !important;
+}
+
+/* Fix for allauth pages */
+.allauth-pages {
+    margin-bottom: 50px !important;  /* Ensure content doesn't crowd footer */
+}
+
+.allauth-form-inner-content {
+    margin-bottom: 100px;
+}
+
+.auth-container {
+    margin-top: 200px !important;
+}
+
+.login input, 
+.signup input,
+.login textarea,
+.signup textarea {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    color: #212529;
+    border-radius: 20px;
+    padding: 10px 15px;
+}
+
+.auth-container .feature-card-custom {
+    box-shadow: 0 2px 8px rgba(54, 155, 149, 0.30);
+    transition: all 0.3s ease;
+}
+
+.auth-container .feature-card-custom:hover {
+    box-shadow: 0 4px 16px rgba(129, 33, 178, 0.30);
 }
 
 
@@ -550,5 +707,34 @@ body.faq-form-page {
     body {
         height: calc(100vh - 116px);
         background-color: #fff;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Make icons smaller on mobile */
+    .nav-link .fa-lg {
+        font-size: 1rem;
+    }
+    
+    /* Hide "My Account" text on smallest screens */
+    @media (max-width: 575px) {
+        .account-text {
+            display: none;
+        }
+        
+        /* Compress the icons to fit */
+        .list-inline-item {
+            margin-right: 0.2rem !important;
+        }
+    }
+    
+    /* Make search bar appear below on mobile but keep other elements on top row */
+    .order-last {
+        margin-top: 10px;
+    }
+    
+    /* Adjust logo size */
+    .logo-font {
+        font-size: 1.5rem;
     }
 }

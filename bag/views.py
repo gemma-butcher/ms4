@@ -51,7 +51,7 @@ def adjust_bag(request, item_id):
     if size:
         if item_id in list(bag.keys()):
             if size in bag[item_id]['items_by_size'].keys():
-                bag[item_id]['items_by_size'][size] = quantity  # <-- set, don't add
+                bag[item_id]['items_by_size'][size] = quantity
                 messages.success(
                     request,
                     (
