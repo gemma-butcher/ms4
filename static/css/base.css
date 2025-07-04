@@ -167,33 +167,6 @@ a.category-badge > span.badge:hover {
 }
 /* Home Page */
 
-/* Hero section - with ID for extra specificity */
-#hero.hero-section,
-body .hero-section {
-    background-image: url('/static/img/camera-bg.jpg') !important;
-    background-size: cover !important;
-    background-position: center !important;
-    height: 500px !important;
-    min-height: 400px !important;
-    position: relative !important;
-    display: flex !important;
-    align-items: center !important;
-    margin-bottom: 30px !important;
-    margin-top: 160px !important;
-    z-index: 1 !important;
-}
-
-/* Content section */
-.content-section {
-    background: #fff;
-    padding-top: 30px;
-    position: relative;
-    z-index: 2;
-}
-
-.hero-overlay {
-    background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%) !important;
-}
 
 /* ----- Products ------ */
 .product-container {

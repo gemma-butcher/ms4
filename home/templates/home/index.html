@@ -89,28 +89,6 @@
             </div>
         </div>
     </div>  
-        
-        <!-- Featured product or promotion -->
-        <!-- <div class="row mb-5">
-            <div class="col-12">
-                <div class="product-card-custom p-4">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="{% static 'img/cyber.jpg' %}" alt="Featured Camera" class="img-fluid rounded">
-                        </div>
-                        <div class="col-md-8 d-flex flex-column justify-content-center">
-                            <h3>Featured: Sony Cyber-Shot DSLR Camera</h3>
-                            <p class="my-3">Our most popular professional camera with 4K HDR (HLG) video recording, 180-degree flip screen and premium build quality.</p>
-                            <p><strong>$1,239.16</strong> <span class="text-danger">Save $300</span></p>
-                            <div>
-                                <a href="{% url 'product_detail' 8 %}" class="btn-isnap">View Details</a>
-                                <a href="{% url 'add_to_bag' 1 %}" class="btn-purple-float ml-3">Add to Basket</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
 
 <!-- Featured Products Carousel -->
 <div class="row mb-7 featured-product-row py-4" style="background-color: #000; position: relative;">
@@ -126,8 +104,8 @@
             <!-- Carousel Items -->
             <div class="carousel-inner">
                 <!-- Featured Product 1 -->
-                <div class="carousel-item active">
-                    <div class="product-card-custom p-4 mx-5" style="background: white;">
+                <div class="carousel-item active text-center">
+                    <div class="feature-card-custom p-4 mx-auto" style="background: white;">
                         <div class="row">
                             <div class="col-md-4">
                                 <img src="{% static 'img/cyber.jpg' %}" alt="Sony Cyber-Shot Camera" class="img-fluid rounded">
@@ -147,7 +125,7 @@
                 
                 <!-- Featured Product 2 -->
                 <div class="carousel-item">
-                    <div class="product-card-custom p-4" style="background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+                    <div class="feature-card-custom p-4" style="background: white;">
                         <div class="row">
                             <div class="col-md-4">
                                 <img src="{% static 'img/canon.jpg' %}" alt="Canon EOS Camera" class="img-fluid rounded">
@@ -167,7 +145,7 @@
                 
                 <!-- Featured Product 3 -->
                 <div class="carousel-item">
-                    <div class="product-card-custom p-4" style="background: white; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+                    <div class="feature-card-custom p-4" style="background: white;">
                         <div class="row">
                             <div class="col-md-4">
                                 <img src="{% static 'img/lens.jpg' %}" alt="Premium Lens" class="img-fluid rounded">
@@ -187,20 +165,38 @@
             </div>
             
             <!-- Carousel Controls moved outside the carousel but inside the row -->
-            <a class="carousel-control-prev" href="#featuredProductsCarousel" role="button" data-slide="prev" 
-            style="width: 5%; left: 0; opacity: 1; z-index: 10;">
-                <span aria-hidden="true" style="font-size: 2rem; color: white; text-shadow: 0 0 10px rgba(0,0,0,0.5);">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#featuredProductsCarousel" role="button" data-slide="next"
-            style="width: 5%; right: 0; opacity: 1; z-index: 10;">
-                <span aria-hidden="true" style="font-size: 2rem; color: white; text-shadow: 0 0 10px rgba(0,0,0,0.5);">
-                    <i class="fas fa-chevron-right"></i>
-                </span>
-                <span class="sr-only">Next</span>
-            </a>
+            <div class="carousel-control-div">
+                <a class="carousel-control-prev" href="#featuredProductsCarousel" role="button" data-slide="prev" 
+                style="width: 5%; left: 0; opacity: 1; z-index: 10;">
+                    <span aria-hidden="true" style="font-size: 2rem; color: white; text-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#featuredProductsCarousel" role="button" data-slide="next"
+                style="width: 5%; right: 0; opacity: 1; z-index: 10;">
+                    <span aria-hidden="true" style="font-size: 2rem; color: white; text-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                        <i class="fas fa-chevron-right"></i>
+                    </span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add this before the testimonials section -->
+<div class="content-section bg-light">
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3>Create an Account for Premium Benefits</h3>
+                <p class="lead">Enjoy faster checkout, order tracking, and exclusive offers.</p>
+                <div class="mt-3">
+                    <a href="{% url 'account_login' %}" class="btn-isnap mr-2">Sign In</a>
+                    <a href="{% url 'account_signup' %}" class="btn-purple-float">Create Account</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -236,6 +232,10 @@
                 <h3 class="mb-4">Ready to elevate your photography?</h3>
                 <a href="{% url 'products' %}" class="btn-isnap btn-lg">Browse All Products</a>
                 <a href="{% url 'contact' %}" class="btn-purple-float btn-lg ml-3">Contact Our Experts</a>
+                <div class="mt-4">
+                    <p>Already have an account? <a href="{% url 'account_login' %}" class="text-primary">Sign in</a> or 
+                    <a href="{% url 'account_signup' %}" class="text-primary">create an account</a> for faster checkout and order tracking.</p>
+                </div>
             </div>
         </div>
     </div>

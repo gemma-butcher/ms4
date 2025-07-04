@@ -29,9 +29,7 @@ body .hero-section {
 /* Featured Products Carousel */
 .featured-product-row {
     background-color: #000;
-    margin-left: -15px;
-    margin-right: -15px;
-    width: 100vw;
+    width: 100%;
     position: relative;
     left: 50%;
     right: 50%;
@@ -39,14 +37,38 @@ body .hero-section {
     margin-right: -50vw;
 }
 
-.product-card-custom {
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.feature-card-custom {
+    width: 80%;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(54, 155, 149, 0.30);
+    transition: all 0.3s ease;
+    overflow: hidden;
 }
 
-.product-card-custom:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+/* On hover */
+.feature-card-custom:hover {
+    box-shadow: 0 4px 16px rgba(129, 33, 178, 0.30);
+    border-color: #b3ece9;
+}
+
+.feature-card-custom img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 8px;
+}
+
+
+.feature-card-custom .card-body p {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.feature-card-custom .card-footer p.lead {
+    color: #007bff;
+    font-weight: bold;
 }
 
 /* Testimonials */
@@ -55,6 +77,14 @@ body .hero-section {
 }
 
 /* Custom Carousel Controls */
+.carousel-item .feature-card-custom {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-control-div {
+    margin-top: 30px;
+}
 .carousel-control-prev-icon, .carousel-control-next-icon {
     background-color: rgba(0,0,0,0.5);
     padding: 20px;
@@ -69,10 +99,57 @@ body .hero-section {
 }
 
 .carousel-indicators {
-    bottom: -30px;
+    bottom: -3
+    0px;
 }
 
 /* Responsive Adjustments */
+@media (max-width: 460px) {
+    .feature-card-custom .btn-isnap,
+    .feature-card-custom .btn-purple-float {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        margin: 5px 3px;
+        display: inline-block;
+        min-width: 0;
+        width: auto;
+    }
+    
+    .feature-card-custom .ml-3 {
+        margin-left: 5px !important;
+    }
+    
+    .feature-card-custom h3 {
+        font-size: 1.3rem;
+    }
+    
+
+    .feature-card-custom .col-md-4 {
+        padding: 0 10px;
+    }
+    
+    .feature-card-custom strong {
+        font-size: 1.2rem !important;
+    }
+
+    .content-section .row:last-child .btn-isnap.btn-lg,
+    .content-section .row:last-child .btn-purple-float.btn-lg {
+        display: block;
+        width: 80%;
+        margin: 10px auto !important;
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+
+    .content-section .row:last-child .ml-3 {
+        margin-left: 0 !important;
+    }
+
+    .content-section .row:last-child h3 {
+        font-size: 1.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-section {
         min-height: 400px;
@@ -82,3 +159,4 @@ body .hero-section {
         margin: 0 15px;
     }
 }
+
