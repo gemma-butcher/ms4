@@ -117,34 +117,94 @@
     {% block content %}
     {% endblock %}
 
-    <footer class="mt-auto bg-light text-center py-3 border-top">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h4>About Us</h4>
-                <p>Your go-to store for all photography gear.</p>
+<footer class="mt-auto bg-black text-white pt-5 pb-3">
+    <div class="container">
+        <!-- Main Footer Content -->
+        <div class="row mb-4">
+            <!-- Logo & About -->
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <h3 class="logo-font mb-3"><strong style="color: #4ECDC4;">I</strong><span style="color: #FF6B6B;">-</span>SNAP</h3>
+                <p class="text-white">Your premium destination for professional photography equipment and accessories.</p>
+                <div class="payment-icons mt-3">
+                    <i class="fab fa-cc-visa mr-2" style="font-size: 24px; color: #ffffff;"></i>
+                    <i class="fab fa-cc-mastercard mr-2" style="font-size: 24px; color: #ffffff;"></i>
+                    <i class="fab fa-cc-amex mr-2" style="font-size: 24px; color: #ffffff;"></i>
+                    <i class="fab fa-cc-paypal mr-2" style="font-size: 24px; color: #ffffff;"></i>
+                    <i class="fab fa-cc-apple-pay" style="font-size: 24px; color: #ffffff;"></i>
+                </div>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="{% url 'products' %}">Products</a></li>
-                    <li><a href="{% url 'faq' %}">FAQ</a></li>
-                    <li><a href="{% url 'contact' %}">Contact</a></li>
+            
+            <!-- Quick Links -->
+            <div class="col-sm-6 col-lg-2 mb-4 mb-lg-0">
+                <h5 class="mb-3" style="color: #4ECDC4; font-weight: bold;">Shop</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="{% url 'products' %}?category=cameras" class="text-white hover-underline">Cameras</a></li>
+                    <li class="mb-2"><a href="{% url 'products' %}?category=accessories" class="text-white hover-underline">Accessories</a></li>
+                    <li class="mb-2"><a href="{% url 'products' %}?category=lenses" class="text-white hover-underline">Lenses</a></li>
+                    <li class="mb-2"><a href="{% url 'products' %}" class="text-white hover-underline">All Products</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <ul class="social-links">
-                    <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-                    <li><a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-                    <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            
+            <!-- Customer Service -->
+            <div class="col-sm-6 col-lg-2 mb-4 mb-lg-0">
+                <h5 class="mb-3" style="color: #4ECDC4; font-weight: bold;">Customer Service</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="{% url 'contact' %}" class="text-white hover-underline">Contact Us</a></li>
+                    <li class="mb-2"><a href="{% url 'faq' %}" class="text-white hover-underline">FAQ</a></li>
+                    <li class="mb-2"><a href="#" class="text-white hover-underline">Shipping Policy</a></li>
+                    <li class="mb-2"><a href="#" class="text-white hover-underline">Returns</a></li>
                 </ul>
             </div>
+            
+            <!-- Newsletter Signup -->
+            <div class="col-lg-4">
+                <h5 class="mb-3" style="color: #4ECDC4; font-weight: bold;">Stay Updated</h5>
+                <p class="text-white">Subscribe to our newsletter for special offers and updates</p>
+                <form id="newsletter-form">
+                    {% csrf_token %}
+                    <div class="input-group mb-3">
+                        <input type="email" name="email" class="form-control bg-dark border-white text-white" placeholder="Your email address" aria-label="Your email address" required>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-light" type="submit">Subscribe</button>
+                        </div>
+                    </div>
+                    <div id="newsletter-response" class="small mt-2"></div>
+                </form>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="text-white mr-3 hover-opacity" aria-label="Visit our Facebook page">
+                        <i class="fab fa-facebook-f" style="font-size: 20px;"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="text-white mr-3 hover-opacity" aria-label="Visit our Instagram profile">
+                        <i class="fab fa-instagram" style="font-size: 20px;"></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" class="text-white mr-3 hover-opacity" aria-label="Visit our Twitter profile">
+                        <i class="fab fa-twitter" style="font-size: 20px;"></i>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="text-white hover-opacity" aria-label="Visit our YouTube channel">
+                        <i class="fab fa-youtube" style="font-size: 20px;"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; {{ year|default:2025 }} I-SNAP. All rights reserved.</p>
+        
+        <!-- Footer Divider -->
+        <hr class="border-light mt-4 mb-3">
+        
+        <!-- Bottom Footer -->
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-left">
+                <p class="mb-0 text-white">&copy; {{ year|default:2025 }} I-SNAP. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-right">
+                <small class="text-white">
+                    <a href="#" class="text-white mr-2 hover-underline">Privacy Policy</a> | 
+                    <a href="#" class="text-white mr-2 hover-underline">Terms of Service</a> | 
+                    <a href="#" class="text-white hover-underline">Cookies</a>
+                </small>
+            </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
     {% if messages %}
     <div class="message-container">
@@ -170,6 +230,29 @@
         $('.toast').toast('show');    
     </script>
     <script src="{% static 'js/static.js' %}"></script>
+
+    <script type="text/javascript">
+        $('#newsletter-form').on('submit', function(e) {
+            e.preventDefault();
+            
+            $.ajax({
+                type: 'POST',
+                url: "{% url 'newsletter_subscribe' %}",
+                data: $(this).serialize(),
+                success: function(response) {
+                    if (response.success) {
+                        $('#newsletter-response').html(`<span class="text-success">${response.message}</span>`);
+                        $('#newsletter-form')[0].reset();
+                    } else {
+                        $('#newsletter-response').html(`<span class="text-danger">${response.message}</span>`);
+                    }
+                },
+                error: function() {
+                    $('#newsletter-response').html('<span class="text-danger">An error occurred. Please try again.</span>');
+                }
+            });
+        });
+    </script>
     {% endblock %}
 
   </body>
