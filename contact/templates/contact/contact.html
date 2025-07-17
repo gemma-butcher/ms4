@@ -4,29 +4,33 @@
 {% load static %}
 
 {% block content %}
-<div class="container py-5 contact-container">
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card contact-card shadow-sm hover-effect-card">
-                    <div class="card-header contact-card-header text-white">
-                        <h4 class="mb-0">Contact Us</h4>
+<div class="container mt-3 mb-3">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            <div class="feature-card-custom p-4 mb-5" style="background: #fff;">
+                <h2 class="mb-4 text-center" style="color: #369b95;">Contact Us</h2>
+                <p class="lead text-center mb-4">
+                    Have a question or need help? Fill out the form below and our team will get back to you as soon as possible.
+                </p>
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <!-- Example form fields, adjust as needed -->
+                    <div class="form-group">
+                        <label for="id_name" class="font-weight-bold" style="color: #7719a1;">Name</label>
+                        <input type="text" class="form-control" id="id_name" name="name" required>
                     </div>
-                    <div class="card-body">
-                        <form method="post">
-                            {% csrf_token %}
-                            <div class="mb-3">
-                                <label for="name" class="form-label contact-form-label uk-text-bold">Name</label>
-                                <input type="text" class="form-control contact-input" id="name" name="name" placeholder="Enter your name" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label contact-form-label">Email</label>
-                                <input type="email" class="form-control contact-input uk-text-bold" id="email" name="email" placeholder="Enter your email" required>
-                            </div>
-                            <button type="submit" class="btn contact-submit-btn w-100">Submit</button>
-                        </form>
+                    <div class="form-group">
+                        <label for="id_email" class="font-weight-bold" style="color: #369b95;">Email</label>
+                        <input type="email" class="form-control" id="id_email" name="email" required>
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label for="id_message" class="font-weight-bold" style="color: #4ECDC4;">Message</label>
+                        <textarea class="form-control" id="id_message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-isnap btn-lg rounded-pill">Send Message</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

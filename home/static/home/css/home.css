@@ -9,8 +9,6 @@ body .hero-section {
     position: relative !important;
     display: flex !important;
     align-items: center !important;
-    margin-bottom: 30px !important;
-    margin-top: 160px !important;
     z-index: 1 !important;
 }
 
@@ -157,6 +155,18 @@ body .hero-section {
     
     .featured-product-row .product-card-custom {
         margin: 0 15px;
+    }
+}
+
+
+@media (max-width: 991.98px) {
+    body.home-page .main-content-with-navbar {
+        margin-top: -120px;
+    }
+}
+@media (max-width: 430px) {
+    body.home-page .main-content-with-navbar {
+        margin-top: -115.59px;
     }
 }
 

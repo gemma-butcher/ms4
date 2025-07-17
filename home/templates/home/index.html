@@ -15,23 +15,6 @@
 {% endblock %}
 {% block body_class %}home-page{% endblock %}
 {% block content %}
-    <!-- <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-black">
-                    Welcome to I-Snap
-                </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-                    </h4>
-                </div>
-                <p class="text-white">Click <a href="{% url 'account_login' %}">here</a> to login</p>
-                <p class="text-white">Click <a href="{% url 'account_signup' %}">here</a> to sign up</p>
-
-            </div>
-        </div>
-    </div> -->
 
 <!-- Hero section with background image -->
 <section id="hero" class="hero-section">
@@ -128,7 +111,7 @@
                     <div class="feature-card-custom p-4" style="background: white;">
                         <div class="row">
                             <div class="col-md-4">
-                                <img src="{% static 'img/canon.jpg' %}" alt="Canon EOS Camera" class="img-fluid rounded">
+                                <img src="{% static 'img/eos.jpg' %}" alt="Canon EOS Camera" class="img-fluid rounded">
                             </div>
                             <div class="col-md-8 d-flex flex-column justify-content-center">
                                 <h3><span style="color: #369b95; font-weight: bold;">Hot Deal:</span> Canon EOS R5 Full-Frame</h3>
@@ -148,15 +131,15 @@
                     <div class="feature-card-custom p-4" style="background: white;">
                         <div class="row">
                             <div class="col-md-4">
-                                <img src="{% static 'img/lens.jpg' %}" alt="Premium Lens" class="img-fluid rounded">
+                                <img src="{% static 'img/sigma24-70.jpg' %}" alt="Premium Lens" class="img-fluid rounded">
                             </div>
                             <div class="col-md-8 d-flex flex-column justify-content-center">
                                 <h3><span style="color: #369b95; font-weight: bold;">New Arrival:</span> Sigma 24-70mm f/2.8 Lens</h3>
                                 <p class="my-3">Professional-grade zoom lens with constant f/2.8 aperture, perfect for portraits, landscapes, and event photography.</p>
                                 <p><strong style="font-size: 1.4rem;">£899.00</strong> <span class="badge badge-primary ml-2 p-2">Limited Stock</span></p>
                                 <div>
-                                    <a href="{% url 'product_detail' 15 %}" class="btn-isnap">View Details</a>
-                                    <a href="{% url 'add_to_bag' 15 %}" class="btn-purple-float ml-3">Add to Basket</a>
+                                    <a href="{% url 'product_detail' 18 %}" class="btn-isnap">View Details</a>
+                                    <a href="{% url 'add_to_bag' 18 %}" class="btn-purple-float ml-3">Add to Basket</a>
                                 </div>
                             </div>
                         </div>

@@ -14,6 +14,22 @@ body, .default-background {
     background-color: #fff;
 }
 
+.main-content-with-navbar {
+    padding-top: 173.8px;
+}
+
+@media (max-width: 991.98px) {
+    .main-content-with-navbar {
+        padding-top: 251.8px;
+    }
+}
+
+@media (max-width: 430px) {
+    .main-content-with-navbar {
+        padding-top: 280.59px;
+    }
+}
+
 /* Base style for ALL links */
 a {
     text-decoration: none;

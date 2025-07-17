@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-3 mb-3">
+    <div class="feature-card-custom card p-4 mx-auto" style="max-width: 700px;">
+        <div class="card-body">
+            <h2 class="mb-4 text-center" style="color: #369b95;">Expert Services</h2>
+            <p class="lead text-center mb-4">
+                Our team of professionals offers a range of expert services to keep your photography equipment in top condition.
+            </p>
+            <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item bg-transparent">
+                    <i class="fas fa-tools mr-2" style="color: #7719a1;"></i>
+                    <strong>Camera & Lens Repair:</strong> Fast and reliable repairs for all major camera and lens brands.
+                </li>
+                <li class="list-group-item bg-transparent">
+                    <i class="fas fa-bullseye mr-2" style="color: #369b95;"></i>
+                    <strong>Sensor & Lens Calibration:</strong> Precision calibration for sharp, accurate images every time.
+                </li>
+                <li class="list-group-item bg-transparent">
+                    <i class="fas fa-tint mr-2" style="color: #4ECDC4;"></i>
+                    <strong>Sensor Cleaning:</strong> Professional cleaning to remove dust and spots from your camera sensor.
+                </li>
+                <li class="list-group-item bg-transparent">
+                    <i class="fas fa-sync-alt mr-2" style="color: #FF6B6B;"></i>
+                    <strong>Firmware Updates:</strong> Keep your devices up to date with the latest manufacturer firmware.
+                </li>
+                <li class="list-group-item bg-transparent">
+                    <i class="fas fa-lightbulb mr-2" style="color: #369b95;"></i>
+                    <strong>Expert Advice:</strong> Personal consultations for gear recommendations, upgrades, and troubleshooting.
+                </li>
+            </ul>
+            <div class="text-center mt-4">
+                <a href="{% url 'contact' %}" class="btn btn-isnap btn-lg rounded-pill">Request a Service</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
