@@ -281,9 +281,6 @@ a:hover {
     background-color: white;
 }
 
-.h2-div {
-    margin-top: 200px;
-}
 
 a.category-badge > span.badge:hover {
     background: #000 !important;
@@ -296,14 +293,6 @@ a.category-badge > span.badge:hover {
     margin-bottom: 50px !important;
 }
 
-.main-product-row {
-    margin-top: 50px !important;
-}
-
-.individual-product-row {
-    margin-top: 200px !important;
-}
-
 .btt-button {
     height: 42px;
     width: 42px;
@@ -313,6 +302,18 @@ a.category-badge > span.badge:hover {
 }
 .btt-link {
     cursor: pointer;
+}
+
+@media (max-width: 502px) {
+    .product-page-mobile-margin {
+        margin-top: 6rem !important;
+    }
+}
+
+@media (max-width: 340px) {
+    .product-page-mobile-margin {
+        margin-top: 10rem !important;
+    }
 }
 
 
