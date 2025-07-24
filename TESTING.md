@@ -71,14 +71,14 @@ The W3C Markup Validator was used to validate every html page of the project to 
 |add-product.html       |[view here](documentation/testing_images/html_validation/)                             | Passed |
 |profile.html           |[view here](documentation/testing_images/html_validation/)                             | Passed | 
 |bag.html               |[view here](documentation/testing_images/html_validation/)                             | Passed |
-|checkout.html          |[view here](documentation/testing_images/html_validation/)         | Passed |
-|checkout-success.html  |[view here](documentation/testing_images/html_validation/)         | Passed |
-|contact.html           |[view here](documentation/testing_images/html_validation/)         | Passed |
-|faq_list.html          |[view here](documentation/testing_images/html_validation/)         | Passed |
-|faq_form.html          |[view here](documentation/testing_images/html_validation/)         | Passed |
-|faq_add.html           |[view here](documentation/testing_images/html_validation/)         | Passed |
-|faq_confirm_delete.html  |[view here](documentation/testing_images/html_validation/)         | Passed |
-|404.html               |[view here](documentation/testing_images/html_validation/)         | Passed |
+|checkout.html          |[view here](documentation/testing_images/html_validation/)                             | Passed |
+|checkout-success.html  |[view here](documentation/testing_images/html_validation/)                             | Passed |
+|contact.html           |[view here](documentation/testing_images/html_validation/)                             | Passed |
+|faq_list.html          |[view here](documentation/testing_images/html_validation/)                             | Passed |
+|faq_form.html          |[view here](documentation/testing_images/html_validation/)                             | Passed |
+|faq_add.html           |[view here](documentation/testing_images/html_validation/)                             | Passed |
+|faq_confirm_delete.html  |[view here](documentation/testing_images/html_validation/)                           | Passed |
+|404.html               |[view here](documentation/testing_images/html_validation/)                             | Passed |
 
 ### CSS Validation
 
@@ -108,7 +108,7 @@ The W3C CSS Validator Services was used to validate every css file of the projec
 |add_slang.html        |[view here](documents/testing/webaim/webaim_add_slang.png)                    | Passed | 
 |delete_slang.html     |[view here](documents/testing/webaim/webaim_remove_slang.png)                 | Passed |
 |404.html              |[view here](documents/testing/webaim/webaim_404.png)                          | Passed - alt text query(minor)| 
-|dashboard.html   |[view lighthouse testing here](documents/testing/lighthouse/dashboard_lighthouse.png) | Can only be tested in lighthouse due to login required. Not supported by webaim. |
+|dashboard.html        |[view lighthouse testing here](documents/testing/lighthouse/dashboard_lighthouse.png) | Can only be tested in lighthouse due to login required. Not supported by webaim. |
 |admin_dashboard.html  |[view lighthouse testing here](documents/testing/lighthouse/admin_dashboard_lighthouse.png) | Can only be tested in lighthouse due to login required. Not supported by webaim. |
 
 ------
@@ -133,7 +133,7 @@ The W3C CSS Validator Services was used to validate every css file of the projec
 
 ### CI Python Linter
 
-  * All Python code files ina ll apps was put though [CI Python Linter](https://pep8ci.herokuapp.com/).
+  * All Python code files in all apps was put though [CI Python Linter](https://pep8ci.herokuapp.com/).
 | Test      | Screenshot                                                                                   | Notes                                                |
 |----------------------------|-----------------------------------------------------------------------------|------------------------------------------------------|
 | CI python linter  | [Home App Python Linter Images](documentation/testing_images/python_linting/home) | Passed |
@@ -149,16 +149,6 @@ After initially correcting the code format and it passing testing using the CI p
 
 ##### back to [top](#table-of-contents)
 
-------
-
-## Fuzzywuzzy Testing
-
-  * Initially the matching threshold was set to 80% whilst in development.
-  * The function and installation was tested by entering random slang words that were stored in the database and by seeing what results were displayed as a match. 
-  * At 80% threshold the user needs to be very accurate and close to the correct spelling of the slang word to get a close match. This does not align with the user stories.
-  * The threshold was then reduced to 50% and tested in the same way again at 5% intervals. Between 50-65% the results were too broad and the matches were too 'fuzzy'. 
-  * 70% match threshold seems to return close enough matches with enough tollerance and flexibility for spelling mistakes for all users.
-
 ## Bug Fixes
 
   * please see the [development](DEVELOPMENT.md) file for bug fix information.
@@ -171,202 +161,137 @@ The project user stories have been met with the following features;
 
 "**_As a guest user, I would like to_** _______________"
 
-✅  browse through the slang terms listed alphabetically so I can see all the terms that are available.
+✅  As a user interested in browsing, I expect to see items that are interesting and relevant.
 
-   ItScool provides:<br>
-      * a bootstrap accordion of all slangs listed alphabetically on all devices. <br>
-      * expandable accordion headings revealing slang words starting with the corresponding letter. <br>
-      * correspoding defintions in the accordion next to each slang word.<br>
+   I-Snap provides:<br>
+      * all products available to view as default filter for all is set. <br>
+      * featured products and special offers on the homepage. <br>
 
-       The accordion can be seen below.
+       The offers carousel can be seen below.
 
-![screenshot]()
-
-
-✅  click on slang terms to view their definitions and sample usage, so I can understand the meaning and context.
-
-   ItScool provides:<br>
-      * a bootstrap accordion which when clicked, reveals slang words listed with their corresponding definitions. Viewable [here]().<br>
+![screenshot](documentation\readme_images\offer_carousel.png)
 
 
-✅  search for slang terms by typing keywords or phrases, so I can quickly find the slang term I'm interested in.
+✅  As a user interested in cameras and accessories, I expect to find cameras and accessories in relevant categories.
 
-   ItScool provides:<br>
-    * A search bar enabling the user to search for slang terms, that are relevance from partial matching using fuzzywuzzy. This displays partial match results due to the nature of slang spellings. This can be seen [here]().<br>
-    * A search result area displaying the results of the search. Viewable [here]().
+   I-Snap provides:<br>
+      * specific product categories accessible via the search bar or product filters, and nav bar links. the navbar categoriescan be seen [here](documentation\readme_images\category_bar.png).<br>
+      * there is a search bar in the top half of the nav to search specific or relevant product groups. This is seen [here](documentation\readme_images\search_bar.png)
 
 
-✅  browse slang terms by selecting a letter from A-Z, so I can easily find terms that start with a specific letter.
+✅  As an industry professional, I expect to find a professional equipment in a relevant category so as to save time browsing and find what i need.
 
-   ItScool provides:<br>
-     * a bootstrap accordion of all slangs listed alphabetically on all devices. The accordion can be seen [here]().
+   I-Snap provides:<br>
+     * specific product categories accessible via the search bar or product filters, and nav bar links. the navbar categories can be seen [here](documentation\readme_images\category_bar.png).<br>
+     * there is a search bar in the top half of the nav to search specific or relevant product groups. This is seen below.<br>
+     * a sort filter in the products pages shown [here](documentation\readme_images\sort_filter.png).
+     
+![screenshot](documentation\readme_images\search_bar.png)
 
-✅  as a new user, create an account by providing a username and password, so I can log in and use additional features.
 
-   ItScool provides:<br>
-     * a signup page for users to register as a user with a signup form.<br>
-     * This function is a create part of CRUD functionality for this project. It allows the user to create a profile with a username and password.
+✅  I expect to be able to use tags and badges to find my way around categories.
+
+   I-Snap provides:<br>
+     * tags on all product cards and badges for filtering in the nav bar seen [here](documentation\readme_images\category_tags.png).
+
+✅  as a user shopping online, I expect to see menus and navigation that follow precedents set by other shopping sites.
+
+   I-Snap provides:<br>
+     * a industry standard and generic layout for familiarity and ease of use seen [here](documentation\readme_images\nav_bar.png).<br>
+     * Uses main categories with dropdown menu for subcategories for further specificy. Shown Below.
+
+![screenshot](documentation\readme_images\nav_cat_dropdown.png)
+
+✅  As a user looking through the items, I expect clear labels as to what kind of item it is and the stock of the said item.
+
+   I-Snap provides:<br>
+     * category labels on product cards and product pages shown [here](documentation\readme_images\category_tags.png).
+
+
+✅  As a user adding items to the cart, I expect to not be interrupted when clicking add.
+
+   I-Snap provides:<br>
+     * an uninterupted add to bag function with no advertising messages.<br>
+     * a off-centre, top right toast notification to let the user know its been added to the bag but does not obscure the main screen and hinder shopping experience. Seen [here](documentation\readme_images\bag_update_msg.png).
+
+
+✅  As a user with items in the cart, I expect my totals to be accurate and updated.
+
+   I-Snap provides:<br>
+     * a shopping bag icon in the main nav bar with a total that updates when items are added to let the user know the purchase total has increased.<br>
+     * a pop up toast success message in the top right corner by the bag icon letting the user know the item added and the quanity and an option to go straight to checkout.<br>
+
+     Shopping bag update toast message is shown below.
+
+![screenshot](documentation\readme_images\bag_update_msg.png)
+
+✅  As a user who wants to make a purchase, I expect to feel the site is trustworthy and to have a straightforward purchasing flow.
+
+   I-Snap provides:<br>
+     * 
 
      Signup page is shown below.
 
 ![screenshot](documents/readme/signup.png)
-
 ------
 
 "**_As a registered user, I would like to_** _______________"
 
-✅  as a returning user, I want to log in with my username and password, so I can access my account.<br>
+✅  As a user who has made a purchase, I expect to receive a confirmation by email.<br>
 
-  ItScool provides:<br>
-      * a login page for users to login with their username and password.<br>
-      * a flash message letting users know they are logged in.<br>
+  I-Snap provides:<br>
+      * 
 
 ![screenshot](documents/readme/login.png)
 
-✅  as a logged-in user, I want to log out of my account, so I can ensure my account remains secure on shared devices.
+✅  As a user who has made a payment, I expect the order to be confirmed, even if I am interrupted.
 
-  ItScool provides:<br>
-    * a link in the navbar for both users and admin users to log out with one click. These can be seen below.<br>
+  I-Snap provides:<br>
+    * .<br>
 
 ![screenshot](documents/readme/logout.png)
-![screenshot](documents/readme/admin_nav.png)
 
-✅  get immediate feedback to know if I have signed up, logged in or signed out.
+✅  As a repeat purchaser, I expect to have my information saved for reuse.
 
-  ItScool provides:<br>
+  I-Snap provides:<br>
      * Immediate feedback via a flash message to let users know they have signd up successfully.<br>
-     * Immediate feedback via a flash message to let users know they have logged in successfully.<br>
-     * Immediate feedback via a flash message to let users know they have logged out successfully.<br>
 
     Example of a flash message is shown below.
 
 ![screenshot](documents/readme/admin_flash.png)
 
-✅  access a user dashboard when logged in.
+✅  As a user who has made purchases, I expect to be able to view my order history.
 
-  ItScool provides:<br>
-     * a user dashboard for logged in users accessible via the navbar as required.<br>
+  I-Snap provides:<br>
+     *.<br>
 
 ![screenshot](documents/readme/user_dashboard.png)
 
-✅  request to add new slang terms and definitions, so I can expand the slang dictionary and share knowledge.
 
-  ItScool provides:<br>
-      * A navigation link to a add slang word request form in the navbar<br>
-      * A add slang page with a add slang word request for for logged in users.<br>
+✅   As a user who may want to return, I would like to be able to make an account securely.
 
-![screenshot](documents/readme/add_slang.png)
-
-✅  request to edit slang terms I’ve added to correct or improve definitions, ensuring the information stays accurate and up-to-date.
-
-  ItScool provides:<br>
-      * A add slang form where any slang or revision of slang will be reviewed by admin to update appropriately.<br>
-      * This is the update functionality within the CRUD functionality. This can be seen [here](documents/readme/add_slang.png).<br>
+  I-Snap provides:<br>
+      * 
 
 
-✅  request to delete slang terms that are no longer relevant or are duplicates, so the dictionary remains clean and useful.
+✅  As a user who has made an account, I expect to be able to change or update my information and login securely.
 
-  ItScool provides:<br>
-      * A delete slang page for logged in users which can be navigated to in the navbar.<br>
-      * Delete slang form on the delete slang page that once submitted is subject to review by admin. This is part of the delete functionality within CRUD. 
+  I-Snap provides:<br>
+      * an account profile with the users details stored in the databse which they can edit and save to update. 
      
-![screenshot](documents/readme/delete_slang.png)
+![screenshot]()
 
-✅   be able to save my favourite slang words to a favourites list in my user dashboard.
+✅  be able to sign up to newsletters to keep up to date with products and company news.
 
-    ItScool provides:<br>
-      * A heart shaped favourite button that allows users to add favourite slang words to be added to a favourites list in their user profile dashboard page.<br>
-      * Favourite buttons located in both the accordion and search results sections, next to slang words. These can be seen below.<br>
+  I-Snap provides:<br>
+      * a newsletter signup located in the footer. This also forms parts of the projects CRUD functionality.
+      * The function lets the user know when they have succesfully signed up.
+      * Will let the user know if they have already signed up with a notifcation stating they have already submitted their email address fornewletter subscription.
      
-![screenshot](documents/readme/result_favourite.png)
-![screenshot](documents/readme/favourite_accordion.png)
+![screenshot]()
+
 
 ------
-
-"**_As an student user, I would like to_** _______________"
-
-✅  Learn About Common School Slang:
-    As a student, I want to browse slang terminology so I can understand the informal language and slang used by peers in the school environment and elsewhere.
-
-  ItScool provides:<br>
-      * A bootstrap accordion where students can browse slang words and their corresponding terminology, seen [here](documents/readme/accordion.png).<br>
-      * A search bar enabling the user to search for slang terms, that are benefot from partial matching using fuzzywuzzy. This displays partial match results due to the nature of slang spellings. This can be seen [here](documents/readme/search_function.png).<br>
-      * A search result area displaying the results of the search. Viewable [here](documents/readme/search_results.png).
-     
-
-![screenshot](documents/readme/favourite_accordion.png)
-
-✅  Contribute School-Specific Slang:
-    As a student, I want to contribute slang that’s specific to my age, school type or region, so I can share it with other students who may find it relevant or interesting.<br>
-
-  ItScool provides:<br>
-    * A add slang page where users can add slang words that, pending approval, will be added to the dictionary allowing users to contribute, making the concept user centric. This can be seen [here](documents/readme/add_slang.png).<br>
-    
-✅  See Slang Organized Alphabetically:
-    As a student, I want to see slang words organized by their first letter, so I can easily find terms that I hear frequently.<br>
-
-  ItScool provides:<br>
-      * A bootstrap accordion where students can browse slang words and their corresponding terminology grouped by the letter they begin with. This can be seen [here](documents/readme/accordion.png).<br>
-
-✅   Report Incorrect or Inappropriate Content:
-    As a student, I want to report slang entries that are incorrect, outdated, or inappropriate, so I can help maintain a positive and accurate dictionary.<br>
-
-  ItScool provides:<br>
-      * A delete slang word page where users can request a slang word and its related fields to be deleted from the dictionary if a users feels it is incorrect or innapropriate for the user groups.<br>
-      * A clearly labelled delete slang page which can be navigated to from the nav bar.<br>
-      * A simple, clear delete slang form that takes the slang word to be deleted and submits it to admin for approval.<br>
-     
-![screenshot](documents/readme/delete_nav.png)
-
-✅  Save Favourite Slang:
-   As a student, I want to be able to save my favourite slang words to a favourites list in my user dashboard.<br>
-
-  ItScool provides:<br>
-      * A heart shaped favourite button that allows users to add favourite slang words to be added to a favourites list in their user profile dashboard page.<br>
-      * Favourite buttons located in both the accordion and search results sections, next to slang words. These can be seen below.<br>
-     
-![screenshot](documents/readme/result_favourite.png)
-![screenshot](documents/readme/favourite_accordion.png)
-
-
-##### back to [top](#table-of-contents)
-
-------
-
-"**_As a teacher or parent, I would like to_** _______________"
-
-✅  Understand Student Language:
-    As a teacher or parent, I want to look up slang terms and definitions, so I can understand the language students are using in social and school settings.<br>
-
-  ItScool provides:<br>
-    * A search bar enabling the user to search for slang terms, that are benefot from partial matching using fuzzywuzzy. This displays partial match results due to the nature of slang spellings. This can be seen [here](documents/readme/search_function.png).<br>
-    * A search result area displaying the results of the search. Viewable [here](documents/readme/search_results.png).<br>
-    * A bootstrap accordion enabling the user to browse slang terms that they may find relevant or may be looking for. This can be seen [here](documents/readme/accordion.png).<br>
-
-
-✅  View Related Terms and Meanings:
-    As a teacher or parent, I want to be able to search for slang words that i have heard and want to find out their corresponding definition and appropriateness.
-
-  ItScool provides:<br>
-    * A search bar enabling the user to search for slang terms, that are benefot from partial matching using fuzzywuzzy. This displays partial match results due to the nature of slang spellings. This can be seen [here](documents/readme/search_function.png).<br>
-    * A search result area displaying the results of the search. Viewable [here](documents/readme/search_results.png).<br>
-     
-
-✅  Browse by Letter or Category:
-    As a teacher or parent, I want to browse slang by letter to find terms more easily and understand common slang patterns.
-
-  ItScool provides:<br>
-     * a bootstrap accordion of all slangs listed alphabetically on all devices. The accordion can be seen [here](documents/readme/accordion.png).
-
-
-✅  Save Relevant Slang:
-    As a teacher or parent, I want to be able to save slang words to a favourites list in my user dashboard that i can come back to as a reference point.
-
-  ItScool provides:<br>
-    * a favourites list for logged in and registered users available in the user dashboard.<br>
-    * favourite buttons to allow logged in and registered users to add favourite slangs to their favourites list.<br>
-     
-![screenshot](documents/readme/favourite_list.png)
 
 ##### back to [top](#table-of-contents)
 
@@ -374,46 +299,42 @@ The project user stories have been met with the following features;
 
 "**_As an administrator, I would like to_** _______________"
 
-✅  review slang terms submitted by users before they are published, so I can ensure quality and appropriateness.
+✅  update products on the front end.
 
-  ItScool provides:<br>
-    * a pending slang list where users have submitted request for slangs to be added to the dictionary by submitting the add slang form for users.
-    * Action button allowing the admin user to take appropriate action.
+  I-Snap provides:<br>
+    * 
      
-![screenshot](documents/readme/action_buttons.png)
+![screenshot]()
 
-✅  delete any slang term to correct inaccuracies, enforce content guidelines, and remove inappropriate entries.
+✅  add products from the front end.
 
-  ItScool provides:<br>
-    * an admin search function allowing admin to search slang words they wish to remove from the dictionary. This can be seen below.<br>
-    * a confirmation modal to ensure admin confirm that they want to delete the slang entry, minimising mistakes. This can be seen [here](documents/readme/delete_nav.png).<br>
+  I-Snap provides:<br>
+    * 
+
+![screenshot]()
+
+✅  delete products from the front-end and back end.
+
+  I-Snap provides:<br>
+    * 
      
-
-![screenshot](documents/readme/admin_dashboard.png)
-
-✅  edit, delete or approve pending approval requests from users requesting a slang word to be added to the app via an admin dashboard.
-
-  ItScool provides:<br>
-    * action buttons allowing the admin user to add, delete or edit a pending slang.<br>
-    * an edit button that triggers an edit modal enabling the admin user to edit the pending slang before approval. This can be seen [here](documents/readme/edit_modal.png).<br>
-     
-![screenshot](documents/readme/action_buttons.png)
+![screenshot]()
 
 
-✅  use a form to add new slang words to the app.
+✅  add, delete and update FAQ's
 
-  ItScool provides:<br>
+  I-Snap provides:<br>
     * an add slang form located in the admin dashboard where the admin can add a slang term and its corresponding fields without having to submit it for approval, streamlining the process for admin.
      
 
-![screenshot](documents/readme/add_slang_admin.png)
+![screenshot]()
 
-✅  navigate easily to the admin dashboard via a navbar.
+✅  know that i am logged in as admin and navigate to the admin features.
 
-  ItScool provides:<br>
-    * a navbar specifically for admin users, which can be seen below.<br>
+  I-Snap provides:<br>
+    * 
      
-![screenshot](documents/readme/admin_nav.png)
+![screenshot]()
 
 ##### back to [top](#table-of-contents)
 

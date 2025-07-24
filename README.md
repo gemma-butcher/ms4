@@ -337,7 +337,7 @@ Reach out for collaboration or investment opportunities:
 1. As a user interested in browsing, I expect to see items that are interesting and compatable with each other.
 0. As a user interested in cameras and accessories, I expect to find cameras and accessories in relevant categories.
 0. As a user interested in
-0. As an industry professional, I expect to find a professional equiptment in a relevant category so as to save time browsing and find what i need.
+0. As an industry professional, I expect to find a professional equipment in a relevant category so as to save time browsing and find what i need.
 0. I expect to be able to use tags and badges to find my way around categories.
 0. As a user shopping online, I expect to see menus and navigation that follow precedents set by other shopping sites.
 0. As a user looking through the items, I expect clear labels as to what kind of item it is and the stock of the said item.
@@ -409,13 +409,6 @@ Reach out for collaboration or investment opportunities:
 - This gives users immediate feedback, for instance, if a user has added all available stock of an item, the message will change from "X added to cart." to "X has run out of stock!"
 - Toasts have a higher z-index than the preloader so they can be seen even while a page is loading.
 - They are fired both by the Django messages function, as well as the AJAX forms.
-
-### Infinite Scroll
-- Infinite Scroll has been implemented to the site using [waypoints](https://github.com/imakewebthings/waypoints).
-- Infinite Scroll is applied to product pages to create a social media-like feed.
-- Allows the user to browse the entire stock, and like items or add to cart whenever they see something they like.
-- The same preloader icon is used for loading new items.
-- Django's paginator automatically provides the page list and queryset for the next set of items.
 
 ----
 
@@ -489,16 +482,6 @@ Reach out for collaboration or investment opportunities:
 - Information will change dynamically, if there is more than one item in stock, there will be a quantity box, the size will or won't display, etc.
 - Cannot add more than the current stock of the item to the basket.
 
-#### Related Items Bar
-<div align="center">
-  <img src="" alt="Product Detail"><br>
-</div>
-
-- Highlights up to nine other popular products in the same category as the chosen product.
-- Utilises the same Product Box template with all the same features.
-- Side-scrolling in line with many other sites' "Related items" sections.
-- Is also used on other pages which may result as empty, such as empty search results, 404 pages, etc.
-
 ### Account Pages
 #### Singup and Login
 <div align="center">
@@ -508,7 +491,7 @@ Reach out for collaboration or investment opportunities:
 - [django-allauth](https://github.com/pennersr/django-allauth) is used for account verification functions.
 - Some aspects of django-allauth have been customised to suit the site, such as page redirections, etc.
 - Both the Signup/Login pages give access to the other form in as a tab in case the incorrect option was selected.
-- Many forms and templates have been customised for the site.
+- Many forms and templates have been customised for the sites global theme.
 
 #### Settings Page
 - All django-allauth functions are available, changing the email, adding email, changing password, etc
