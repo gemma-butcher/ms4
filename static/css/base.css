@@ -304,6 +304,31 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+.sort-select-wrapper .isnap-select,
+#sort-selector.isnap-select {
+    border: 2px solid #369b95 !important;
+    border-radius: 8px !important;
+    background: #fff !important;
+    color: #165665 !important;
+    font-size: 1rem !important;
+    padding: 0.5rem 2.5rem 0.5rem 0.75rem !important;
+    transition: border-color 0.2s, box-shadow 0.2s !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    background-image: url("data:image/svg+xml;charset=UTF-8,<svg width='16' height='16' fill='%23369b95' xmlns='http://www.w3.org/2000/svg'><path d='M4 6l4 4 4-4'/></svg>") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 0.75rem center !important;
+    background-size: 1.25em !important;
+    box-shadow: 0 2px 8px rgba(54, 155, 149, 0.08) !important;
+}
+
+.sort-select-wrapper .isnap-select:focus {
+    border-color: #7719a1 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px #b3ece9 !important;
+}
+
 @media (max-width: 502px) {
     .product-page-mobile-margin {
         margin-top: 6rem !important;
