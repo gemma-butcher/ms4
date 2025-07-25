@@ -262,7 +262,7 @@ User profile page including current and previous orders
 
 - **Inventory:** Dropshipping or 3PL fulfillment
 - **Shipping:** Integrated with FedEx/UPS/DHL APIs
-- **Customer Support:** Live chat, FAQ, email support
+- **Customer Support:** FAQ, email support, services.
 
 ---
 
@@ -336,7 +336,7 @@ Reach out for collaboration or investment opportunities:
 ### User Stories
 1. As a user interested in browsing, I expect to see items that are interesting and compatable with each other.
 0. As a user interested in cameras and accessories, I expect to find cameras and accessories in relevant categories.
-0. As a user interested in
+0. As a user interested in product servicing, easily find out about services offered.
 0. As an industry professional, I expect to find a professional equipment in a relevant category so as to save time browsing and find what i need.
 0. I expect to be able to use tags and badges to find my way around categories.
 0. As a user shopping online, I expect to see menus and navigation that follow precedents set by other shopping sites.
@@ -500,14 +500,14 @@ Reach out for collaboration or investment opportunities:
 - Able to save Shipping and Billing details separately, so when making an order the fields will automatically be filled in.
 
 
-### Basket Page 
-#### Basket 
+### Shopping Bag Page 
+#### Bag 
 - Shows a list of items that have been added to the basket. 
 - Information varies depending on product characteristics like quantity or size.
 - Quantity can be updated, but cannot be increased above max stock. 
 - Items can be removed without page reloading, they will fade out and a notification will fire.
 - The total will also refresh when quantity is updated or an item is removed.
-- If the page is empty, a button leading to the home page is shown.
+- If the page is empty, a button leading to the home page is shown. This can be seen [here](documentation/readme_images/shopping_bag_page.png).
 
 #### Add to Basket Shortcut
 - There is a button on the products page located at the bottom right of the product card.
@@ -527,6 +527,7 @@ Reach out for collaboration or investment opportunities:
 - Payment buttons deactivate upon sending the form to not double send and the preloader blocks other buttons. 
 - A Webhook will create the order if payment completes and the order hasn't been created.
 - Email is sent on order confirmation.
+- The checkout page can be seen [here](documentation/readme_images/checkout_page.png).
 
 #### Order Detail
 - A simple page displaying order information. 
@@ -538,9 +539,12 @@ Reach out for collaboration or investment opportunities:
 - A simple page with orders listed in reverse chronological order. 
 - Displays an image and a few key order details. 
 
-### Contact Pages
+### Contact Page
 - A simple contact form that sends emails to the recipients with a thank you email as well.
 - All emails are stored in the database for reference.
+
+### Services Page
+- Easy to find static services page outlining services offered and ways to enquire about them.
 
 
 ## Additional Features
