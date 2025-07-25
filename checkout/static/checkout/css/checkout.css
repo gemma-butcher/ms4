@@ -65,8 +65,13 @@ select option[value=""] {
     height: 100%;
 }
 
-/* checkout success page */
-.thanks-container,
 .checkout-container {
-    margin-top: 200px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(54,155,149,0.08);
+    padding: 2rem 2.5rem;
+}
+
+.thanks-container, .checkout-container {
+    margin-top: 100px !important;
 }
