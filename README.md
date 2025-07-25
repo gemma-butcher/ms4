@@ -533,11 +533,20 @@ Reach out for collaboration or investment opportunities:
 - A simple page displaying order information. 
 - A confirmed order automatically redirects to this page after creation.
 - This page will redirect if it is accessed by an account that hasn't made the order. 
-- If an account that is not logged in makes an order, a token which allows the user to view only their order is stored in the session. 
+- If an account that is not logged in makes an order, a token which allows the user to view only their order is stored in the session.
+- The order detail page can be seen below.
+
+<div align="center">
+  <img src="documentation/readme_images/order_history.png" alt="order history details"><br>
+</div>
 
 #### Order List
 - A simple page with orders listed in reverse chronological order. 
-- Displays an image and a few key order details. 
+- Displays an image and a few key order details. This can be seen below.
+
+<div align="center">
+  <img src="documentation/readme_images/order_list.png" alt="order list"><br>
+</div>
 
 ### Contact Page
 - A simple contact form that sends emails to the recipients with a thank you email as well.

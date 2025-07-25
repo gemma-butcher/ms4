@@ -263,9 +263,10 @@ The project user stories have been met with the following features;
 ✅  As a user who has made purchases, I expect to be able to view my order history.
 
   I-Snap provides:<br>
-     *.<br>
+     * a order history list in the account profile page.<br>
+     * a order overview page showing the usser all of the order details.
 
-![screenshot](documents/readme/user_dashboard.png)
+![screenshot](documentation/readme_images/order_history.png)
 
 
 ✅   As a user who may want to return, I would like to be able to make an account securely.
@@ -277,9 +278,10 @@ The project user stories have been met with the following features;
 ✅  As a user who has made an account, I expect to be able to change or update my information and login securely.
 
   I-Snap provides:<br>
-      * an account profile with the users details stored in the databse which they can edit and save to update. 
+      * an account profile with the users details stored in the databse which they can edit and save to update shown [here](documentation/readme_images/profile_page.png).
+      *a toast notification letting the user know when they have successfully updated their profile. This can be seen below.
      
-![screenshot]()
+![screenshot](documentation/readme_images/profile_update_success.png)
 
 ✅  be able to sign up to newsletters to keep up to date with products and company news.
 

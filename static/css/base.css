@@ -421,12 +421,65 @@ a.category-badge > span.badge:hover {
 }
 
 /* ------ Shopping Bag ------ */
-.container.bag-container {
-    margin-top: 200px !important;
+
+/* Modern Card for Bag Page */
+.bag-container .card {
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(54, 155, 149, 0.10);
+    border: none;
+    background: #fff;
 }
 
-.basket-table {
-    margin-top: 75px !important;
+.bag-container .card-body {
+    padding: 2rem 1.5rem;
+}
+
+.bag-container .logo-font {
+    color: #369b95;
+}
+
+.bag-header-icon {
+    color: #369b95;
+}
+
+.bag-title {
+    color: #369b95;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.basket-table .table {
+    background: transparent;
+}
+
+.basket-table .table thead th {
+    color: #369b95;
+    font-weight: bold;
+    border-bottom: 2px solid #369b95;
+    background: #f8f9fa;
+}
+
+.basket-table .table tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.basket-table .img-fluid {
+    max-width: 80px;
+    max-height: 80px;
+    object-fit: cover;
+    border: 1px solid #e0e0e0;
+    background: #fafafa;
+    border-radius: 8px;
+}
+
+@media (max-width: 576px) {
+    .bag-container {
+        padding: 1rem 0.25rem;
+    }
+    .basket-table .img-fluid {
+        max-width: 60px;
+        max-height: 60px;
+    }
 }
 
 /* ------ Messages ------ */
