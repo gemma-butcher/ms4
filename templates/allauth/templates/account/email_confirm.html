@@ -1,39 +1,71 @@
 {% extends "account/base_entrance.html" %}
-{% load i18n %}
-{% load account %}
-{% load allauth %}
+{% load allauth i18n account %}
+
 {% block head_title %}
-    {% trans "Confirm Email Address" %}
+    {% trans "Confirm E-mail Address" %}
 {% endblock head_title %}
+
 {% block content %}
-    {% element h1 %}
-        {% trans "Confirm Email Address" %}
-    {% endelement %}
-    {% if confirmation %}
-        {% user_display confirmation.email_address.user as user_display %}
-        {% if can_confirm %}
-            {% element p %}
-                {% blocktrans with confirmation.email_address.email as email %}Please confirm that <a href="mailto:{{ email }}">{{ email }}</a> is an email address for user {{ user_display }}.{% endblocktrans %}
-            {% endelement %}
-            {% url 'account_confirm_email' confirmation.key as action_url %}
-            {% element form method="post" action=action_url %}
-                {% slot actions %}
-                    {% csrf_token %}
-                    {{ redirect_field }}
-                    {% element button type="submit" %}
-                        {% trans 'Confirm' %}
-                    {% endelement %}
-                {% endslot %}
-            {% endelement %}
-        {% else %}
-            {% element p %}
-                {% blocktrans %}Unable to confirm {{ email }} because it is already confirmed by a different account.{% endblocktrans %}
-            {% endelement %}
-        {% endif %}
-    {% else %}
-        {% url 'account_email' as email_url %}
-        {% element p %}
-            {% blocktrans %}This email confirmation link expired or is invalid. Please <a href="{{ email_url }}">issue a new email confirmation request</a>.{% endblocktrans %}
-        {% endelement %}
-    {% endif %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card shadow-lg border-0">
+                <div class="card-body p-5">
+                    <div class="text-center mb-4">
+                        <svg class="mb-3" width="48" height="48" viewBox="0 0 24 24" fill="#369b95" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        <h1 class="logo-font mb-2">{% trans "Confirm E-mail Address" %}</h1>
+                    </div>
+
+                    {% if confirmation %}
+                        {% user_display confirmation.email_address.user as user_display %}
+                        
+                        <div class="alert alert-info text-center mb-4">
+                            <p class="mb-0">
+                                {% blocktranslate with confirmation.email_address.email as email %}
+                                Please confirm that <a href="mailto:{{ email }}">{{ email }}</a> is an e-mail address for user {{ user_display }}.
+                                {% endblocktranslate %}
+                            </p>
+                        </div>
+
+                        <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+                            {% csrf_token %}
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-isnap btn-lg font-weight-bold px-5">
+                                    {% trans "Confirm" %}
+                                </button>
+                            </div>
+                        </form>
+                    {% else %}
+                        <div class="alert alert-warning text-center mb-4">
+                            <h4 class="alert-heading">{% trans "Invalid confirmation link" %}</h4>
+                            <p class="mb-0">
+                                {% url 'account_email' as email_url %}
+                                {% blocktranslate %}
+                                This e-mail confirmation link expired or is invalid. Please 
+                                <a href="{{ email_url }}">issue a new e-mail confirmation request</a>.
+                                {% endblocktranslate %}
+                            </p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <a href="{% url 'account_email' %}" class="btn btn-outline-primary btn-lg font-weight-bold px-5">
+                                {% trans "Request New Confirmation" %}
+                            </a>
+                        </div>
+                    {% endif %}
+
+                    <div class="text-center mt-4">
+                        <p class="mb-0">
+                            <a href="{% url 'home' %}" class="text-decoration-none">
+                                {% trans "Back to Home" %}
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}

@@ -181,7 +181,8 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/profiles/profile/'
-ACCOUNT_SIGNUP_REDIRECT_URL = '/profiles/profile/'
+ACCOUNT_SIGNUP_REDIRECT_URL = '/'
+ACCOUNT_EMAIL_CONFIRMATION_AUTHENTICATED_REDIRECT_URL = '/profiles/profile/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
@@ -262,7 +263,7 @@ DEFAULT_FROM_EMAIL = 'isnap@example.com'
 CSRF_FAILURE_VIEW = 'django.views.csrf.csrf_failure'
 
 # Email settings
-if 'DEVELOPMENT' in os.environ:
+if 'DEVELOPMENT' in os.environ or DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'isnap@example.com'
 else:
@@ -273,4 +274,3 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
-
