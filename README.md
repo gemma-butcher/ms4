@@ -171,7 +171,7 @@ The target audience for I-Snap are:
 - People who are interested or work in photography, videography and broadcasting.
 - People that want to browse through various equiptment.
 - Professionals seeking high end equiptment for broadcasting and cinemography.
-- Shoppers that don't know what they want, but want to explore.
+- Shoppers that don't know what they want, but want to explore and browse.
 
 User goals are:
 - Find the piece of equiptment they were looking for or find something that meets their search requirements.
@@ -380,7 +380,7 @@ Reach out for collaboration or investment opportunities:
 - Using the SASS, shadows and sharp-edged boxes have been applied by default, taking advantage of the features.
 - Responsive text sizing has also been enabled using SASS.
 - Rounded edges have been utilised where a bit more friendliness and fun is necessary, such as the tags below the products.
-- Fading animations are utilised for smoothness in certain transitions, such as the icons in the Navbar.
+- Fading animations are utilised for smoothness in certain transitions, such as the product cards.
 
 
 ## Seamless Design
@@ -421,18 +421,16 @@ Reach out for collaboration or investment opportunities:
   <img src="" alt="Small Header">
 </div>
 
-- The Navbar is the single persistent item across the site, as a footer has been foregone in favour of the infinite scroll.
-- The Logo is always highlighted, central and bold, on all screen sizes, as a form of self-advertising.
-- The three icons and the search bar are always present as they are key features of the site, however, positions change depending on screen size. The search bar moves down into the green section next to the collapsable menu on a smaller screen and the icons spread out. The heart shifts position to the centre under the logo and flashes pink when an item is liked, drawing attention towards the logo.
+- The Navbar and fotter are persistent items across the site.
+- The Logo is always visible on all screen sizes, as a form of self-advertising.
+- The three icons and the search bar are always present as they are key features of the site, however, positions change depending on screen size.
 - Authorisation functions switch depending on whether or not the user is logged in. Signup, login, profile and logout are always highlighted no matter the page.
-- The like and cart buttons are animated to catch the eye and keep things playful. 
 - The cart button will highlight the number of items in the cart with a little badge.
-- The section menus are standard e-commerce menus. Stockdrops are utilised as a separate category.
-- Categories and StockDrop menu options are dynamically added and sorted based on the models in the database.
+- The section menus are standard e-commerce menus.
+- Categories menu options are dynamically added and sorted based on the models in the database.
 - The correct section menu is dynamically set as active and highlighted in the Navbar depending on the current page.
 - I've tried to make the like, cart and tags more prominent than the section menus, as I think positive user engagement is gained more through simplicity than deep menus.
 - The search bar is always available and performs a Postgres text search that gives more weight to tags.
-- The mobile nav button has been placed to the right for ease of use with one hand.
 
 ### Product List Page
 #### StockDrop Carousel
@@ -464,13 +462,9 @@ Reach out for collaboration or investment opportunities:
 #### Search
 - The Product List page also functions as the search query page.
 - Runs a Postgres text-based search on all products, with weighted results. Tags carry one grade more importance than other text.
-- Searches automatically remove the Stockdrop image and display the search term instead.
+- Searches display the search term.
 - Displays the same grid with filtered results.
 - If there are no results, it gives the option to return to the main shop page and it displays a side-scrolling box with products.
-
-#### StockDrop and Category
-- Utilise the same layout and similar features as the Product List Page, with results filtered to the respective model.
-- I will look into optimising the templates and views by integrating these pages into the same view and template as the Page List.
 
 ### Product Detail Page
 #### Product Detail Box
@@ -478,20 +472,20 @@ Reach out for collaboration or investment opportunities:
   <img src="" alt="Product Detail"><br>
 </div>
 
-- Displays information similar to the product box but adds a description section, with larger text and buttons.
+- Displays information similar to the product card but adds a description section, with larger text and buttons.
 - Information will change dynamically, if there is more than one item in stock, there will be a quantity box, the size will or won't display, etc.
 - Cannot add more than the current stock of the item to the basket.
 
 ### Account Pages
-#### Singup and Login
+#### Signup and Login
 <div align="center">
-  <img src="" alt="Product Box"><br>
+  <img src="documentation/readme_images/signup_page.png" alt="Product Box"><br>
 </div>
 
 - [django-allauth](https://github.com/pennersr/django-allauth) is used for account verification functions.
-- Some aspects of django-allauth have been customised to suit the site, such as page redirections, etc.
+- Some aspects of django-allauth have been customised to suit the site, such as page redirections, etc. Templates have been custom styles to match the global themes.
 - Both the Signup/Login pages give access to the other form in as a tab in case the incorrect option was selected.
-- Many forms and templates have been customised for the sites global theme.
+- Many forms and templates have been customised for the sites global theme. A customised all auth page can be seen above.
 
 #### Settings Page
 - All django-allauth functions are available, changing the email, adding email, changing password, etc
@@ -502,12 +496,15 @@ Reach out for collaboration or investment opportunities:
 
 ### Shopping Bag Page 
 #### Bag 
+<div align="center">
+  <img src="documentation/readme_images/shopping_bag_page.png" alt="Shopping Bag"><br>
+</div>
 - Shows a list of items that have been added to the basket. 
-- Information varies depending on product characteristics like quantity or size.
+- Information varies depending on product characteristics like quantity or price.
 - Quantity can be updated, but cannot be increased above max stock. 
 - Items can be removed without page reloading, they will fade out and a notification will fire.
 - The total will also refresh when quantity is updated or an item is removed.
-- If the page is empty, a button leading to the home page is shown. This can be seen [here](documentation/readme_images/shopping_bag_page.png).
+- If the page is empty, a button leading to the home page is shown. This can be seen [here](documentation/readme_images/empty_shopping_bag.png).
 
 #### Add to Basket Shortcut
 - There is a button on the products page located at the bottom right of the product card.
@@ -537,7 +534,7 @@ Reach out for collaboration or investment opportunities:
 - The order detail page can be seen below.
 
 <div align="center">
-  <img src="documentation/readme_images/order_history.png" alt="order history details"><br>
+  <img src="documentation/readme_images/order_confirmation.png" alt="order confirmation details"><br>
 </div>
 
 #### Order List
@@ -552,9 +549,18 @@ Reach out for collaboration or investment opportunities:
 - A simple contact form that sends emails to the recipients with a thank you email as well.
 - All emails are stored in the database for reference.
 
+<div align="center">
+  <img src="documentation/readme_images/contact_us.png" alt="contact us page"><br>
+</div>
+
 ### Services Page
 - Easy to find static services page outlining services offered and ways to enquire about them.
+- Clicking on the 'request a service' button takes the user to the contact page to enquire about services.
+- A future development of this would be to implement a services modal where the user can request specific services while keeping them on the services page.
 
+<div align="center">
+  <img src="documentation/readme_images/services_page.png" alt="services page"><br>
+</div>
 
 ## Additional Features
 ### General
