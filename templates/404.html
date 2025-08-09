@@ -3,21 +3,24 @@
 {% block body_class %}default-background{% endblock %}
 {% load static %}
 {% block content %}
-<div class="container not-found-container" style="margin-top:200px;">
+<div class="container my-5">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-12 col-lg-10 col-xl-8">
             <div class="card shadow-lg border-0">
-                <div class="card-body text-center">
-                    <h1 class="display-4 mb-3">404</h1>
-                    <h2 class="mb-3">Oops! Page Not Found</h2>
-                    <p class="lead mb-4">
+                <div class="card-body text-center p-5 p-lg-6">
+                    <svg class="mb-4" width="80" height="80" viewBox="0 0 24 24" fill="#369b95" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                    <h1 class="display-2 mb-3">404</h1>
+                    <h2 class="display-5 mb-3">Oops! Page Not Found</h2>
+                    <p class="lead mb-4" style="font-size: 1.5rem;">
                         Sorry, the page you are looking for does not exist.<br>
                         It might have been moved or deleted.
                     </p>
-                    <a href="{% url 'home' %}" class="btn btn-primary btn-lg">
+                    <a href="{% url 'home' %}" class="btn btn-isnap btn-lg font-weight-bold px-5 py-3">
                         Back to Home
                     </a>
-                    <a href="{% url 'products' %}" class="btn btn-secondary btn-lg ml-2">
+                    <a href="{% url 'products' %}" class="btn btn-outline-primary btn-lg font-weight-bold ml-2 px-5 py-3">
                         Browse Products
                     </a>
                 </div>
