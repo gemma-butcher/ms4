@@ -562,6 +562,16 @@ Reach out for collaboration or investment opportunities:
   <img src="documentation/readme_images/services_page.png" alt="services page"><br>
 </div>
 
+### 404 Page
+- A customised 404 page where users will be directed to if they enter an incorrect URL or end up following a broken link.
+- Maintains the global site styling with a clea werror messsage giving the user feedback as to what has happened and that they have not ended  up where they may have expected.
+- A back to home button so the user can easily navigate back to the home page in one click minimising cognitive overload.
+- A browse products button which directs the user back to the products page if they so wish to continue browsing. This is also in one click minimising cognitive overload.
+
+
+<div align="center">
+  <img src="documentation/readme_images/404_page.png" alt="services page"><br>
+</div>
 ## Additional Features
 ### General
 - App structure
