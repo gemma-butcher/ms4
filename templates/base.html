@@ -42,7 +42,7 @@
     <title>I-Snap {% block extra_title %}{% endblock %}</title>
   </head>
   <body class="{% block body_class %}default-background{% endblock %}">
-    <header class="container-fluid fixed-top p-0">
+    <header class="container-fluid sticky-top p-0">
         <!-- Top Row: Logo, Search and Account -->
         <div class="row bg-black pt-2 pb-2 m-0">
             <!-- Logo -->
@@ -143,7 +143,8 @@
         <!-- Third Row: Delivery Banner -->
         <div id="delivery-banner" class="row text-center m-0">
             <div class="col delivery-banner-bg text-white">
-                <h4 class="logo-font my-1">Free delivery on all orders over £{{ free_shipping_threshold }}!</h4>
+                <h4 class="logo-font my-1 d-none d-sm-block">Free delivery on all orders over £{{ free_shipping_threshold }}!</h4>
+                <p class="my-1 d-block d-sm-none small">Free delivery on orders over £{{ free_shipping_threshold }}!</p>
             </div>
         </div>
     </header>

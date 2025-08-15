@@ -46,9 +46,11 @@
     - [Product List Page](#product-list-page)
     - [Product Detail Page](#product-detail-page)
     - [Account Pages](#account-pages)
-    - [Cart Pages](#cart-pages)
+    - [Shopping Bag Pages](#shopping-bag-pages)
     - [Checkout Pages](#checkout-pages)
-    - [Contact Pages](#contact-pages)
+    - [Contact Page](#contact-pages)
+    - [Services Page](#services-page)
+    - [404 Page](#404-page)
     </details></li>
 
     <li><details>
@@ -494,7 +496,7 @@ Reach out for collaboration or investment opportunities:
 - Able to save Shipping and Billing details separately, so when making an order the fields will automatically be filled in.
 
 
-### Shopping Bag Page 
+### Shopping Bag Pages
 #### Bag 
 <div align="center">
   <img src="documentation/readme_images/shopping_bag_page.png" alt="Shopping Bag"><br>
@@ -572,6 +574,8 @@ Reach out for collaboration or investment opportunities:
 <div align="center">
   <img src="documentation/readme_images/404_page.png" alt="services page"><br>
 </div>
+
+
 ## Additional Features
 ### General
 - App structure
@@ -607,7 +611,6 @@ Reach out for collaboration or investment opportunities:
     - Confirmation sent to the email address on purchase.
     - The ability to view that order will remain in their session if the anonymous user wishes to return to the page.
     - That order also cannot be viewed by anyone else without the session cookie.
-    - If they choose to join or login during that session, the likes in their session will be transferred to their user profile and saved.
 - Accounts
     - [django-allauth](https://django-allauth.readthedocs.io/en/latest/index.html) features are utilised for accounts.
     - Accounts must be email verified.
@@ -621,7 +624,7 @@ Reach out for collaboration or investment opportunities:
     - Utilises a full-text search on select model fields.
     - Product tags are weighted more than other text to maintain their importance.
 - Tags
-    - Tags allow people to search by idea, concept, aesthetic, etc.
+    - Tags allow people to search by idea, concept, category, etc.
     - More similar to a social networking site.
     - A familiar concept used for quickly accessing similar items more abstractly.
 
