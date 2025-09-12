@@ -1,4 +1,8 @@
-[I-Snap](https:/)
+<div align="center">
+  <img src="documentation\readme_images\mock_up.png" alt="I-Snap Mockup">
+</div>
+
+**[🚀 View Live Site: I-Snap](https://i-snap-110e214ae896.herokuapp.com/)**
 
 ## Table of Contents
 1. <details open>
@@ -57,7 +61,6 @@
     <summary><a href="#additional-features">Additional Features</a></summary>
 
     - [General](#general)
-    - [Products](#products)
     - [Users](#users)
     - [Search Features](#search-features)
     </details></li>
@@ -224,13 +227,13 @@ The Business Goals of I-Snap are:
 ---
 
 ## 🛒 Features
-🔍 Advanced product search & filters
-📄 Frequently Asked Questions (FAQ) section for customer self-help
-📬 Contact form with message storage in the database (for support & inquiries)
-💳 Secure checkout with Stripe/PayPal
-🛠️ Admin panel for inventory management, FAQ management and updates
-📦 Order tracking & fulfillment integration
-User profile page including current and previous orders
+🔍 Advanced product search & filters<br>
+📄 Frequently Asked Questions (FAQ) section for customer self-help<br>
+📬 Contact form with message storage in the database (for support & inquiries)<br>
+💳 Secure checkout with Stripe/PayPal<br>
+🛠️ Admin panel for inventory management, FAQ management and updates<br>
+📦 Order tracking & fulfillment integration<br>
+📦 User profile page including current and previous orders
 
 
 ---
@@ -298,7 +301,7 @@ User profile page including current and previous orders
 | Risk                  | Mitigation                            |
 |-----------------------|----------------------------------------|
 | High competition      | Focused niche & personalized tools     |
-| Inventory challenges  | Start with dropshipping or low-risk SKUs |
+| Inventory challenges  | Start with high profit low-risk SKUs |
 | Tech downtime         | Cloud hosting, CI/CD, daily backups    |
 
 ---
@@ -358,11 +361,11 @@ Reach out for collaboration or investment opportunities:
 ### Wireframes
 -All wireframes for the project can be viewed [here](documentation\wireframes). Desktop and moble wireframes are available for all custom pages, and a mobile and desktop 
 wireframe is available for one of the customised all auth pages. 
-- Tre is one tablet wireframe of the homepage to give an example of the expected tablet layout.
+- There is one tablet wireframe of the homepage to give an example of the expected tablet layout.
 
 ### Fonts
-- The primary font, [Montserrat](https://fonts.google.com/specimen/Montserrat) was chosen because it was similar to the secondary font used for the brand. It is sans-serif, so it is clear, clean and simple. It was chosen to not contrast or draw the eye, but instead to remain rather mute, keeping the eyes more focused on the products and images.
-- The secondary font, [Lexand Deca](https://fonts.google.com/specimen/Lexend+Deca) was chosen because it is Monospace, is a very clean font, which looks great bold and in uppercase. The spacing equal spacing allowed for easy use in based on character length. It was perfect for a strong brand logo as well as use for headings.
+- The primary font, Segoe UI, with a fallback font of sans serif for ease of readability to to high image count and graphics in layout.
+- The secondary font is Helvetica Neue with a fall back of sans serif, again for ease of readability and compatibility.
 
 ### Icons
 - Icons are taken from the new Bootstrap Icon library and so are SVG files,
@@ -377,7 +380,7 @@ wireframe is available for one of the customised all auth pages.
 - The site has a heavy image use, mainly for products. Official product images are used to increase validitiy or seller authenticity.
 - Some images have been resized and converted to another format before being uploaded for best optimisation. 
 - Images are all responsive.
-- Images have a small tag by way of a badge if to convey more information, such as new stock  or if it's on back-order.
+- Images have a small tag by way of a badge to convey more information, such as new stock  or if it's on back-order.
 
 ### Styling
 - For this project I have utilised Bootstrap 4.5 source files to override their class defaults to my liking, making customisation much easier. The entire site can be restyled with a single switch in the code.
@@ -385,7 +388,7 @@ wireframe is available for one of the customised all auth pages.
 - Using the SASS, shadows and sharp-edged boxes have been applied by default, taking advantage of the features.
 - Responsive text sizing has also been enabled using SASS.
 - Rounded edges have been utilised where a bit more friendliness and fun is necessary, such as the tags below the products.
-- Fading animations are utilised for smoothness in certain transitions, such as the product cards.
+- Fading animations are utilised for smoothness in certain transitions, such as the product cards and buttons.
 
 
 ## Seamless Design
@@ -411,7 +414,7 @@ wireframe is available for one of the customised all auth pages.
 
 - Bootstrap Toasts are used to notify users of their actions on the page.
 - A toast will show with a response to the user action, it may be a success message, an info message or an error message.
-- This gives users immediate feedback, for instance, if a user has added all available stock of an item, the message will change from "X added to cart." to "X has run out of stock!"
+- This gives users immediate feedback. Such as "product x has been added to your bag".
 - Toasts have a higher z-index than the preloader so they can be seen even while a page is loading.
 - They are fired both by the Django messages function, as well as the AJAX forms.
 
@@ -591,22 +594,6 @@ wireframe is available for one of the customised all auth pages.
     - Decorators and mixins are utilised to prevent access to forbidden pages.
     - DetailViews will often redirect a user to their own version of that view to prevent access to other's orders.
     - Stripe is active on all pages so their fraud protection is active.
-
-### Products
-- Stock
-    - Items are marked as unique by default and their stock will be set to 1.
-    - Items that are not unique have stock set to a default of 50.
-    - when these' items stock drops below 10 they will be marked as "low stock".
-    - Users can not purchase more stock than is available, it will be set to the maximum stock available.
-    - Items with 0 stock will be automatically set to "sold" and have their add to cart buttons removed.
-    - Products remain viewable and likeable after being sold.
-
-- Management
-    - Products can be saved to user profiles by liking.
-    - The items saved by users will be saved in reverse chronological order by utilising a "through" model table on the ManytoMany field.
-    - Products have a "popularity" field that updates on likes, and stock changes.
-    - Products are sorted by both popularity and stock quantity.
-    - Delivery is free above £50. Postage costs vary per products and per quantity and delivery destination.
 
 ### Users
 - Anonymous Users
@@ -863,7 +850,7 @@ category_id | null=False | bigint
     * Tracks code coverage statistics.
 - [Github](https://github.com/)
     * Storing code remotely.
-- [Gitpod](https://gitpod.io/)
+- [Visual Studio Code](https://code.visualstudio.com//)
     * IDE for project development.
 - [Heroku](https://www.heroku.com/)
     * Platform for production deployement.
@@ -874,8 +861,8 @@ category_id | null=False | bigint
     * To create wireframes.
 - [DBeaver](https://dbeaver.io/)
     * Generate Diagrams for the database.
-- [Mockup Generator](https://techsini.com/multi-mockup/index.php)
-    * For device mockup images.
+- [Mockup Generator](https://websitemockupgenerator.com/)
+    * Used for device mockup images at the top of this file.
 
 ----
 
@@ -886,7 +873,7 @@ category_id | null=False | bigint
 - CSS has been validated with [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and auto-prefixed with [CSS Autoprefixer](https://autoprefixer.github.io/).
 - Links checked with [W3C Link Checker](https://validator.w3.org/checklink).
 - Each javascript file was tested on the site for errors and functionality using the console and with [JSHint](https://jshint.com/).
-- Python has been validated using the [Microsoft Python Linter](https://code.visualstudio.com/docs/python/linting)
+- Python has been validated using the [Microsoft Python Linter](https://code.visualstudio.com/docs/python/linting) and code institute pylinter. 
 
 ### Python Testing
 **Notes:**
@@ -940,7 +927,7 @@ category_id | null=False | bigint
 ### Mobile Testing
 - I tested the site personally on my Apple iphone16 device, going through the pages and proceses, checking buttons, functions, checking out, etc.
 - The site was sent to friends and relatives for them to follow the same process. They have tested on their devices, including android.
-- Chrome was utilised to inspect the site in mobile format, going through the pages and functions.
+- Chrome Dev Tools was utilised to inspect the site in mobile format, going through the pages and functions.
 
 ### Desktop Testing
 - The site was developed on a Chromebook and, as such, the majority of testing occurred on Chrome.
@@ -1060,7 +1047,7 @@ python manage.py collectstatic --noinput --traceback
 
 ## Credit and Contact
 ### Images
-Product images were all taken from Creative Video Productions Limited andas a result have copyright watrermarks on the majority. I am an employed Web Designer of the company and have 
+Product images were all taken from Creative Video Productions Limited and as a result have copyright watrermarks on the majority. I am an employed Web Designer of the company and have 
 permission to use these images for educational purposes for this project.
 Additional images were taken from:
 - 

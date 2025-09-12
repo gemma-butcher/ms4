@@ -27,7 +27,7 @@ if settings.DEBUG:
     from django.http import FileResponse, Http404
     from django.views.decorators.http import require_GET
     import os
-    
+
     @require_GET
     def favicon(request):
         try:
@@ -40,7 +40,7 @@ if settings.DEBUG:
             )
         except FileNotFoundError:
             raise Http404("Favicon not found")
-    
+
     urlpatterns += [
         path(
             '404/',
