@@ -356,6 +356,9 @@ Reach out for collaboration or investment opportunities:
 
 ## Visual Design
 ### Wireframes
+-All wireframes for the project can be viewed [here](documentation\wireframes). Desktop and moble wireframes are available for all custom pages, and a mobile and desktop 
+wireframe is available for one of the customised all auth pages. 
+- Tre is one tablet wireframe of the homepage to give an example of the expected tablet layout.
 
 ### Fonts
 - The primary font, [Montserrat](https://fonts.google.com/specimen/Montserrat) was chosen because it was similar to the secondary font used for the brand. It is sans-serif, so it is clear, clean and simple. It was chosen to not contrast or draw the eye, but instead to remain rather mute, keeping the eyes more focused on the products and images.
