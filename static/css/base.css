@@ -7,7 +7,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    
+    min-height: 100vh;
 }
 
 body, .default-background {
@@ -683,8 +683,8 @@ body.faq-form-page {
 
 .faq-accordion-container,
 .faq-form-container {
-    margin-top: 200px !important;
-    padding-bottom: 250px !important;
+    margin-top: 50px !important;
+    padding-bottom: 20px !important;
 }
 
 /* FAQ Accordion */
@@ -700,11 +700,6 @@ body.faq-form-page {
     box-shadow: 0 4px 16px rgba(129, 33, 178, 0.30);
     transform: translateY(-5px);
     border-color: #b3ece9;
-}
-
-/* ------ Contact Page ------*/
-.contact-container {
-    margin-top: 200px !important;
 }
 
 .contact-card {
