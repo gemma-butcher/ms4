@@ -531,7 +531,6 @@ wireframe is available for one of the customised all auth pages.
 - Billing and Shipping information can be saved to the profile if the save infobox is ticked.
 - Payment buttons deactivate upon sending the form to not double send and the preloader blocks other buttons. 
 - A Webhook will create the order if payment completes and the order hasn't been created.
-- Email is sent on order confirmation.
 - The checkout page can be seen [here](documentation/readme_images/checkout_page.png).
 
 #### Order Detail
@@ -883,7 +882,7 @@ category_id | null=False | bigint
 - A secondary, persistent, PostgreSQL test database has been utilised on [Heroku](https://www.heroku.com/). This way the test database functions more similarly to the production database, with items being added and persisting. This allows for more accurate testing and test views which function on a real Postgres database. Testing must be run with the option `--keepdb` to maintain the database's persistence.
 
 #### Running Tests
-1. Activate the virtual environment with the [deployed](#deployement) code.
+1. Activate the virtual environment with the [deployed](#deployment) code.
 2. Input the following code into the terminal:
     ```
     python manage.py test --keepdb

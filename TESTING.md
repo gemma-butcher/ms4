@@ -470,6 +470,11 @@ It is particuarly useful as it can encompass a wide range of input from stakehol
 
 | **Feature**          | **Test Details**           | **Expected results**                      | **Pass/Fail** |                                             
 | :-- | :-- | :-- | :-- |
+| Contact Page | Click contact us Link in footer quick links. Ensure contact page loads as expected | contact page loads as expected | Pass |
+| Contact styling effects | Hover over send message button and ensure hover effects work | Hover effects work as expected | Pass |
+| Contact form text input | Click  and ensure the forms take the required text in correct format | Takes input as expected | Pass |
+| Contact form submission confirmation | After inputting text click send message button | Success message modal appears with close button and closes upon clicking button | Pass |
+
 
 - Below is a table of the manual user testing carried for FAQ's.
 
@@ -484,6 +489,16 @@ It is particuarly useful as it can encompass a wide range of input from stakehol
 | Admin Action Button (Add) | Ensure logged in as a superuser (@admin required), Click add FAQ button | Directed to Add FAQ page | Pass |
 | Admin Add FAQ Page | Enter a question, answer and select category from relevant fields. Click Create FAQ button, navigate to faq page to check questions and answer is added in selected category | Question and answer has been added to selected category| Pass |
 | Admin Action Button (Cancel) | Navigate to the Add FAQ page. Click the grey cancel button next to the create FAQ button. | Admin user is redirected back to the FAQ page | Pass |
+
+
+- Below is a table of the manual user testing carried for the newsletter.
+
+| **Feature**          | **Test Details**           | **Expected results**                      | **Pass/Fail** |                                             
+| :-- | :-- | :-- | :-- |
+| Newsletter signup input | Click email input and takes only an email address | Takes email address. Turns white on completion | Pass |
+| Newsletter Subscribe Button Hover | Hover over subscribe button and ensure hover effects work | Hover effects work as expected | Pass |
+| Newsletter Subscribe Button Submission New | Click submit button after inputting email address | Green message notifying user of suibscription shows if not previously submitted | Pass |
+| Newsletter Subscribe Button Submission Pre-existing | Click submit button after inputting email address | Red message notifying user of existing suibscription shows if previously submitted | Pass |
 
 ##### back to [top](#table-of-contents)
 
