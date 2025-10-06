@@ -228,7 +228,8 @@ The project user stories have been met with the following features;
 ✅  As a user who wants to make a purchase, I expect to feel the site is trustworthy and to have a straightforward purchasing flow.
 
    I-Snap provides:<br>
-     * 
+     * stripe payment processing to ensure trust, security and authentication requirements.
+     * django all auth pages handling signup and account verification or security and data protection and handling.
 
      Signup page is shown below.
 
@@ -254,17 +255,15 @@ The project user stories have been met with the following features;
 ✅  As a repeat purchaser, I expect to have my information saved for reuse.
 
   I-Snap provides:<br>
-     * Immediate feedback via a flash message to let users know they have signd up successfully.<br>
+     * a profile page with saved information on signup and purchases, including delivery
 
-    Example of a flash message is shown below.
-
-![screenshot](documents/readme/admin_flash.png)
+![screenshot](documents/readme/profile_page.png)
 
 ✅  As a user who has made purchases, I expect to be able to view my order history.
 
   I-Snap provides:<br>
      * a order history list in the account profile page.<br>
-     * a order overview page showing the usser all of the order details.
+     * a order overview page showing the user all of the order details.
 
 ![screenshot](documentation/readme_images/order_history.png)
 
@@ -272,14 +271,14 @@ The project user stories have been met with the following features;
 ✅   As a user who may want to return, I would like to be able to make an account securely.
 
   I-Snap provides:<br>
-      * 
+      * Django all auth logic and templates for secure account sign up and login pages. The sign up page can be seen [here](documentation\readme_images\signup_page.png)
 
 
 ✅  As a user who has made an account, I expect to be able to change or update my information and login securely.
 
   I-Snap provides:<br>
-      * an account profile with the users details stored in the databse which they can edit and save to update shown [here](documentation/readme_images/profile_page.png).
-      *a toast notification letting the user know when they have successfully updated their profile. This can be seen below.
+      * an account profile with the users details stored in the database which they can edit and save to update shown [here](documentation/readme_images/profile_page.png).
+      * a toast notification letting the user know when they have successfully updated their profile. This can be seen below.
      
 ![screenshot](documentation/readme_images/profile_update_success.png)
 
@@ -290,7 +289,7 @@ The project user stories have been met with the following features;
       * The function lets the user know when they have succesfully signed up.
       * Will let the user know if they have already signed up with a notifcation stating they have already submitted their email address fornewletter subscription.
      
-![screenshot]()
+![screenshot](documentation/readme_images/subscribe_success.png)
 
 
 ------
@@ -304,21 +303,28 @@ The project user stories have been met with the following features;
 ✅  update products on the front end.
 
   I-Snap provides:<br>
-    * 
+    * A product management system for signed in and authorised administrators.
+    * edit product form link located on the product card for logged in users.
+    * edit product form for updating existing products from the front end.
      
-![screenshot]()
+![screenshot](documentation/readme_images/edit_management_link.png)
+
+    * edit/update product for for existing products.
+
+![screenshot](documentation/readme_images/edit_product_form.png)
 
 ✅  add products from the front end.
 
   I-Snap provides:<br>
-    * 
-
-![screenshot]()
+    * A product management system for signed in and authorised administrators.
+    * product management form to add products and their relevant categories and a product image.
+![screenshot](documentation/readme_images/product_management_form.png)
 
 ✅  delete products from the front-end and back end.
 
   I-Snap provides:<br>
-    * 
+    * A product management system for signed in and authorised administrators.
+    * Delete product link on the product cards for logged in admin users.
      
 ![screenshot]()
 
@@ -326,7 +332,10 @@ The project user stories have been met with the following features;
 ✅  add, delete and update FAQ's
 
   I-Snap provides:<br>
-    * an add slang form located in the admin dashboard where the admin can add a slang term and its corresponding fields without having to submit it for approval, streamlining the process for admin.
+    * an add faq form located in the faq page where the admin can add,delete and update FAQ's and its corresponding fields without having to submit it for approval, streamlining the process for admin.
+    ![screenshot](documentation/readme_images/add_faq_form.png)
+    * add FAQ form is accessed from the add FAQ button on the FAQ page only accessible to logged in admin users.
+    ![screenshot](documentation/readme_images/add_faq_button.png)
      
 
 ![screenshot]()
@@ -334,9 +343,9 @@ The project user stories have been met with the following features;
 ✅  know that i am logged in as admin and navigate to the admin features.
 
   I-Snap provides:<br>
-    * 
+    * a product management link in the user account submenu.
      
-![screenshot]()
+![screenshot](documentation/readme_images/product_management_account.png)
 
 ##### back to [top](#table-of-contents)
 
