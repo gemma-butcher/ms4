@@ -179,9 +179,9 @@ The target audience for I-Snap are:
 - Shoppers that don't know what they want, but want to explore and browse.
 
 User goals are:
-- Find the piece of equiptment they were looking for or find something that meets their search requirements.
+- Find the piece of equipment they were looking for or find something that meets their search requirements.
 - Explore detailed product specifications.
-- See what's new and exciting every month.
+- See what's new and exciting when new products are released.
 - Navigate the store and sections easily through different kinds of camera related products.
 - Make a secure purchase.
 
@@ -349,7 +349,6 @@ Reach out for collaboration or investment opportunities:
 0. As a user adding items to the cart, I expect to not be interrupted when clicking add.
 0. As a user with items in the cart, I expect my totals to be accurate and updated.
 0. As a user who wants to make a purchase, I expect to feel the site is trustworthy and to have a straightforward purchasing flow.
-0. As a user who has made a purchase, I expect to receive a confirmation by email.
 0. As a user who has made a payment, I expect the order to be confirmed, even if I am interrupted.
 0. As a repeat purchaser, I expect to have my information saved for reuse.
 0. As a user who has made purchases, I expect to be able to view my order history.
@@ -359,7 +358,7 @@ Reach out for collaboration or investment opportunities:
 
 ## Visual Design
 ### Wireframes
--All wireframes for the project can be viewed [here](documentation\wireframes). Desktop and moble wireframes are available for all custom pages, and a mobile and desktop 
+-All wireframes for the project can be viewed [here](documentation/wireframes). Desktop and mobile wireframes are available for all custom pages, and a mobile and desktop 
 wireframe is available for one of the customised all auth pages. 
 - There is one tablet wireframe of the homepage to give an example of the expected tablet layout.
 
@@ -409,7 +408,7 @@ wireframe is available for one of the customised all auth pages.
 
 ### Toasts
 <div align="center">
-  <img src=" alt="Toasts">
+  <img src="documentation\readme_images\past_confirmation_toast.png" alt="Toasts">
 </div>
 
 - Bootstrap Toasts are used to notify users of their actions on the page.
@@ -425,46 +424,30 @@ wireframe is available for one of the customised all auth pages.
 ### All Pages
 #### Navbar
 <div align="center">
-  <img src="" alt="Medium Header"><br>
-  <img src="" alt="Small Header">
+  <img src="documentation\readme_images\nav_bar.png" alt="I-Snap Navbar"><br>
+  <img src="documentation\readme_images\footer.png" alt="I-Snap Footer">
 </div>
 
-- The Navbar and fotter are persistent items across the site.
-- The Logo is always visible on all screen sizes, as a form of self-advertising.
+- The Navbar and footer are fixed items across the site.
+- The logo is always visible on all screen sizes, as a form of advertisements and user feedback.
 - The three icons and the search bar are always present as they are key features of the site, however, positions change depending on screen size.
 - Authorisation functions switch depending on whether or not the user is logged in. Signup, login, profile and logout are always highlighted no matter the page.
 - The cart button will highlight the number of items in the cart with a little badge.
-- The section menus are standard e-commerce menus.
+- The section menus are standard e-commerce menus offering familiarity and good UX.
 - Categories menu options are dynamically added and sorted based on the models in the database.
 - The correct section menu is dynamically set as active and highlighted in the Navbar depending on the current page.
-- I've tried to make the like, cart and tags more prominent than the section menus, as I think positive user engagement is gained more through simplicity than deep menus.
+- I've tried to make the cart and tags more prominent than the section menus, as I think positive user engagement is gained more through simplicity than deep menus.
 - The search bar is always available and performs a Postgres text search that gives more weight to tags.
 
 ### Product List Page
-#### StockDrop Carousel
-<div align="center">
-  <img src="" alt="Stockdrop Carousel"><br>
-</div>
-
-- Used as a splash image that highlights the most recent collections.
-- Stockdrops are a model and so images, phrases, links, dates, etc. are all dynamically generated.
-- Most recently added Stockdrop is automatically set to the active image.
-- Uploaded images, like products, are automatically resized appropriately.
-- Displays only on the home page, search queries will remove it from the page.
-
-
 #### Product Box
 <div align="center">
-  <img src="" alt="Product Box"><br>
+  <img src="documentation\readme_images\product_card.png" alt="Product Card"><br>
 </div>
 
-- Used as the main item in the feed, as a 3x3 grid on larger screens, singly on smaller screens.
-- Ordered by popularity, an integer that is the sum of likes they have received and quantity sold, and secondly by stock. This way the most popular items that still have the most stock are pushed to the top to generate sales, whereas items out of stock are listed last in the feed.
-- Out of stock products are still viewable to maintain the theme of browsing goods, see what's there, playing with the products rather than solely shopping.
-- Utilises small info banners to communicate item details. Items can be marked as a "sole item", essentially unique, "low stock" for items that re not unique, but are running out, and "sold" when the stock hits zero.
-- Information changes depending on item details. If the item has a size it will be displayed, if the item is sold the add to cart button disappears, etc. As a thrift store usually has all kinds of stock, of varying shapes, sizes, types and number, I have attempted to dynamically highlight this where possible.
-- Has two ajax form buttons for adding to cart or liking.
-- item names are truncated to maintain the aesthetic, if somebody likes the image the idea is that they will click from curiosity.
+- A 4 column grid grid on larger screens, single column on smaller screens.
+- Information changes depending on item details. If the item has a size it will be displayed, if the item is sold the add to cart button disappears, etc.
+- Has a add to basket button on each card.
 - Tags at the bottom can be clicked to search for items with that tag, to bring up items of a similar "aesthetic", much like social network tags.
 
 #### Search
@@ -477,7 +460,7 @@ wireframe is available for one of the customised all auth pages.
 ### Product Detail Page
 #### Product Detail Box
 <div align="center">
-  <img src="" alt="Product Detail"><br>
+  <img src="documentation\readme_images\product_detail.png" alt="Product Detail"><br>
 </div>
 
 - Displays information similar to the product card but adds a description section, with larger text and buttons.
@@ -499,7 +482,7 @@ wireframe is available for one of the customised all auth pages.
 - All django-allauth functions are available, changing the email, adding email, changing password, etc
 - Utilising these functions will redirect to the user's account page with a toast notification instead of the usual django-allauth redirect for smoother user experience.
 - Trying to access another user's page will result in your own page being displayed as the view checks for the current logged in user and utilises that for the page context.
-- Able to save Shipping and Billing details separately, so when making an order the fields will automatically be filled in.
+- Able to save Shipping and Billing details separately, so when making an order the fields will automatically be filled in. This can be seen [here]()
 
 
 ### Shopping Bag Pages
@@ -571,7 +554,7 @@ wireframe is available for one of the customised all auth pages.
 
 ### 404 Page
 - A customised 404 page where users will be directed to if they enter an incorrect URL or end up following a broken link.
-- Maintains the global site styling with a clea werror messsage giving the user feedback as to what has happened and that they have not ended  up where they may have expected.
+- Maintains the global site styling with a clear error messsage giving the user feedback as to what has happened and that they have not ended up where they may have expected.
 - A back to home button so the user can easily navigate back to the home page in one click minimising cognitive overload.
 - A browse products button which directs the user back to the products page if they so wish to continue browsing. This is also in one click minimising cognitive overload.
 
@@ -620,27 +603,24 @@ wireframe is available for one of the customised all auth pages.
 
 ## Features Not Yet Implemented
 ### Basic
-- An admin section with superuser abilities within the site.
+- An admin specific page with superuser abilities.
 - Data graphs with tracking item sales, popularity, etc.
 - Implement Swagger API.
 - Database charts for mapping connections.
 - Preloader fades in on click, before another page loads, giving a more complete sense of seamless loading.
+- Services modal where users can request services directly without going through the contact page.
 
 ### Content 
 - More comprehensive product size features.
 - More products.
-- Custom sharable user walls, like Pinterest.
 - A more well-defined search function, as I find the search to be either too inclusive or exclusive.
 - Tags can be entered by users as well.
-- The number of likes is shown for items.
-- Newsletter Signup
-- Sharing to Social Networks
+- Product reviews linked to product cards.
+- Sharing to Social Networks.
 
 ### User Features
-- More interaction between users, such as the ability to follow/friend.
-- A board where they can make requests for particular items or comment.
-- A public profile page with liked items, bought items if desired, etc.
-- Login using social accounts.
+- A form where users can make requests for suggested products to add to catalogue.
+- Login using social accounts, google or apple.
 
 ----
 
@@ -915,7 +895,6 @@ category_id | null=False | bigint
 
 ## Manual Testing
 ### General Testing
-- Each feature was developed and tested in its own branch before being pushed to master.
 - Each time a feature was added, all the functions were tested to see if there was an impact.
 - The views have been thoroughly manually tested and refined over time, utilising python features to create documents in the database in a useful, flexible structure.
 - The site was sent to friends for feedback and testing.
@@ -924,12 +903,12 @@ category_id | null=False | bigint
 - .gitignore file has been included to prevent system file commits.
 
 ### Mobile Testing
-- I tested the site personally on my Apple iphone16 device, going through the pages and proceses, checking buttons, functions, checking out, etc.
+- I tested the site personally on my Apple iphone16 device, going through the pages and processes, checking buttons, functions, checking out, etc.
 - The site was sent to friends and relatives for them to follow the same process. They have tested on their devices, including android.
 - Chrome Dev Tools was utilised to inspect the site in mobile format, going through the pages and functions.
 
 ### Desktop Testing
-- The site was developed on a Chromebook and, as such, the majority of testing occurred on Chrome.
+- The site was developed on a thinkpad and macbook, the majority of testing occurred on Chrome and Safari browsers.
 - The site was tested by friends and relatives on numerous desktop devices.
 - The site was marginally tested on other browsers, such as Firefox and Edge.
 - Internet Explorer was not tested and the site was not developed with it in mind as support for the browser is gradually being dropped.
@@ -1046,10 +1025,8 @@ python manage.py collectstatic --noinput --traceback
 
 ## Credit and Contact
 ### Images
-Product images were all taken from Creative Video Productions Limited and as a result have copyright watrermarks on the majority. I am an employed Web Designer of the company and have 
+- Product images were all taken from Creative Video Productions Limited and as a result have copyright watrermarks on the majority. I am an employed Web Developer of the company and have 
 permission to use these images for educational purposes for this project.
-Additional images were taken from:
-- 
 
 ### Code
 - Any code utilised from another programmer is documented and credited within the code.

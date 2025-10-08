@@ -205,14 +205,14 @@ The project user stories have been met with the following features;
 ✅  As a user looking through the items, I expect clear labels as to what kind of item it is and the stock of the said item.
 
    I-Snap provides:<br>
-     * category labels on product cards and product pages shown [here](documentation\readme_images\category_tags.png).
+     * category labels on product cards and product pages shown [here](documentation/readme_images/category_tags.png).
 
 
 ✅  As a user adding items to the cart, I expect to not be interrupted when clicking add.
 
    I-Snap provides:<br>
      * an uninterupted add to bag function with no advertising messages.<br>
-     * a off-centre, top right toast notification to let the user know its been added to the bag but does not obscure the main screen and hinder shopping experience. Seen [here](documentation\readme_images\bag_update_msg.png).
+     * a off-centre, top right toast notification to let the user know its been added to the bag but does not obscure the main screen and hinder shopping experience. Seen [here](documentation/readme_images/bag_update_msg.png).
 
 
 ✅  As a user with items in the cart, I expect my totals to be accurate and updated.
@@ -223,7 +223,7 @@ The project user stories have been met with the following features;
 
      Shopping bag update toast message is shown below.
 
-![screenshot](documentation\readme_images\bag_update_msg.png)
+![screenshot](documentation/readme_images/bag_update_msg.png)
 
 ✅  As a user who wants to make a purchase, I expect to feel the site is trustworthy and to have a straightforward purchasing flow.
 
@@ -233,31 +233,25 @@ The project user stories have been met with the following features;
 
      Signup page is shown below.
 
-![screenshot](documents/readme/signup.png)
+![screenshot](documentation/readme_images/signup_page.png)
 ------
 
 "**_As a registered user, I would like to_** _______________"
 
-✅  As a user who has made a purchase, I expect to receive a confirmation by email.<br>
-
-  I-Snap provides:<br>
-      * 
-
-![screenshot](documents/readme/login.png)
 
 ✅  As a user who has made a payment, I expect the order to be confirmed, even if I am interrupted.
 
   I-Snap provides:<br>
-    * .<br>
+    * order confirmation in account profile.<br>
 
-![screenshot](documents/readme/logout.png)
+![screenshot](documentation/readme_images/order_confirmation.png)
 
 ✅  As a repeat purchaser, I expect to have my information saved for reuse.
 
   I-Snap provides:<br>
      * a profile page with saved information on signup and purchases, including delivery
 
-![screenshot](documents/readme/profile_page.png)
+![screenshot](documents/readme_images/profile_page.png)
 
 ✅  As a user who has made purchases, I expect to be able to view my order history.
 
@@ -287,7 +281,7 @@ The project user stories have been met with the following features;
   I-Snap provides:<br>
       * a newsletter signup located in the footer. This also forms parts of the projects CRUD functionality.
       * The function lets the user know when they have succesfully signed up.
-      * Will let the user know if they have already signed up with a notifcation stating they have already submitted their email address fornewletter subscription.
+      * Will let the user know if they have already signed up with a notifcation stating they have already submitted their email address for the newletter subscription.
      
 ![screenshot](documentation/readme_images/subscribe_success.png)
 
