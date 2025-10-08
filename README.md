@@ -482,7 +482,7 @@ wireframe is available for one of the customised all auth pages.
 - All django-allauth functions are available, changing the email, adding email, changing password, etc
 - Utilising these functions will redirect to the user's account page with a toast notification instead of the usual django-allauth redirect for smoother user experience.
 - Trying to access another user's page will result in your own page being displayed as the view checks for the current logged in user and utilises that for the page context.
-- Able to save Shipping and Billing details separately, so when making an order the fields will automatically be filled in. This can be seen [here]()
+- Able to save Shipping and Billing details separately, so when making an order the fields will automatically be filled in. This can be seen [here](documentation\readme_images\profile_page.png)
 
 
 ### Shopping Bag Pages
@@ -495,7 +495,10 @@ wireframe is available for one of the customised all auth pages.
 - Quantity can be updated, but cannot be increased above max stock. 
 - Items can be removed without page reloading, they will fade out and a notification will fire.
 - The total will also refresh when quantity is updated or an item is removed.
-- If the page is empty, a button leading to the home page is shown. This can be seen [here](documentation/readme_images/empty_shopping_bag.png).
+- If the page is empty, a button leading to the home page is shown. This can be seen below.
+<div align="center">
+  <img src="documentation/readme_images/empty_shopping_bag.png" alt="Empty bag"><br>
+</div>
 
 #### Add to Basket Shortcut
 - There is a button on the products page located at the bottom right of the product card.
@@ -560,7 +563,7 @@ wireframe is available for one of the customised all auth pages.
 
 
 <div align="center">
-  <img src="documentation/readme_images/404_page.png" alt="services page"><br>
+  <img src="documentation/readme_images/404_page.png" alt="404 page"><br>
 </div>
 
 
