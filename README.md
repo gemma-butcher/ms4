@@ -164,7 +164,6 @@
 
     - [Images](#local-preparation)
     - [Code](#local-instructions)
-    - [Contact](#contact)
 </details>
 
 ----
