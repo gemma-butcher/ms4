@@ -33,8 +33,8 @@
     <summary><a href="#seamless-design">Seamless Design</a></summary>
 
     - [Preloader](#preloader)
+    - [AJAX](#AJAX)
     - [Toasts](#toasts)
-    - [Infinite Scroll](#infinite-scroll)
     </details></li>
     </ul>
 </details>
@@ -52,7 +52,7 @@
     - [Account Pages](#account-pages)
     - [Shopping Bag Pages](#shopping-bag-pages)
     - [Checkout Pages](#checkout-pages)
-    - [Contact Page](#contact-pages)
+    - [Contact Page](#contact-page)
     - [Services Page](#services-page)
     - [404 Page](#404-page)
     </details></li>
@@ -93,6 +93,7 @@
     - [Contact App](#contact-app)
     - [Products App](#products-app)
     - [Users App](#users-app)
+    - [FAQ App](#faq-app)
     </details></li>
     </ul>
 </details>
