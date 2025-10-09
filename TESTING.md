@@ -24,10 +24,7 @@
 The complete site was tested on the lighthouse facility in Google Developer Tools to assess the overall performance of the site. The site meets the pass criteria and you can see the results in the below table.
 | Page                  | Screenshot Link                                                                       | Notes  |
 |-----------------------|---------------------------------------------------------------------------------------|--------|
-|base.html              |[view here](documentation/testing_images/lighthouse/)            | Passed |
-|index.html             |[view here](documentation/testing_images/lighthouse/)           | Passed |
-|main-nav.html          |[view here](documentation/testing_images/lighthouse/)        | Passed |
-|mobile-top-header.html |[view here](documentation/testing_images/lighthouse/)        | Passed |
+|Home including nav and footer |[view here](documentation/testing_images/lighthouse/index_lh.png)        | Passed |
 |products.html          |[view here](documentation/testing_images/lighthouse/)        | Passed |
 |product-detail.html    |[view here](documentation/testing_images/lighthouse/) | Passed |
 |edit-product.html      |[view here](documentation/testing_images/lighthouse/)                             | Passed | 
@@ -36,8 +33,9 @@ The complete site was tested on the lighthouse facility in Google Developer Tool
 |bag.html               |[view here](documentation/testing_images/lighthouse/)                             | Passed |
 |checkout.html          |[view here](documentation/testing_images/lighthouse/)                             | Passed |
 |checkout-success.html  |[view here](documentation/testing_images/lighthouse/)                             | Passed |
-|contact.html           |[view here](documentation/testing_images/lighthouse/)                             | Passed |
-|faq_list.html          |[view here](documentation/testing_images/lighthouse/)                             | Passed |
+|contact           |[view here](documentation/testing_images/lighthouse/contact_lh.png)     | Passed |
+|Services           |[view here](documentation/testing_images/lighthouse/services_lh.png)     | Passed |
+|faq               |[view here](documentation/testing_images/lighthouse/faq_lh.png)         | Passed |
 |faq_form.html          |[view here](documentation/testing_images/lighthouse/)                             | Passed |
 |faq_add.html           |[view here](documentation/testing_images/lighthouse/)                             | Passed |
 |faq_confirm_delete.html  |[view here](documentation/testing_images/lighthouse/)                           | Passed |
