@@ -24,9 +24,9 @@
                 <div class="hero-overlay p-4 rounded">
                     <h1 class="display-4 logo-font text-white">Welcome to I-Snap</h1>
                     <h2 class="text-white">Snap Into Professional Excellence</h2>
-                    <h4>
+                    <h3>
                         <a href="{% url 'products' %}" class="btn-isnap btn rounded-0 text-uppercase py-3">Shop Now</a>
-                    </h4>
+                    </h3>
                 </div>
             </div>
         </div>
@@ -67,7 +67,7 @@
                     <i class="fas fa-cogs fa-3x mb-3" style="color: #369b95;"></i>
                     <h3>Expert Services</h3>
                     <p>Get professional advice, repairs, and customization for your equipment.</p>
-                    <a href="{% url 'products' %}?category=services" class="btn-isnap">Learn More</a>
+                    <a href="{% url 'services' %}" class="btn-isnap" aria-label="Learn more about our expert photography services">Learn More</a>
                 </div>
             </div>
         </div>
@@ -168,7 +168,7 @@
     </div>
 </div>
 
-<!-- Add this before the testimonials section -->
+
 <div class="content-section bg-light">
     <div class="container py-4">
         <div class="row">
@@ -216,8 +216,8 @@
                 <a href="{% url 'products' %}" class="btn-isnap btn-lg">Browse All Products</a>
                 <a href="{% url 'contact' %}" class="btn-purple-float btn-lg ml-3">Contact Our Experts</a>
                 <div class="mt-4">
-                    <p>Already have an account? <a href="{% url 'account_login' %}" class="text-primary">Sign in</a> or 
-                    <a href="{% url 'account_signup' %}" class="text-primary">create an account</a> for faster checkout and order tracking.</p>
+                    <p>Already have an account? <a href="{% url 'account_login' %}" class="text-isnap">Sign in</a> or 
+                    <a href="{% url 'account_signup' %}" class="text-isnap">create an account</a> for faster checkout and order tracking.</p>
                 </div>
             </div>
         </div>

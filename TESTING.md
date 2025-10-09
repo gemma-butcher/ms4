@@ -22,6 +22,26 @@
 ## Overall Performance
 
 The complete site was tested on the lighthouse facility in Google Developer Tools to assess the overall performance of the site. The site meets the pass criteria and you can see the results in the below table.
+| Page                  | Screenshot Link                                                                       | Notes  |
+|-----------------------|---------------------------------------------------------------------------------------|--------|
+|base.html              |[view here](documentation/testing_images/lighthouse/)            | Passed |
+|index.html             |[view here](documentation/testing_images/lighthouse/)           | Passed |
+|main-nav.html          |[view here](documentation/testing_images/lighthouse/)        | Passed |
+|mobile-top-header.html |[view here](documentation/testing_images/lighthouse/)        | Passed |
+|products.html          |[view here](documentation/testing_images/lighthouse/)        | Passed |
+|product-detail.html    |[view here](documentation/testing_images/lighthouse/) | Passed |
+|edit-product.html      |[view here](documentation/testing_images/lighthouse/)                             | Passed | 
+|add-product.html       |[view here](documentation/testing_images/lighthouse/)                             | Passed |
+|profile.html           |[view here](documentation/testing_images/lighthouse/)                             | Passed | 
+|bag.html               |[view here](documentation/testing_images/lighthouse/)                             | Passed |
+|checkout.html          |[view here](documentation/testing_images/lighthouse/)                             | Passed |
+|checkout-success.html  |[view here](documentation/testing_images/lighthouse/)                             | Passed |
+|contact.html           |[view here](documentation/testing_images/lighthouse/)                             | Passed |
+|faq_list.html          |[view here](documentation/testing_images/lighthouse/)                             | Passed |
+|faq_form.html          |[view here](documentation/testing_images/lighthouse/)                             | Passed |
+|faq_add.html           |[view here](documentation/testing_images/lighthouse/)                             | Passed |
+|faq_confirm_delete.html  |[view here](documentation/testing_images/lighthouse/)                           | Passed |
+|404.html               |[view here](documentation/testing_images/lighthouse/)                             | Meets criteria. Lower SEO but as a 404 page this is not too concerning |
 
 | Page         | Screenshot                                                      | Notes          |
 |--------------|-----------------------------------------------------------------|----------------|
@@ -32,20 +52,18 @@ The complete site was tested on the lighthouse facility in Google Developer Tool
 | Contact |![screenshot](documents/testing/lighthouse/add_slang_lighthouse.png) |  Meets criteria |                        
 | FAQ's  |![screenshot](documents/testing/lighthouse/delete_lighthouse.png)    |  Meets criteria|
 | Profile |![screenshot](documents/testing/lighthouse/admin_dashboard_lighthouse.png)    |  Meets criteria |                         
-|404       |![screenshot](documents/testing/lighthouse/404_lighthouse.png)       |  Meets criteria. Lower SEO but as a 404 page this is not too concerning |
+
 
 ------
 
 ## Responsiveness & Compatability Testing
 
-To ensure a broad range of users can successfully use this site, I tested it across the 5 major browsers in both desktop and mobile configuration.
+To ensure a broad range of users can successfully use this site, I tested it across the 4 major browsers in both desktop and mobile configuration.
 
-- Chrome *v.74*
-- Edge *v.18*
-- Firefox *v.67*
-- Safari *v.12*
-- Opera n/a
-- Internet Explorer *v.11*
+- Chrome *v.141*
+- Edge *v.141*
+- Firefox *v.143*
+- Safari *v.18*
 
 For testing compatibility, I created a testing matrix to test across multiple devices and browsers. The test matrix can be found seen below.
 
@@ -212,6 +230,7 @@ The project user stories have been met with the following features;
 
    I-Snap provides:<br>
      * an uninterupted add to bag function with no advertising messages.<br>
+     * a add to bag buttoin on the button card for direct and clea add to bag function without navigating to product detail page.<br>
      * a off-centre, top right toast notification to let the user know its been added to the bag but does not obscure the main screen and hinder shopping experience. Seen [here](documentation/readme_images/bag_update_msg.png).
 
 
@@ -233,7 +252,7 @@ The project user stories have been met with the following features;
 
      Signup page is shown below.
 
-![screenshot](documentation/readme_images/signup_page.png)
+![screenshot](documentation/readme_images/signup.png)
 ------
 
 "**_As a registered user, I would like to_** _______________"
