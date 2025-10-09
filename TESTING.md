@@ -22,24 +22,25 @@
 ## Overall Performance
 
 The complete site was tested on the lighthouse facility in Google Developer Tools to assess the overall performance of the site. The site meets the pass criteria and you can see the results in the below table.
-| Page                  | Screenshot Link                                                                       | Notes  |
-|-----------------------|---------------------------------------------------------------------------------------|--------|
-|Home including nav and footer |[view here](documentation/testing_images/lighthouse/index_lh.png)        | Passed |
-|products.html          |[view here](documentation/testing_images/lighthouse/)        | Passed |
-|product-detail.html    |[view here](documentation/testing_images/lighthouse/) | Passed |
-|edit-product.html      |[view here](documentation/testing_images/lighthouse/)                             | Passed | 
-|add-product.html       |[view here](documentation/testing_images/lighthouse/)                             | Passed |
-|profile.html           |[view here](documentation/testing_images/lighthouse/)                             | Passed | 
-|bag.html               |[view here](documentation/testing_images/lighthouse/)                             | Passed |
-|checkout.html          |[view here](documentation/testing_images/lighthouse/)                             | Passed |
-|checkout-success.html  |[view here](documentation/testing_images/lighthouse/)                             | Passed |
-|contact           |[view here](documentation/testing_images/lighthouse/contact_lh.png)     | Passed |
-|Services           |[view here](documentation/testing_images/lighthouse/services_lh.png)     | Passed |
-|faq               |[view here](documentation/testing_images/lighthouse/faq_lh.png)         | Passed |
-|faq_form.html          |[view here](documentation/testing_images/lighthouse/)                             | Passed |
-|faq_add.html           |[view here](documentation/testing_images/lighthouse/)                             | Passed |
-|faq_confirm_delete.html  |[view here](documentation/testing_images/lighthouse/)                           | Passed |
-|404.html               |[view here](documentation/testing_images/lighthouse/)                             | Meets criteria. Lower SEO but as a 404 page this is not too concerning |
+| Page                            | Screenshot Link                                                           | Notes  |
+|---------------------------------|---------------------------------------------------------------------------|--------|
+|Home including nav and footer    |[view here](documentation/testing_images/lighthouse/index_lh.png)          | Meets criteria |
+|Products                         |[view here](documentation/testing_images/lighthouse/product_lh.png)        | Meets criteria |
+|Product Detail                   |[view here](documentation/testing_images/lighthouse/)                      | Meets criteria |
+|Login (django all auth example)  |[view here](documentation/testing_images/lighthouse/login_lh.png)          | Meets criteria |
+|edit-product.html                |[view here](documentation/testing_images/lighthouse/)                      | Passed | 
+|add-product.html                 |[view here](documentation/testing_images/lighthouse/)                      | Passed |
+|Profile                          |[view here](documentation/testing_images/lighthouse/profile_lh.png)        | Meets criteria | 
+|Shopping Bag                     |[view here](documentation/testing_images/lighthouse/bag_lh.png)            | Meets criteria |
+|Checkout                         |[view here](documentation/testing_images/lighthouse/checkout_lh.png)       | Meets criteria |
+|checkout-success.html  |[view here](documentation/testing_images/lighthouse/)                                | Passed |
+|contact           |[view here](documentation/testing_images/lighthouse/contact_lh.png)                       | Meets criteria |
+|Services           |[view here](documentation/testing_images/lighthouse/services_lh.png)                     | Meets criteria |
+|faq               |[view here](documentation/testing_images/lighthouse/faq_lh.png)                           | Meets criteria |
+|faq_form.html          |[view here](documentation/testing_images/lighthouse/)                                | Passed |
+|faq_add.html           |[view here](documentation/testing_images/lighthouse/)                                | Passed |
+|faq_confirm_delete.html  |[view here](documentation/testing_images/lighthouse/)                              | Passed |
+|404.html               |[view here](documentation/testing_images/lighthouse/)                                | Meets criteria. Lower SEO but as a 404 page this is not too concerning |
 
 | Page         | Screenshot                                                      | Notes          |
 |--------------|-----------------------------------------------------------------|----------------|
