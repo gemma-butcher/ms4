@@ -11,5 +11,5 @@ The JS errors are shown below.
 - Although it is text designed to look like a logo, and could be argues that it could be dismissed, the text will still need to be accessible which it was not.
 - The original contrast was a background of #000000 with the hyphen being #7719a1.
 ![screenshot](documentation\development_images\hyphen_contrast_fail.png)
-- The updated contrast is a background of #000000 with the hyphen being #b99bc7.
+- The updated contrast is a background of #000000 with the hyphen being #ff6b6b. This is now consistent with the site footer which makes the branding more consistent.
 ![screenshot](documentation\development_images\hyphen_contrast_pass.png)
