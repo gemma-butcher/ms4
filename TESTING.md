@@ -28,29 +28,14 @@ The complete site was tested on the lighthouse facility in Google Developer Tool
 |Products                         |[view here](documentation/testing_images/lighthouse/product_lh.png)        | Meets criteria |
 |Product Detail                   |[view here](documentation/testing_images/lighthouse/)                      | Meets criteria |
 |Login (django all auth example)  |[view here](documentation/testing_images/lighthouse/login_lh.png)          | Meets criteria |
-|edit-product.html                |[view here](documentation/testing_images/lighthouse/)                      | Passed | 
-|add-product.html                 |[view here](documentation/testing_images/lighthouse/)                      | Passed |
 |Profile                          |[view here](documentation/testing_images/lighthouse/profile_lh.png)        | Meets criteria | 
 |Shopping Bag                     |[view here](documentation/testing_images/lighthouse/bag_lh.png)            | Meets criteria |
 |Checkout                         |[view here](documentation/testing_images/lighthouse/checkout_lh.png)       | Meets criteria |
-|checkout-success.html  |[view here](documentation/testing_images/lighthouse/)                                | Passed |
-|contact           |[view here](documentation/testing_images/lighthouse/contact_lh.png)                       | Meets criteria |
-|Services           |[view here](documentation/testing_images/lighthouse/services_lh.png)                     | Meets criteria |
-|faq               |[view here](documentation/testing_images/lighthouse/faq_lh.png)                           | Meets criteria |
-|faq_form.html          |[view here](documentation/testing_images/lighthouse/)                                | Passed |
-|faq_add.html           |[view here](documentation/testing_images/lighthouse/)                                | Passed |
-|faq_confirm_delete.html  |[view here](documentation/testing_images/lighthouse/)                              | Passed |
-|404.html               |[view here](documentation/testing_images/lighthouse/)                                | Meets criteria. Lower SEO but as a 404 page this is not too concerning |
-
-| Page         | Screenshot                                                      | Notes          |
-|--------------|-----------------------------------------------------------------|----------------|
-| Index Page |![screenshot](documents/testing/lighthouse/index_lighthouse.png)  |  Meets criteria|
-| Login   |![screenshot](documents/testing/lighthouse/login_lighthouse.png) |  Meets criteria|                        
-| Sign Up |![screenshot](documents/testing/lighthouse/signup_lighthouse.png) |  Meets criteria|                        
-| User Dashboard |![screenshot](documents/testing/lighthouse/dashboard_lighthouse.png) |  Meets criteria |                        
-| Contact |![screenshot](documents/testing/lighthouse/add_slang_lighthouse.png) |  Meets criteria |                        
-| FAQ's  |![screenshot](documents/testing/lighthouse/delete_lighthouse.png)    |  Meets criteria|
-| Profile |![screenshot](documents/testing/lighthouse/admin_dashboard_lighthouse.png)    |  Meets criteria |                         
+|contact                          |[view here](documentation/testing_images/lighthouse/contact_lh.png)        | Meets criteria |
+|Services                         |[view here](documentation/testing_images/lighthouse/services_lh.png)       | Meets criteria |
+|faq                              |[view here](documentation/testing_images/lighthouse/faq_lh.png)            | Meets criteria |
+|404.html                         |[view here](documentation/testing_images/lighthouse/404_lh.png)            | Meets criteria. Lower SEO but as a 404 page this is not too concerning |
+                     
 
 
 ------
@@ -135,14 +120,11 @@ The W3C CSS Validator Services was used to validate every css file of the projec
 ### JS Hint
 
   * All JavaScript code was put though [JS Hint](https://jshint.com/) 
-
-| Test      | Screenshot                                              | Notes                                                   |
-|-----------|---------------------------------------------------------|---------------------------------------------------------|
-| JS Hint   |![screenshot](documents/testing/jshint_testing.png)      | Passed - No warnings. 1 undefined variable as expected. |
+  * After this all JS scripts have been moved to seperate JS files instead of at the bottom of the html files. See the [development](DEVELOPMENT.md) file for more detailed information.
 
 ### Summary
 
- Shows an undefined variable in the script.js file. This variable is defined in a script tag in the 404.html file. For more information see bug fix section in the [development](DEVELOPMENT.md).
+ * JS scripts moved to seperate files where appropriate after testing.
 
 ------
 
