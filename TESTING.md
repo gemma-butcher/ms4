@@ -8,13 +8,11 @@
   4. [**Responsiveness & Compatability Testing**](#responsiveness--compatability-testing)
   5. [**JavaScript Testing**](#javascript-testing)
   6. [**Python Testing**](#python-testing)
-        - **JS Hint**
   7. [**Bug Fixes**](#bug-fixes)
   8. [**Testing User Stories from User Experience (UX) Section**](#testing-user-stories)
-        - **Project Goals**
-        - **User Goals**
-        - 
   9. [**Other Testing Methods**](#other-testing)
+        - [**Manual Testing**](#manual-testing)
+        - [**Automated Testing**](#automated-testing)
   10. [**Further Testing**](#further-testing)
 
   ------
@@ -86,11 +84,12 @@ The W3C Markup Validator was used to validate every html page of the project to 
 
 The W3C CSS Validator Services was used to validate every css file of the project to ensure there were no syntax errors in the project. The results and screenshots are in the table below.
 
-| Page          | Screenshot Link                                               | Notes  |
-|---------------|---------------------------------------------------------------|--------|
-|base.css       |[view here](documentation/testing_images/css_validation/base_css.png) | Passed | 
+
+| Page          | Screenshot Link                                                          | Notes  |
+|---------------|--------------------------------------------------------------------------|--------|
+|base.css       |[view here](documentation/testing_images/css_validation/base_css.png)     | Passed | 
 |profiles.css   |[view here](documentation/testing_images/html_validation/profile_css.png) | Passed |
-|checkout.css   |[view here](documentation/testing_images/html_validation/checkout_css.png) | Passed |
+|checkout.css   |[view here](documentation/testing_images/html_validation/checkout_css.png)| Passed |
 
 
 ##### back to [top](#table-of-contents)
@@ -101,9 +100,33 @@ The W3C CSS Validator Services was used to validate every css file of the projec
 
 * The complete site was tested using [Web Aim](https://wave.webaim.org/) and has passed. The links are available in the below table.
 
+| Page                  | Screenshot Link                                                                       | Notes  |
+|-----------------------|---------------------------------------------------------------------------------------|--------|
+|base.html              |[view here](documentation/testing_images/html_validation/base_html_w3c.png)            | Passed |
+|index.html             |[view here](documentation/testing_images/html_validation/index_html_w3c.png)           | Passed |
+|main-nav.html          |[view here](documentation/testing_images/html_validation/products_html_w3c.png)        | Passed |
+|mobile-top-header.html |[view here](documentation/testing_images/html_validation/products_html_w3c.png)        | Passed |
+|products.html          |[view here](documentation/testing_images/html_validation/products_html_w3c.png)        | Passed |
+|product-detail.html    |[view here](documentation/testing_images/html_validation/product_details_html_w3c.png) | Passed |
+|edit-product.html      |[view here](documentation/testing_images/html_validation/)                             | Passed | 
+|add-product.html       |[view here](documentation/testing_images/html_validation/)                             | Passed |
+|profile.html           |[view here](documentation/testing_images/html_validation/)                             | Passed | 
+|bag.html               |[view here](documentation/testing_images/html_validation/)                             | Passed |
+|checkout.html          |[view here](documentation/testing_images/html_validation/)                             | Passed |
+|checkout-success.html  |[view here](documentation/testing_images/html_validation/)                             | Passed |
+|contact.html           |[view here](documentation/testing_images/html_validation/)                             | Passed |
+|faq_list.html          |[view here](documentation/testing_images/html_validation/)                             | Passed |
+|faq_form.html          |[view here](documentation/testing_images/html_validation/)                             | Passed |
+|faq_add.html           |[view here](documentation/testing_images/html_validation/)                             | Passed |
+|faq_confirm_delete.html  |[view here](documentation/testing_images/html_validation/)                           | Passed |
+|404.html               |[view here](documentation/testing_images/html_validation/)                             | Passed |
+
+
+
+
 
 | Page                 | Screenshot                                                            | Notes  |
-|----------------------|-----------------------------------------------------------------------|--------|
+|----------------------|---------------------------------------------------------------------------|--------|
 |index.html            |[view here](documents/testing/webaim/webaim_index_pass.png)                   | Passed | 
 |login.html            |[view here](documents/testing/webaim/webaim_login.png)                        | Passed |
 |signup.html           |[view here](documents/testing/webaim/webaim_signup.png) | Passed |
@@ -120,11 +143,11 @@ The W3C CSS Validator Services was used to validate every css file of the projec
 ### JS Hint
 
   * All JavaScript code was put though [JS Hint](https://jshint.com/) 
-  * After this all JS scripts have been moved to seperate JS files instead of at the bottom of the html files. See the [development](DEVELOPMENT.md) file for more detailed information.
+  * See the [development](DEVELOPMENT.md) file for more detailed information.
 
 ### Summary
 
- * JS scripts moved to seperate files where appropriate after testing.
+ * JS scripts all pass criteria with the exception of JS Hint not being able to factor in the jinja templating for python django framework and packages used for this project.
 
 ------
 
@@ -135,7 +158,7 @@ The W3C CSS Validator Services was used to validate every css file of the projec
   * All Python code files in all apps was put though [CI Python Linter](https://pep8ci.herokuapp.com/).
 | Test      | Screenshot                                                                                   | Notes                                                |
 |----------------------------|-----------------------------------------------------------------------------|------------------------------------------------------|
-| CI python linter  | [Home App Python Linter Images](documentation/testing_images/python_linting/home) | Passed |
+| CI python linter  | [Home App Python Linter Images](documentation/testing_images/python_linting/home)    | Passed |
 | CI python linter | [Products App Python Linter Images](documentation/testing_images/python_linting/products) | Passed | 
 | CI python linter | [Bag App Python Linter Images](documentation/testing_images/python_linting/bag)  | Passed |
 | CI python linter | [Checkout App Python Linter Images](documentation/testing_images/python_linting/checkout) | Passed |
@@ -320,19 +343,20 @@ The project user stories have been met with the following features;
     * A product management system for signed in and authorised administrators.
     * Delete product link on the product cards for logged in admin users.
      
-![screenshot]()
+![screenshot](documentation/readme_images/edit_management_link.png)
 
 
 ✅  add, delete and update FAQ's
 
   I-Snap provides:<br>
     * an add faq form located in the faq page where the admin can add,delete and update FAQ's and its corresponding fields without having to submit it for approval, streamlining the process for admin.
-    ![screenshot](documentation/readme_images/add_faq_form.png)
-    * add FAQ form is accessed from the add FAQ button on the FAQ page only accessible to logged in admin users.
-    ![screenshot](documentation/readme_images/add_faq_button.png)
-     
 
-![screenshot]()
+![screenshot](documentation/readme_images/add_faq_form.png)
+
+    * add FAQ form is accessed from the add FAQ button on the FAQ page only accessible to logged in admin users.
+
+![screenshot](documentation/readme_images/add_faq_button.png)
+
 
 ✅  know that i am logged in as admin and navigate to the admin features.
 
