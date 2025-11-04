@@ -191,38 +191,38 @@ The project user stories have been met with the following features;
 
        The offers carousel can be seen below.
 
-![screenshot](documentation\readme_images\offer_carousel.png)
+![screenshot](documentation/readme_images/offer_carousel.png)
 
 
 ✅  As a user interested in cameras and accessories, I expect to find cameras and accessories in relevant categories.
 
    I-Snap provides:<br>
-      * specific product categories accessible via the search bar or product filters, and nav bar links. the navbar categoriescan be seen [here](documentation\readme_images\category_bar.png).<br>
-      * there is a search bar in the top half of the nav to search specific or relevant product groups. This is seen [here](documentation\readme_images\search_bar.png)
+      * specific product categories accessible via the search bar or product filters, and nav bar links. the navbar categoriescan be seen [here](documentation/readme_images/category_bar.png).<br>
+      * there is a search bar in the top half of the nav to search specific or relevant product groups. This is seen [here](documentation/readme_images/search_bar.png)
 
 
 ✅  As an industry professional, I expect to find a professional equipment in a relevant category so as to save time browsing and find what i need.
 
    I-Snap provides:<br>
-     * specific product categories accessible via the search bar or product filters, and nav bar links. the navbar categories can be seen [here](documentation\readme_images\category_bar.png).<br>
+     * specific product categories accessible via the search bar or product filters, and nav bar links. the navbar categories can be seen [here](documentation/readme_images/category_bar.png).<br>
      * there is a search bar in the top half of the nav to search specific or relevant product groups. This is seen below.<br>
-     * a sort filter in the products pages shown [here](documentation\readme_images\sort_filter.png).
+     * a sort filter in the products pages shown [here](documentation/readme_images/sort_filter.png).
      
-![screenshot](documentation\readme_images\search_bar.png)
+![screenshot](documentation/readme_images/search_bar.png)
 
 
 ✅  I expect to be able to use tags and badges to find my way around categories.
 
    I-Snap provides:<br>
-     * tags on all product cards and badges for filtering in the nav bar seen [here](documentation\readme_images\category_tags.png).
+     * tags on all product cards and badges for filtering in the nav bar seen [here](documentation/readme_images/category_tags.png).
 
 ✅  as a user shopping online, I expect to see menus and navigation that follow precedents set by other shopping sites.
 
    I-Snap provides:<br>
-     * a industry standard and generic layout for familiarity and ease of use seen [here](documentation\readme_images\nav_bar.png).<br>
+     * a industry standard and generic layout for familiarity and ease of use seen [here](documentation/readme_images/nav_bar.png).<br>
      * Uses main categories with dropdown menu for subcategories for further specificy. Shown Below.
 
-![screenshot](documentation\readme_images\nav_cat_dropdown.png)
+![screenshot](documentation/readme_images/nav_cat_dropdown.png)
 
 ✅  As a user looking through the items, I expect clear labels as to what kind of item it is and the stock of the said item.
 
@@ -288,7 +288,7 @@ The project user stories have been met with the following features;
 ✅   As a user who may want to return, I would like to be able to make an account securely.
 
   I-Snap provides:<br>
-      * Django all auth logic and templates for secure account sign up and login pages. The sign up page can be seen [here](documentation\readme_images\signup_page.png)
+      * Django all auth logic and templates for secure account sign up and login pages. The sign up page can be seen [here](documentation/readme_images/signup_page.png)
 
 
 ✅  As a user who has made an account, I expect to be able to change or update my information and login securely.
