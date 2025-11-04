@@ -256,7 +256,7 @@ The project user stories have been met with the following features;
 
      Signup page is shown below.
 
-![screenshot](documentation/readme_images/signup.png)
+![screenshot](documentation/readme_images/signup_page.png)
 ------
 
 "**_As a registered user, I would like to_** _______________"
