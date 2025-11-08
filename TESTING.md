@@ -98,7 +98,7 @@ The W3C CSS Validator Services was used to validate every css file of the projec
 
 ## Accesibility Testing
 
-* The complete site was tested using [Web Aim](https://wave.webaim.org/) and has passed. The links are available in the below table.
+* The main pages of the site were tested using [Web Aim](https://wave.webaim.org/) and has passed. The links are available in the below table.
 
 | Page                  | Screenshot Link                                                                       | Notes  |
 |-----------------------|---------------------------------------------------------------------------------------|--------|
@@ -108,18 +108,6 @@ The W3C CSS Validator Services was used to validate every css file of the projec
 |mobile-top-header.html |[view here](documentation/testing_images/html_validation/products_html_w3c.png)        | Passed |
 |products.html          |[view here](documentation/testing_images/html_validation/products_html_w3c.png)        | Passed |
 |product-detail.html    |[view here](documentation/testing_images/html_validation/product_details_html_w3c.png) | Passed |
-|edit-product.html      |[view here](documentation/testing_images/html_validation/)                             | Passed | 
-|add-product.html       |[view here](documentation/testing_images/html_validation/)                             | Passed |
-|profile.html           |[view here](documentation/testing_images/html_validation/)                             | Passed | 
-|bag.html               |[view here](documentation/testing_images/html_validation/)                             | Passed |
-|checkout.html          |[view here](documentation/testing_images/html_validation/)                             | Passed |
-|checkout-success.html  |[view here](documentation/testing_images/html_validation/)                             | Passed |
-|contact.html           |[view here](documentation/testing_images/html_validation/)                             | Passed |
-|faq_list.html          |[view here](documentation/testing_images/html_validation/)                             | Passed |
-|faq_form.html          |[view here](documentation/testing_images/html_validation/)                             | Passed |
-|faq_add.html           |[view here](documentation/testing_images/html_validation/)                             | Passed |
-|faq_confirm_delete.html  |[view here](documentation/testing_images/html_validation/)                           | Passed |
-|404.html               |[view here](documentation/testing_images/html_validation/)                             | Passed |
 
 
 ------
