@@ -2,6 +2,7 @@ from django.test import TestCase
 from django.urls import reverse
 from products.models import Product
 
+
 class BagViewTests(TestCase):
     def setUp(self):
         self.product = Product.objects.create(
