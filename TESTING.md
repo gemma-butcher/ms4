@@ -122,20 +122,6 @@ The W3C CSS Validator Services was used to validate every css file of the projec
 |404.html               |[view here](documentation/testing_images/html_validation/)                             | Passed |
 
 
-
-
-
-| Page                 | Screenshot                                                            | Notes  |
-|----------------------|---------------------------------------------------------------------------|--------|
-|index.html            |[view here](documents/testing/webaim/webaim_index_pass.png)                   | Passed | 
-|login.html            |[view here](documents/testing/webaim/webaim_login.png)                        | Passed |
-|signup.html           |[view here](documents/testing/webaim/webaim_signup.png) | Passed |
-|add_slang.html        |[view here](documents/testing/webaim/webaim_add_slang.png)                    | Passed | 
-|delete_slang.html     |[view here](documents/testing/webaim/webaim_remove_slang.png)                 | Passed |
-|404.html              |[view here](documents/testing/webaim/webaim_404.png)                          | Passed - alt text query(minor)| 
-|dashboard.html        |[view lighthouse testing here](documents/testing/lighthouse/dashboard_lighthouse.png) | Can only be tested in lighthouse due to login required. Not supported by webaim. |
-|admin_dashboard.html  |[view lighthouse testing here](documents/testing/lighthouse/admin_dashboard_lighthouse.png) | Can only be tested in lighthouse due to login required. Not supported by webaim. |
-
 ------
 
 ## JavaScript Testing
@@ -345,6 +331,10 @@ The project user stories have been met with the following features;
      
 ![screenshot](documentation/readme_images/edit_management_link.png)
 
+    * A delete confirmation modal to confirm the admin user wants to delete the product permanantly from the site.
+
+![screenshot](documentation/readme_images/delete_modal.png)
+
 
 ✅  add, delete and update FAQ's
 
@@ -443,6 +433,10 @@ It is particuarly useful as it can encompass a wide range of input from stakehol
 | Add to basket button - Product Card | Click add to basket button on a product card | Product is added to bag confirmed by toast success message and bag icon total updates | Pass |
 | Products Home Link | Click Products home text link in top left of product screen | Displays all products and resets filters to default (none) | Pass |
 | Product total display | Select category, verfiy amount of displayed products matches total product display | Pass |
+| Product Card Edit link | Click edit link on product card when logged in as superuser | link triggers redirect to edit product page | Pass |
+| Product Card edit link | Click edit link on product card when logged in as superuser | link triggers delete product modal | Pass |
+| Delete Modal - Cancel Button | Click the cancel button when modal pops up | Delete modal disappears on click and the product remains on the site | Pass |
+| Delete Modal - Delete Product Button | Click the Delete Product option when modal pops up | Delete modal disappears and product is removed from the site with a toast notification | Pass |
 
 
 
