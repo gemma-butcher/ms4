@@ -7,6 +7,7 @@ from django.conf import settings
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
+from .email import send_confirmation_email
 from products.models import Product
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
@@ -137,8 +138,6 @@ def checkout(request):
         else:
             order_form = OrderForm()
 
-        # in the video, the below code is not indented properly
-        # this is the correct indentation
         if not stripe_public_key:
             messages.warning(request, 'Stripe public key is missing. \
                 Did you forget to set it in your environment?')
@@ -151,7 +150,6 @@ def checkout(request):
         }
 
         return render(request, template, context)
-        # end of the corrected indentation
 
 
 def checkout_success(request, order_number):
@@ -182,9 +180,30 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
+    # Send confirmation email
+    try:
+        send_confirmation_email(order)
+        email_sent = True
+    except Exception as e:
+        # Log error but don't break the checkout process
+        messages.warning(
+            request,
+            (
+                f"Your order was processed successfully, but we couldn't send "
+                f"the confirmation email: {str(e)}. Please contact us if you "
+                "don't receive it within 24 hours."
+            )
+        )
+        email_sent = False
+
+    # Update your success message based on email status
+    if email_sent:
+        messages.success(request, f'Order successfully processed! \
+            Your order number is {order_number}. A confirmation \
+            email has been sent to {order.email}.')
+    else:
+        messages.success(request, f'Order successfully processed! \
+            Your order number is {order_number}.')
 
     if 'bag' in request.session:
         del request.session['bag']
