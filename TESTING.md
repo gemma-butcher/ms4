@@ -24,14 +24,14 @@ The complete site was tested on the lighthouse facility in Google Developer Tool
 |---------------------------------|---------------------------------------------------------------------------|--------|
 |Home including nav and footer    |[view here](documentation/testing_images/lighthouse/index_lh.png)          | Meets criteria |
 |Products                         |[view here](documentation/testing_images/lighthouse/product_lh.png)        | Meets criteria |
-|Product Detail                   |[view here](documentation/testing_images/lighthouse/)                      | Meets criteria |
+|Product Detail                   |[view here](documentation/testing_images/lighthouse/product_lh.)                      | Meets criteria |
 |Login (django all auth example)  |[view here](documentation/testing_images/lighthouse/login_lh.png)          | Meets criteria |
 |Profile                          |[view here](documentation/testing_images/lighthouse/profile_lh.png)        | Meets criteria | 
 |Shopping Bag                     |[view here](documentation/testing_images/lighthouse/bag_lh.png)            | Meets criteria |
 |Checkout                         |[view here](documentation/testing_images/lighthouse/checkout_lh.png)       | Meets criteria |
-|contact                          |[view here](documentation/testing_images/lighthouse/contact_lh.png)        | Meets criteria |
+|Contact                          |[view here](documentation/testing_images/lighthouse/contact_lh.png)        | Meets criteria |
 |Services                         |[view here](documentation/testing_images/lighthouse/services_lh.png)       | Meets criteria |
-|faq                              |[view here](documentation/testing_images/lighthouse/faq_lh.png)            | Meets criteria |
+|FAQ                              |[view here](documentation/testing_images/lighthouse/faq_lh.png)            | Meets criteria |
 |404.html                         |[view here](documentation/testing_images/lighthouse/404_lh.png)            | Meets criteria. Lower SEO but as a 404 page this is not too concerning |
                      
 
@@ -217,18 +217,16 @@ The project user stories have been met with the following features;
    I-Snap provides:<br>
      * a shopping bag icon in the main nav bar with a total that updates when items are added to let the user know the purchase total has increased.<br>
      * a pop up toast success message in the top right corner by the bag icon letting the user know the item added and the quanity and an option to go straight to checkout.<br>
-
-     Shopping bag update toast message is shown below.
+     * Shopping bag update toast message is shown below.
 
 ![screenshot](documentation/readme_images/bag_update_msg.png)
 
 ✅  As a user who wants to make a purchase, I expect to feel the site is trustworthy and to have a straightforward purchasing flow.
 
    I-Snap provides:<br>
-     * stripe payment processing to ensure trust, security and authentication requirements.
-     * django all auth pages handling signup and account verification or security and data protection and handling.
-
-     Signup page is shown below.
+     * stripe payment processing to ensure trust, security and authentication requirements.<br>
+     * django all auth pages handling signup and account verification or security and data protection and handling.<br>
+     * signup page is shown below.
 
 ![screenshot](documentation/readme_images/signup_page.png)
 ------
@@ -248,15 +246,13 @@ The project user stories have been met with the following features;
   I-Snap provides:<br>
      * a profile page with saved information on signup and purchases, including delivery
 
-![screenshot](documents/readme_images/profile_page.png)
+![screenshot](documentation/readme_images/profile_page.png)
 
 ✅  As a user who has made purchases, I expect to be able to view my order history.
 
   I-Snap provides:<br>
      * a order history list in the account profile page.<br>
-     * a order overview page showing the user all of the order details.
-
-![screenshot](documentation/readme_images/order_history.png)
+     * a order overview page showing the user all of the order details. This can be seen [here](documentation/readme_images/profile_page.png)
 
 
 ✅   As a user who may want to return, I would like to be able to make an account securely.
@@ -268,7 +264,7 @@ The project user stories have been met with the following features;
 ✅  As a user who has made an account, I expect to be able to change or update my information and login securely.
 
   I-Snap provides:<br>
-      * an account profile with the users details stored in the database which they can edit and save to update shown [here](documentation/readme_images/profile_page.png).
+      * an account profile with the users details stored in the database which they can edit and save to update shown [here](documentation/readme_images/profile_page.png).<br>
       * a toast notification letting the user know when they have successfully updated their profile. This can be seen below.
      
 ![screenshot](documentation/readme_images/profile_update_success.png)
@@ -276,8 +272,8 @@ The project user stories have been met with the following features;
 ✅  be able to sign up to newsletters to keep up to date with products and company news.
 
   I-Snap provides:<br>
-      * a newsletter signup located in the footer. This also forms parts of the projects CRUD functionality.
-      * The function lets the user know when they have succesfully signed up.
+      * a newsletter signup located in the footer. This also forms parts of the projects CRUD functionality.<br>
+      * The function lets the user know when they have succesfully signed up.<br>
       * Will let the user know if they have already signed up with a notifcation stating they have already submitted their email address for the newletter subscription.
      
 ![screenshot](documentation/readme_images/subscribe_success.png)
@@ -294,8 +290,8 @@ The project user stories have been met with the following features;
 ✅  update products on the front end.
 
   I-Snap provides:<br>
-    * A product management system for signed in and authorised administrators.
-    * edit product form link located on the product card for logged in users.
+    * A product management system for signed in and authorised administrators.<br>
+    * edit product form link located on the product card for logged in users.<br>
     * edit product form for updating existing products from the front end.
      
 ![screenshot](documentation/readme_images/edit_management_link.png)
@@ -307,14 +303,14 @@ The project user stories have been met with the following features;
 ✅  add products from the front end.
 
   I-Snap provides:<br>
-    * A product management system for signed in and authorised administrators.
+    * A product management system for signed in and authorised administrators.<br>
     * product management form to add products and their relevant categories and a product image.
 ![screenshot](documentation/readme_images/product_management_form.png)
 
 ✅  delete products from the front-end and back end.
 
   I-Snap provides:<br>
-    * A product management system for signed in and authorised administrators.
+    * A product management system for signed in and authorised administrators.<br>
     * Delete product link on the product cards for logged in admin users.
      
 ![screenshot](documentation/readme_images/edit_management_link.png)

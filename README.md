@@ -335,7 +335,7 @@ MIT License
 
 Reach out for collaboration or investment opportunities:  
 **Email:** contact@i-snap.com  
-**Instagram:** [@i-snap](https://instagram.com/i-snap)  
+**Instagram:** [@i-snap](https://instagram.com)  
 
 
 ### User Stories
