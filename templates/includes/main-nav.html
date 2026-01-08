@@ -17,10 +17,8 @@
                 Cameras
             </a>
             <div class="dropdown-menu border-0 bg-dark" aria-labelledby="camera-link">
-                <a href="{% url 'products' %}?category=professional" class="dropdown-item text-white">Professional</a>
-                <a href="{% url 'products' %}?category=instant" class="dropdown-item text-white">Instant</a>
                 <a href="{% url 'products' %}?category=dslr" class="dropdown-item text-white">DSLR</a>
-                <a href="{% url 'products' %}?category=professional,instant,dslr" class="dropdown-item text-white">All Cameras</a>
+                <a href="{% url 'products' %}?category=dslr" class="dropdown-item text-white">All Cameras</a>
             </div>
         </li>
 
@@ -29,9 +27,17 @@
                 Lenses
             </a>
             <div class="dropdown-menu border-0 bg-dark" aria-labelledby="lenses-link">
-                <a href="{% url 'products' %}?category=sport" class="dropdown-item text-white">Sport</a>
                 <a href="{% url 'products' %}?category=telephoto" class="dropdown-item text-white">Telephoto</a>
-                <a href="{% url 'products' %}?category=sport,telephoto" class="dropdown-item text-white">All Lenses</a>
+                <a href="{% url 'products' %}?category=telephoto" class="dropdown-item text-white">All Lenses</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="accessories-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Accessories
+            </a>
+            <div class="dropdown-menu border-0 bg-dark" aria-labelledby="accessories-link">
+                <a href="{% url 'products' %}?category=accessories" class="dropdown-item text-white">All Accessories</a>
             </div>
         </li>
 
@@ -41,9 +47,8 @@
             </a>
             <div class="dropdown-menu border-0 bg-dark" aria-labelledby="specials-link">
                 <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item text-white">New Arrivals</a>
-                <a href="{% url 'products' %}?category=deals" class="dropdown-item text-white">Deals</a>
                 <a href="{% url 'products' %}?category=clearance" class="dropdown-item text-white">Clearance</a>
-                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item text-white">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals,clearance" class="dropdown-item text-white">All Specials</a>
             </div>
         </li>
 
