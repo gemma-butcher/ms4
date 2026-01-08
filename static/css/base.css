@@ -786,14 +786,8 @@ body.faq-form-page {
         padding: 0.5rem 1rem;
     }
     
-    /* Reduce delivery banner height on mobile */
-    #delivery-banner {
-        padding: 0.25rem 0 !important;
-    }
-    
-    #delivery-banner h3,
+    /* Reduce delivery banner text size on mobile */
     #delivery-banner p {
-        margin: 0.25rem 0 !important;
         font-size: 0.875rem !important;
     }
 }
