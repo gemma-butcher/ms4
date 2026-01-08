@@ -1,4 +1,3 @@
-/*---Base CSS for the I-Snap eCommerce site ---*/
 html, body {
     height: 100%;
     overflow-x: hidden !important;
@@ -23,7 +22,7 @@ a {
 
 /* Style for active links */
 a.active-link {
-    color: #165665; /* or any brand color you want */
+    color: #165665;
     font-weight: bold;
 }
 
@@ -95,8 +94,8 @@ a:hover {
     height: 1.5rem;
     width: 1.5rem;
 }
+
 /* Navbar */
-/* Modern Navigation Styling */
 .bg-black {
     background-color: #000;
 }
@@ -362,7 +361,6 @@ a.category-badge > span.badge:hover {
 }
 
 /* Product Card - Add to Cart */
-/* Style for the Add to Basket button */
 .add-to-basket-btn {
     display: flex;
     flex-direction: column;
@@ -559,7 +557,6 @@ a.category-badge > span.badge:hover {
     overflow-y: auto;
 }
 
-
 /* ----- Footer ------ */
 footer {
     position: relative !important;
@@ -641,17 +638,13 @@ body > footer {
     margin: 0 !important;
 }
 
-/* Fix for allauth pages */
+/* ------ Allauth Pages ------ */
 .allauth-pages {
-    margin-bottom: 50px !important;  /* Ensure content doesn't crowd footer */
+    margin-bottom: 50px !important;
 }
 
 .allauth-form-inner-content {
     margin-bottom: 100px;
-}
-
-.auth-container {
-    margin-top: 200px !important;
 }
 
 .login input, 
@@ -663,15 +656,6 @@ body > footer {
     color: #212529;
     border-radius: 20px;
     padding: 10px 15px;
-}
-
-.auth-container .feature-card-custom {
-    box-shadow: 0 2px 8px rgba(54, 155, 149, 0.30);
-    transition: all 0.3s ease;
-}
-
-.auth-container .feature-card-custom:hover {
-    box-shadow: 0 4px 16px rgba(129, 33, 178, 0.30);
 }
 
 
