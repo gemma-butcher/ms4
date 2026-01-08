@@ -104,6 +104,12 @@ a:hover {
     background: linear-gradient(to right, #1a1a1a, #000, #1a1a1a);
 }
 
+/* Make delivery banner text smaller on desktop */
+#delivery-banner h3 {
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+
 .custom-nav-link {
     transition: all 0.3s ease;
 }
@@ -770,6 +776,14 @@ body.faq-form-page {
     /* Make nav links more compact on mobile */
     .navbar-nav .nav-link {
         padding: 0.25rem 0.5rem;
+        font-size: 0.9rem !important;
+        font-weight: normal !important;
+    }
+    
+    /* Reduce dropdown item size on mobile */
+    .dropdown-item {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
     }
     
     /* Reduce delivery banner height on mobile */

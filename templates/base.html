@@ -20,7 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}?v=4">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}?v=8">
     {% endblock %}
 
     {% block extra_css %}
@@ -144,8 +144,8 @@
         <!-- Third Row: Delivery Banner -->
         <div id="delivery-banner" class="row text-center m-0">
             <div class="col delivery-banner-bg text-white">
-                <h3 class="logo-font my-1 d-none d-sm-block">Free delivery on all orders over £{{ free_shipping_threshold }}!</h3>
-                <p class="my-1 d-block d-sm-none small">Free delivery on orders over £{{ free_shipping_threshold }}!</p>
+                <!-- <h3 class="logo-font my-1 d-none d-sm-block">Free delivery on all orders over £{{ free_shipping_threshold }}!</h3> -->
+                <p class="my-1">Free delivery on all orders over £{{ free_shipping_threshold }}!</p>
             </div>
         </div>
     </header>
@@ -227,15 +227,8 @@
         
         <!-- Bottom Footer -->
         <div class="row align-items-center">
-            <div class="col-md-6 text-center text-md-left">
+            <div class="col-12 text-center">
                 <p class="mb-0 text-white">&copy; {{ year|default:2025 }} I-SNAP. All rights reserved.</p>
-            </div>
-            <div class="col-md-6 text-center text-md-right">
-                <small class="text-white">
-                    <a href="#" class="text-white mr-2 hover-underline">Privacy Policy</a> | 
-                    <a href="#" class="text-white mr-2 hover-underline">Terms of Service</a> | 
-                    <a href="#" class="text-white hover-underline">Cookies</a>
-                </small>
             </div>
         </div>
     </div>
