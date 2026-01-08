@@ -104,7 +104,6 @@ a:hover {
     background: linear-gradient(to right, #1a1a1a, #000, #1a1a1a);
 }
 
-/* Make delivery banner text smaller on desktop */
 #delivery-banner h3 {
     font-size: 0.85rem;
     font-weight: 300;
@@ -849,7 +848,7 @@ body.faq-form-page {
         padding: 0.25rem !important;
     }
     
-    /* Fix auth pages (login/signup) mobile spacing */
+    /* auth pages mobile spacing */
     .container.my-5 {
         margin-top: 1rem !important;
         margin-bottom: 1rem !important;
