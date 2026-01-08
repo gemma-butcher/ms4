@@ -24,6 +24,6 @@ The JS errors are shown below.
 - Below is the code used to images werent being cached incorrectly and making it appear in the browser that the connection and serving of images was incorrect.
 ![screenshot](documentation/development_images/aws_debug.png)
 
-- Here is a terminal screenshot below of the printed statemnt and how that appears in the console. This confirms that the static images are ebing served from AWS.
+- Here is a terminal screenshot below of the printed statemnt and how that appears in the console. This confirms that the static images are being served from AWS.
 ![screenshot](documentation/development_images/static_debug.png)
 
